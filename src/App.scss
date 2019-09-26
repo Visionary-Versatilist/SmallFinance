@@ -31,3 +31,31 @@
     transform: rotate(360deg);
   }
 }
+.MuiInputBase-input {
+  padding: 6px 0px 8px 11px !important;
+}
+.MuiTooltip-tooltip {
+  background-color: #3E4664 !important;
+}
+.MuiTooltip-tooltipPlacementTop {
+position: relative;
+}
+.MuiSwitch-root {
+  width: 47px!important;
+  height: 34px!important;
+}
+.MuiSwitch-thumb {
+  width: 15px!important;
+    height: 15px!important;
+}
+.backLink:hover {
+color:#00D95E;
+text-decoration: underline;
+cursor:pointer;
+}
+.help-block{
+  font-size:11px;
+  color:red;
+  font-family: 'Lato'!important;
+}
+

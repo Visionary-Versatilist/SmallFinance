@@ -1,0 +1,75 @@
+.mainDiv {
+    width: 100%;
+}
+.firstDiv {
+    text-align: center;
+    margin: 3rem;
+    margin-bottom: 4rem
+}
+.firstH3 {
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+    font-weight: 400
+}
+.secondDiv {
+    display: flex!important;
+    width: 100%;
+}
+.ImageDiv {
+    width: 50%;
+    text-align: end;
+    padding-top: 1rem;
+}
+.CardDiv {
+    width: 50%;
+}
+.CardDiv2 {
+    height: 100%;
+    // border-radius: 13px!important;
+}
+.CardDiv3 {
+    width: 60%;
+    border-radius: 13px!important;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 4px 0px rgba(0,0,0,0.10), 0px 2px 4px -2px rgba(0,0,0,0.8)!important;
+
+}
+.CardDiv4 {
+    margin: 2rem!important;
+}
+.CardDiv5 {
+text-align: center;
+font-size: 20px;
+}
+form {
+    padding: 1rem 0rem 1rem 0rem
+}
+.btnDiv {
+    padding: 2rem 0rem 1rem 0rem
+}
+.linkDiv {
+    text-align: end;
+}
+
+// .mainCard {
+//     height: 100%;
+//     border-radius: 13px;
+//     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+//   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+// }
+Input {
+    color: #8E8E98;
+}
+h3{
+    font-weight: 400px;
+}
+.btn {
+    background-image: linear-gradient(to right, #00D95E ,#4277DB );
+    border: none!important;
+    height: 3rem!important;
+    color: white!important;
+    text-transform: none!important;
+}
+.MuiInputBase-input{
+    padding:  6px 0px 8px 1px !important;
+  }

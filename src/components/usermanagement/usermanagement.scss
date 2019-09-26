@@ -1,0 +1,113 @@
+.mainBodyDiv{
+    margin-left: 5.5%;
+.TopDiv {
+    display: flex;
+    position: relative;
+.searchDiv {
+    background-color: #EFF2FF;
+    width: 25%;
+    height: 37px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50px; 
+    top: 14px;
+    // .iconButton {
+
+    // }
+    .input {
+        position: absolute;
+        top: 5px;    
+    }
+}
+.ButtonDiv {
+    position: absolute;
+    right: 50px; 
+    top: 14px;
+    .adduserbutton {
+        text-transform: capitalize;
+        color: #ffff;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
+        height: 37px;
+        padding-top: 4px;
+        .plusiconButton{
+            padding-right: 5px;
+        }
+    }
+}
+}
+
+.secondDiv {
+    display: flex;
+    .membercountDiv{
+        position:absolute;
+        top:19.5%;
+        left: 9%;
+        color: #3E4664;
+    }
+    .exportDiv {
+        display: flex;
+        position:absolute;
+        top:18.8%;
+        right: 3.7%;
+        color: #3E4664;
+        .pdficon{
+            cursor: pointer;
+        }
+        .excelicon {
+            cursor: pointer;
+        }
+    }
+}
+
+.cardDiv {
+    margin: 3.6%;
+    margin-top: 8%;
+    .Roww {
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0, -11.12);
+        .switchBtton {
+            color: #00D95E;
+        }
+    }
+    .Roww:hover {
+        background-image: linear-gradient(to right, #00D95E ,#4277DB );
+        .changetext {
+            color: #ffff !important;
+        }
+        
+    }  
+    .iconedit {
+        cursor: pointer;
+    }
+    .icondelet {
+        padding-left: 20px;
+        cursor: pointer;
+    }  
+    
+}
+.changetext {
+    font-weight: 400;
+    font-family: 'Lato'!important;
+    color:'#3E4664 !important'
+}
+
+
+.MuiTableCell-root{
+    padding:2px 22px 2px 22px !important;
+}
+.MuiTableCell-alignRight {
+    text-align: left;
+}
+.MuiTableCell-head {
+    color: #B2B2B2 !important;
+}
+.MuiTableCell-body{
+    color: #3E4664 !important;
+}
+}
+// .MuiSwitch-input{
+//     color: #E5FBEE;
+// }
+
+

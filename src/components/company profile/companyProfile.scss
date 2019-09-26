@@ -1,0 +1,124 @@
+.companyprofilecomponent{
+    background-color: #FBFCFF;
+.cardDiv {
+    margin: 5.6%;
+    margin-top: 0%;
+    margin-bottom: 28px;
+    margin-left: 11%;
+
+.imgPreview{
+  text-align: center;
+  margin: auto;
+  margin-top:5%;
+  height: 134px;
+  width: 134px;
+  border: 1px solid #D4D4D5;
+  border-radius:100px;
+  position: relative;
+  img{
+        width: 134px;
+        height: 134px;
+        border-radius:100px;
+      }
+  .fileInput{
+    // padding: 10px;
+    // margin: 130px;
+    cursor: pointer;
+    border-radius:100px;
+    height: 134px;
+    width: 134px;
+    opacity:0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+.MuiInput-root {
+    position: relative;
+    // border: 1px solid #D4D4D5!important;
+    width: 29%;
+    border-radius: 5px;
+}
+
+.InputLabel{
+    width: 74%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    margin-top:20px;
+    color: #8E8E98;
+}
+.MuiFormControl-root{
+    width: 29%;
+}
+.cameradefault {
+    position: absolute;
+    left: 53%;
+    bottom: 11%;
+}
+.categorytextFieldStyle {
+    // #standard-select {
+        .MuiInput-root{
+            width:100%;         
+        // }
+    }
+    .MuiSelect-select{
+        text-align: left;
+    }
+    .MuiSelect-select:focus{
+        background-color: transparent;
+    }
+}
+.savebutton {
+    background-color: #00D95E;
+    text-transform: capitalize;
+    color: #fff;
+    height: 33px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    position: relative;
+    left: 45px;
+}
+.cancelbutton {
+    border: 1px solid #E4E4E4;
+    text-transform: capitalize;
+    color: #8E8E98;
+    height: 33px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    margin: 3%;
+    position: relative;
+    left: 45px;
+}
+// .textBox:focus {
+//     border: 1px solid #00D95E;
+// }
+// .textBox:active {
+//     border: 1px solid #00D95E;
+// }
+//   img{
+//     width: 100%
+//     height: 100%
+//   }
+  
+  
+// .submitButton{
+//   padding: 12px;
+//   margin-left: 10px;
+//   background: white;
+//   border: 4px solid lightgray;
+//   border-radius: 15px;
+//   font-weight: 700;
+//   font-size: 10pt;
+//   cursor: pointer;
+//   &:hover
+//     background: #efefef;
+// }
+
+// .centerText{
+//   text-align: center;
+//   width: 500px;
+// }
+}
+}

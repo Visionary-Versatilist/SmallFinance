@@ -1,8 +1,8 @@
 {
   "EditProfileDetails": {
     "title": "Edit Profile",
-    "fname": "First name",
-    "lname": "Last name",
+    "fname": "First Name",
+    "lname": "Last Name",
     "phone": "Mobile number",
     "email": "Email ID",
     "lang": "Language",
@@ -17,14 +17,14 @@
     "password": "Password"
   },
   "ProfileModal": {
-    "signout": "SignOut",
+    "signout": "Sign Out",
     "Company": "Company Profile",
     "Management": "User Management"
   },
   "CompanyProfile": {
     "title": "Company Profile",
     "cName": "Company Name",
-    "employees": "Number of employees",
+    "employees": "Number of Employees",
     "website": "Website",
     "Address": "Address",
     "country": "Country",
@@ -48,16 +48,16 @@
         "ans": "Lendstack doesn’t give out loans. Lendstack is a platform used by small and individual lenders to manage their lending process."
       },
       {
-        "que": "Why does Lendstack need to verify my details?",
-        "ans": "In some instances, we’re required to collect, verify and maintain certain information to help prevent potential fraud. We treat this information as extremely sensitive and take privacy and security for seriously"
+        "que": "What is the minimum/maximum amount I can lend out?",
+        "ans": "As a lender, Lendstack gives you the privilege to lend out any amount to your borrower."
       },
       {
-        "que": "As a lender what details can I request from my clients?",
-        "ans": "Apart from the contact information to create a profile, Lendstack leaves a lot up to you. However, you can select the which details you want to request from your client."
+        "que": "Is it Free to use the Platform?",
+        "ans": "Yes, it is free. However, Lendstack will have subscription pricing model in future. Initial few customers who are  heavily using or have moved their business operations completely will be provided free till lifetime."
       },
       {
-        "que": "Can a borrower be a lender?",
-        "ans": "Yes, a borrower can be a lender as long as you have the capital to lend out."
+        "que": "Does Lendstack give out Loans?",
+        "ans": "Lendstack does not give out loans. Lendstack is a platform used by small and individual lenders to manage their lending process."
       },
       {
         "que": "Why did I not get a verification mail?",
@@ -68,6 +68,7 @@
   "MessagingServices": {
     "title": "Messaging Services",
     "content": "Your Messaging Platform Coming Soon..."
+
   },
   "DeleteUser": {
     "content": "Are you sure to Delete?"
@@ -97,8 +98,8 @@
     "loans": "No. of Loans"
   },
   "AddCustomer": {
-    "title": "New Customers",
-    "subtitle": "Add New Customer",
+    "title": "View",
+    "subtitle": "Add Customer Details",
     "fCard": "General Details",
     "fname": "First Name",
     "lname": "Last Name",
@@ -116,14 +117,14 @@
     "stDiv": "Divorced",
     "stWid": "Widow",
     "stWider": "Widower",
-    "email": "Email Id",
+    "email": "Email ID",
     "depname": "Number of Dependents",
     "annincome": "Annual Income",
     "majscr": "Major Source of Income",
     "addar": "Aadhaar Card Number",
     "pan": "PAN Card Number",
     "pic": "Photo",
-    "blank": "Blank / Cancelled Cheque",
+    "blank": "Blank / Cancelled Cheque (Please upload image file)",
     "sCard": "Address Details",
     "address": "Home Address",
     "offaddrss": "Office/Commercial Address",
@@ -137,10 +138,10 @@
     "accnum": "Account Number",
     "acctype": "Account Type",
     "fifthCrad": "Reference Details",
-    "refname": "Reference 1 - Name",
-    "refphone": "Reference 1 - Contact Number",
-    "reffname": "Reference 2 - Name",
-    "reffphone": "Reference 2 - Contact Number",
+    "refname": "Name (Reference 1)",
+    "refphone": "Contact Number (Reference 1)",
+    "reffname": "Name (Reference 2)",
+    "reffphone": "Contact Number (Reference 2)",
     "sixCard": "Proof ID",
     "personalinfo": "Personal Info"
   },

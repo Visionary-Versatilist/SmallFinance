@@ -12,13 +12,13 @@
     "title": "Edit Profile",
     "subtitle": "Update Password",
     "oldPassword": "Old Password",
-    "newPassword": "New Passowrd",
+    "newPassword": "New Password",
     "confirmPassword": "Confirm Password",
     "password": "Password"
   },
   "ProfileModal": {
     "signout": "SignOut",
-    "Company": "Comapny Profile",
+    "Company": "Company Profile",
     "Management": "User Management"
   },
   "CompanyProfile": {
@@ -37,7 +37,8 @@
     "member": "Members"
   },
   "AddUser": {
-    "Cat": "Category"
+    "Cat": "Category",
+    "Button": "Add User Page"
   },
   "FAQ": {
     "title": "FAQs (Frequently asked Questions)",

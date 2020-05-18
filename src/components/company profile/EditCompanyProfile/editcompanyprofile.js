@@ -198,6 +198,8 @@ class EditCompanyProfile extends Component {
             emailError: "none",
             validnum: true,
             numError: "none",
+            validemp: true,
+            empError:"none",
             validhomepin: true,
             homepinError: "none",
             CountryData: [],
@@ -214,6 +216,7 @@ class EditCompanyProfile extends Component {
         this.websiteBox = this.websiteBox.bind(this)
         this.validEmail = this.validEmail.bind(this)
         this.validNum = this.validNum.bind(this)
+        this.validEmp = this.validEmp.bind(this)
         this.validHomePin = this.validHomePin.bind(this)
 
         this.flatBox = this.flatBox.bind(this)
@@ -545,6 +548,28 @@ const headers = {
             })
         }
     }
+  //   validateEmp(totalemployees) {
+  //     const re = /^\d{10}$/g
+  //     return re.test(totalemployees)
+  // }
+  //   validEmp = (event) =>{
+  //     // (event) => this.setState({ totalemployees: event.target.value })
+  //     const totalemployees = event.target.value
+  //       const empVaild = this.validateNum(totalemployees)
+  //     this.setState({
+  //       totalemployees: event.target.value,
+  //       validEmp: empVaild
+  //   })
+  //   if (empVaild === false) {
+  //     this.setState({
+  //         empError: "flex"
+  //     })
+  // } else {
+  //     this.setState({
+  //         empError: "none"
+  //     })
+  // }
+  //   }
     validateNum(mobilenum) {
         const re = /^\d{10}$/g
         return re.test(mobilenum)
@@ -647,7 +672,7 @@ const headers = {
         });
         var description = this.state.description
 
-        const { name,totalemployees, homeAddressLine, homeAddressCity,homeAddressPincode, homeAddressState, homeAddressStreet,homeAddressLandmark, mobilenum, emailid, website, address,validemail,validnum, submitted } = this.state;
+        const { name,totalemployees, homeAddressLine, homeAddressCity,homeAddressPincode, homeAddressState, homeAddressStreet,homeAddressLandmark, mobilenum, emailid, website, address,validemail,validnum,validemp, submitted } = this.state;
         return(
           <div className="Editcompanyprofilecomponent">
               <Sidebar/>
@@ -668,7 +693,7 @@ const headers = {
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "49px" }} >{t('CompanyProfile.employees')}</h6>
                                       {/* <div className={'form-group' + (submitted && !totalemployees ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                      <Input className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
+                                      <Input type="number" className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
                                       {/* {submitted && !totalemployees &&
                                       <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
                                       }

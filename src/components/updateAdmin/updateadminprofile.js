@@ -9,7 +9,7 @@ import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
-import {BaseUrl,headers, ImageBaseUrl} from "../../Environment";
+import {BaseUrl, ImageBaseUrl} from "../../Environment";
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { withNamespaces } from 'react-i18next';
@@ -169,6 +169,10 @@ class UpdateAdminProfile extends Component {
              let formData = new FormData();
         formData.append('alldetails', JSON.stringify(userdetails)); 
         formData.append("userprofilepic", this.state.file);
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
+          }
         
         axios.put(BaseUrl + '/user/updateUser',formData,{
             headers: headers,
@@ -360,7 +364,7 @@ class UpdateAdminProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                     {/* <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                    <Input className="textBox" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ fname: event.target.value })}} />
+                                    <Input className="textBox" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, '');  this.setState({ fname: event.target.value })}} />
                                   
                                          {submitted && !fname &&
                                     <div className="help-block"> First name is required</div>
@@ -369,7 +373,7 @@ class UpdateAdminProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.lname')}</h6>
                                     {/* <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                    <Input className="textBox" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ lname: event.target.value })}} />
+                                    <Input className="textBox" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, '');  this.setState({ lname: event.target.value })}} />
                                    
                                          {submitted && !lname &&
                                     <div className="help-block">Last name is required</div>

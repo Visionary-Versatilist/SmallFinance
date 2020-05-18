@@ -660,7 +660,7 @@ class CustomerHeader extends Component {
     let  loggedinUser= localStorage.getItem("loggedinUserCompany")
 
     const headers = {
-      'Authorization': 'Bearer' + ls.get('token')
+      'Authorization': 'Bearer ' + ls.get('token')
     }
 
     axios.get(BaseUrl + '/loanType/getAllLoanTypes?loanType=&companyId=' + loggedinUser, {

@@ -177,7 +177,7 @@ class UpdatePassword extends Component {
                                     <div className={'form-group' + (submitted && !newpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                     <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) => this.setState({ newpassword: event.target.value })} />
                                     {submitted && !newpassword &&
-                                        <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>New Passowrd is required</div>
+                                        <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>New Password is required</div>
                                         }
                                         </div>
                                 </div>

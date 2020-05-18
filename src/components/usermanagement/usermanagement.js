@@ -258,7 +258,7 @@ class Usermanagement extends Component {
     <Table className='table'>
       <TableHead>
         <TableRow style={{backgroundColor:"#E1F0FA", color:'#B2B2B2'}}>
-          <TableCell>CollectionAgent name</TableCell>
+          <TableCell>Collection Agent Name</TableCell>
           <TableCell align="right">Mobile Number</TableCell>
           <TableCell align="right">Email Id</TableCell>
           <TableCell align="right">Category</TableCell>

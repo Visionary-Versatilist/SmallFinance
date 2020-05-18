@@ -323,8 +323,8 @@ const headers = {
           <Card className="cardDiv">
             <div className="previewComponent">
               <form onSubmit={(e) => this._handleSubmit(e)}>
-                <div style={{ position: 'absolute', right: '8%', top: '15%', cursor: 'pointer' }} onClick={this.editcompanyprofile.bind(this)}>
-                  <img src={editpencil} alt="editpencil" className="editIMage" />
+                <div style={{ position: 'absolute', right: '10%', top: '15%', cursor: 'pointer' }} onClick={this.editcompanyprofile.bind(this)}>
+                  <span className="Fonts SizeFont">EDIT&nbsp;&nbsp;</span> <img src={editpencil} alt="editpencil" className="editIMage" />
                 </div>
                 <div style={{ margin: 'auto', textAlign: "center", marginTop: '34px' }}>
                   <div className="textFieldStyle">

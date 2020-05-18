@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <g id="grid-view-solid" transform="translate(-4 -4)">
-    <rect id="Rectangle_2541" data-name="Rectangle 2541" width="8.571" height="8.571" rx="2" transform="translate(4 4)" fill="#00d95e"/>
-    <rect id="Rectangle_2542" data-name="Rectangle 2542" width="8.571" height="8.571" rx="2" transform="translate(15.429 4)" fill="#00d95e"/>
-    <rect id="Rectangle_2543" data-name="Rectangle 2543" width="8.571" height="8.571" rx="2" transform="translate(4 15.429)" fill="#00d95e"/>
-    <rect id="Rectangle_2544" data-name="Rectangle 2544" width="8.571" height="8.571" rx="2" transform="translate(15.429 15.429)" fill="#00d95e"/>
-  </g>
-</svg>

@@ -1,0 +1,72 @@
+.closeCustomerDialogbox {
+    border-radius: 5px;
+    .MuiDialog-paperWidthSm {
+        // position: absolute!important;
+        left: 0% !important;
+        top: 0% !important;
+        // align-items: center;
+        // justify-content: center;
+        margin: 0 auto;
+        padding: 2rem 3rem 2rem 3rem;
+        width: 750px;
+        height: 270px;
+        border-radius: 5px;
+    }
+    .TitleDiv {
+        .deleteconfirmation {
+            width: 600px;
+            .confrmmessage {
+                font-size: 13px;
+                color: rgb(168, 168, 168);
+            }
+            .closeButtonDiv {
+                position: absolute;
+                right: 4px;
+                top: 4px;
+                bottom: 0;
+                padding: 0.5rem;
+                color: rgb(100, 100, 104);
+            }
+            .cancelnumarictextBox {
+                margin-top: 1rem;
+                border: 1px solid lightgrey;
+                width: 90%;
+                padding: 10px;
+                // height: 50px;
+                border-radius: 7px;
+            }
+        }
+    }
+    .bottomPart {
+        .buttonDiv {
+            display: flex;
+            position: absolute;
+            right: 3rem;
+            bottom: 1rem;
+            .cancelbutton {
+                border: 1px solid lightgrey;
+                color: gray;
+                text-transform: capitalize;
+            }
+            .savebutton {
+                margin-left: 1rem;
+                background-color: #00D95E;
+                color: white;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.confirm {
+    border: none;
+    color: white;
+    background-color: #00d95e;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+}

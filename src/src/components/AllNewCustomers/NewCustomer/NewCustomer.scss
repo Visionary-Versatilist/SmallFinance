@@ -1,0 +1,241 @@
+.Newcustomercardviewpage{
+    display:flex;
+    margin-left: 6.3rem;
+    margin-right: 50px;
+    margin-top: 52px;
+    .CardDiv {
+        margin:1rem;
+        width: 95%;
+        height: 88%;
+        border-radius:10px;
+        float: left;
+        .MuiAvatar-root{
+            border-radius: 25%;
+            border: 1px solid lightgrey;
+        }
+        .NameDiv {
+            font-size: 18px;
+            font-weight: 900;
+            font-family: 'Montserrat';
+            color: #3E4664;
+            text-transform: capitalize;
+        }
+        .subheadingnameDiv {
+            font-size: 12px;
+            font-weight: 400;
+            font-family: 'Montserrat';
+            color: #8E8E98
+        }
+        .MuiCardContent-root {
+            padding: 0px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .MuiCardHeader-content {
+            flex: none;
+            width: 70%;
+            // margin-top: -34px;
+          }
+          .MuiCardHeader-avatar {
+            flex: 0 0 auto;
+            margin-right: 16px;
+            margin-top: -5px;
+          }
+        .DraftButton{
+            background-color: transparent;
+            padding-left: 45px;
+            padding-right: 45px;
+            border: 1px solid #C10707;
+            color: #C10707;
+            border-radius: 5px;
+            height: 35px;
+        }
+        .AddloanButton {
+            background-color: transparent;
+            padding-left: 24px;
+            padding-right: 24px;
+            border: 1px solid #00D95E;
+            color: #00D95E;
+            border-radius: 5px;
+            height: 35px;
+            .plusgreenButton{
+                margin-bottom: -5px;
+                margin-right: 3px
+            }
+        }
+        .VerifyButton{
+            background-color: transparent;
+            padding-left: 45px;
+            padding-right: 45px;
+            border: 1px solid #4D66F0;
+            color: #4D66F0;
+            border-radius: 5px;
+            height: 35px;
+            cursor:pointer;
+        }
+        
+        // .MoneydetailsDiv {
+        //     color:#757575 !important;
+        //     font-size: 18px;
+        //     font-weight: 900 !important;
+        // }
+        // .subheaderDiv {
+        //     display:flex;
+        //     .subheaderStatus{
+        //         background-color:#FFE5E5;
+        //         border-radius: 5px;
+        //         width: fit-content;
+        //         padding: 2px;
+        //         color:#FF0000;
+        //         font-size: 14px;
+        //         font-weight: 900 !important;
+        //     }
+        //     .subheaderDays {
+        //         color: #757575;
+        //         font-size: 14px;
+        //         font-weight: 900 !important;
+        //         padding-left: 8px
+        //     }
+        // }
+        .MuiCardActions-root{
+            display: flex;
+    padding: 13px;
+    padding-top: 45px;
+    align-items: center
+        }
+        .footerDiv1 {
+            width: 67%;
+            .footerDivdate{
+                color: #3E4664;
+                font-size: 14px;
+                font-weight: 900;
+            }
+            .footerDivdatedetails{
+                color: #8E8E98;
+                font-size: 12px;
+                font-weight: 400;
+
+            }
+        }
+        .footerDiv2{
+            width: 31%;
+            text-align: end;
+            .footerDivmonth{
+                color: #3E4664;
+                font-size: 14px;
+                font-weight: 900;
+                // text-align: center;
+            }
+            .footerDivmonthdetails{
+                color: #8E8E98;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        .editwhite{
+            margin-top:12px;
+            cursor: pointer;
+        }
+        .deletewhite{
+            padding-top:10px;
+            cursor: pointer;
+        }
+
+    }
+    .CardDiv:hover {
+        // cursor: pointer;
+        background-image: linear-gradient(to bottom right, #00D95E ,#4277DB );
+            .MuiAvatar-root{
+                border-radius: 25%;
+                border: 1px solid lightgrey;
+            }
+            .NameDiv {
+                font-size: 18px;
+                font-weight: 900;
+                font-family: 'Montserrat';
+                color: #ffff;
+                text-transform: capitalize;
+            }
+            .subheadingnameDiv {
+                font-size: 12px;
+                font-weight: 400;
+                font-family: 'Montserrat';
+                color: #ffff
+            }
+            .MuiCardContent-root {
+                padding: 0px;
+                text-align: center;
+                padding-top: 15px;
+
+            }
+            .DraftButton{
+                background-color: transparent;
+                padding-left: 45px;
+                padding-right: 45px;
+                border: 1px solid #ffff;
+                color: #ffff;
+                border-radius: 5px;
+                height: 35px;
+            }
+            .AddloanButton {
+                background-color: transparent;
+                padding-left: 24px;
+                padding-right: 24px;
+                border: 1px solid #ffff;
+                color: #ffff;
+                border-radius: 5px;
+                height: 35px;
+                cursor: pointer;
+                .plusgreenButton{
+                    margin-bottom: -5px;
+                    margin-right: 3px
+                }
+            }
+            .VerifyButton{
+                background-color: transparent;
+                padding-left: 45px;
+                padding-right: 45px;
+                border: 1px solid #ffff;
+                color: #ffff;
+                border-radius: 5px;
+                height: 35px;
+            }
+            
+            .MuiCardActions-root{
+                display: flex;
+        padding: 13px;
+        padding-top: 45px;
+        align-items: center
+            }
+            .footerDiv1 {
+                width: 67%;
+                .footerDivdate{
+                    color: #ffff;
+                    font-size: 14px;
+                    font-weight: 900;
+                }
+                .footerDivdatedetails{
+                    color: #ffff;
+                    font-size: 12px;
+                    font-weight: 400;
+    
+                }
+            }
+            .footerDiv2{
+                width: 31%;
+                text-align: end;
+                .footerDivmonth{
+                    color: #ffff;
+                    font-size: 14px;
+                    font-weight: 900;
+                    // text-align: center;
+                }
+                .footerDivmonthdetails{
+                    color: #ffff;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+          
+    }
+}

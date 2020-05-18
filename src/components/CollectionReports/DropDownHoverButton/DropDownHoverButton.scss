@@ -1,0 +1,77 @@
+.dropDownButton {
+  .Button {
+    background: #f6f6f6 !important;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    float: right;
+    top: 20px;
+    margin-right: 35px;
+  }
+  .buttonImg {
+    padding-left: 10px;
+  }
+  .hoverMenu {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 41px;
+    right: 35px;
+    width: 210px;
+    padding-inline-start: 0px;
+
+    .menuList {
+      list-style-type: none;
+      padding: 13px 13px;
+      text-align: left;
+      background: #50648c;
+      position: relative;
+      .floatRightIcon {
+        float: right;
+        padding-left: 15px;
+      }
+      .subList {
+        display: none;
+        top: 0px;
+        position: absolute;
+        color: #fff;
+        border-radius: 5px;
+        padding-inline-start: 0px;
+        left: -200px;
+        width: 200px;
+        .subListMenu {
+          list-style-type: block;
+          padding: 13px 15px;
+          text-align: left;
+          background: #50648c;
+        }
+        .subListMenu:hover {
+          background: #ccc;
+        }
+      }
+    }
+    .menuList:hover {
+      background: #ccc;
+      .subList {
+        display: block;
+      }
+    }
+  }
+
+  .hoverFunction:hover {
+    .hoverMenu {
+      display: block;
+    }
+    .Button {
+      background: #50648c !important;
+      color: #fff;
+    }
+  }
+}
+.menuIcon {
+  float: right;
+}

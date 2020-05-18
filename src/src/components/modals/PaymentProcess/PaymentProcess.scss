@@ -1,0 +1,242 @@
+.receivePaymentlayout {
+    font-family: 'Lato'!important;
+    color: #9c9090;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    .receivePayment {
+        background-color: #fefefe;
+        margin: auto;
+        color: #3e4664;
+        padding: 20px 40px;
+        width: 35rem;
+        border-radius: 10px;
+        min-height: 20rem;
+        position: relative;
+        .closeButton {
+            // float: right;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+        }
+        .rpHeader {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            .rpDate {
+                font-size: 14px;
+                color: #9c9090;
+                font-weight: 600;
+            }
+            .rphead {
+                padding-left: 9rem;
+                font-size: 20px;
+            }
+        }
+        .errorMsg {
+            font-size: 10px;
+            color: red;
+        }
+        .payMode {
+            display: flex;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .paymentDetail {
+            margin-bottom: 90px !important;
+        }
+        .paymentLayout {
+            padding-top: 25px;
+            margin-bottom: 10px;
+            .optionLayout {
+                padding-right: 30px;
+                padding-bottom: 20px;
+                font-size: 12px;
+                color: #3e4664;
+                .amountLabel {
+                    padding: 5px 5px 5px 2px;
+                    color: #9c9090;
+                    font-size: 14px;
+                    color: #3e4664;
+                }
+                .selectLayout {
+                    height: 41px;
+                    width: 8rem;
+                    border-radius: 6px;
+                    border: 1px solid #cecece;
+                    padding: 5px;
+                    font-size: 17px;
+                    color: #3e4664;
+                    .selectOptionLayout {
+                        height: 34px;
+                        width: 8rem;
+                    }
+                }
+                .inputAmountLabel {
+                    height: 30px;
+                    width: 8rem;
+                    border-radius: 6px;
+                    border: 1px solid #cecece;
+                    padding: 5px;
+                    font-size: 17px;
+                    color: #3e4664;
+
+                }
+                .penaltyLabel {
+                    width: 12rem;
+                }
+            }
+            .radioOption {
+                font-weight: 550;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                .radioText {
+                    font-size: 17px;
+                    padding-left: 5px;
+                }
+                input[type="radio"]:hover {
+                    border: 1px solid #00d95e;
+                }
+                input[type="radio"]:focus {
+                    border: 1px solid #00d95e;
+                }
+                input[type="radio"]:before {
+                    content: "";
+                    display: block;
+                    width: 50%;
+                    height: 50%;
+                    margin: 20% auto;
+                    border-radius: 50%;
+                }
+                input[type="radio"]:checked:before {
+                    background: #00d95e;
+                    border: 1px solid #00d95e;
+                    box-shadow: none;
+                }
+            }
+        }
+        .totalAmountLayout {
+            position: absolute;
+            bottom: 19px;
+            color: #9c9090;
+            .totalAmount {
+                color: #3e4664;
+                font-weight: bold;
+                font-size: 23px;
+                padding: 5px 0;
+            }
+        }
+        .totalAmount {
+            font-weight: bold;
+            font-size: 23px;
+            padding: 23px 0 5px 0px;
+            color: #3e4664;
+        }
+        .totalAmountText{
+            font-size: 14px;
+            padding: 5px 0 20px 0px;
+            color: #9c9090;
+            font-weight: 400;
+        }
+        .notPaidReasonBox {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .footerButton {
+            width: 10rem;
+            bottom: 25px;
+            position: absolute;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-around;
+            right: 0;
+            .buttonLayout {
+                cursor: pointer;
+                font-size: 13px;
+                padding: 6px 12px;
+                background: white;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 0px 1px 1px rgba(0, 0, 32, 0.1);
+                color: #3e4664;
+            }
+            .greenLayout {
+                background-color: #00d95e;
+                color: white;
+            }
+        }
+    }
+}
+
+.disabledButton {
+    opacity: 0.5;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: none;
+    padding: 1px;
+    // -ms-transform: scale(1.5); /* IE 9 */
+    // -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    // transform: scale(1.5);
+    cursor: pointer;
+}
+
+.tableLayout {
+    border-collapse: separate;
+    border-spacing: 0 3px;
+    width: 100%;
+    text-align: left;
+    .tableHead {
+        .headRow {
+            background: #989494;
+            height: 3rem;
+            .header {
+                display: table-cell;
+                padding-left: 10px;
+            }
+        }
+    }
+    .tableBodyRow {
+        border-collapse: collapse;
+        box-shadow: 0px 1px 4px 1px rgba(162, 133, 138, 0.66);
+        height: 3rem;
+        .tablePrimaryCol {
+            display: flex;
+            padding: 0 10px !important;
+            .tableImgDiv {
+                height: 30px;
+                width: 30px;
+                .tableImg {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+            .nameLayout {
+                padding-left: 12px;
+                .tableCustomerName {
+                    font-weight: bold;
+                }
+                .tableLoanId {
+                    font-size: 10px;
+                    margin-top: -4px;
+                    color: #a8b099;
+                }
+            }
+        }
+    }
+}

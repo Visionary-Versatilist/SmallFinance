@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_27561" data-name="Group 27561" transform="translate(-789 -531)">
+    <g id="Rectangle_2556" data-name="Rectangle 2556" transform="translate(789 531)" fill="#fff" stroke="#626cb2" stroke-width="1">
+      <rect width="50" height="50" rx="12" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" rx="11.5" fill="none"/>
+    </g>
+    <g id="credit-card-solid_1_" data-name="credit-card-solid (1)" transform="translate(799 541)">
+      <rect id="Rectangle_2566" data-name="Rectangle 2566" width="18.333" height="25" rx="0.96" transform="translate(27.5 5.833) rotate(90)" fill="none" stroke="#4d66f0" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_36060" data-name="Path 36060" d="M27,6H3.667A1.667,1.667,0,0,0,2,7.667V24.333A1.667,1.667,0,0,0,3.667,26H27a1.667,1.667,0,0,0,1.667-1.667V7.667A1.667,1.667,0,0,0,27,6Zm0,15H3.667V17.667H27Z" transform="translate(-0.333 -1)" fill="#4d66f0"/>
+      <rect id="Rectangle_2567" data-name="Rectangle 2567" width="30" height="30" fill="rgba(0,0,0,0)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,179 @@
+.allCustomerHeader{  
+    .Headerthing{
+    .ButtonDiv {
+        // margin-left: 70rem;
+        position: absolute;
+        right:4%;
+         
+        margin-top: 18px;
+        padding-left: 20px;
+        .adduserbutton {
+            text-transform: capitalize;
+            background-color: #00D95E !important;
+            color: #ffff;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+            height: 34px;
+            padding-top: 4px;
+            .plusiconButton{
+                padding-right: 5px;
+            }
+        }
+        .adduserbutton:hover {
+            text-transform: capitalize;
+            color: #ffff;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+            height: 34px;
+            padding-top: 4px;
+            background-color: #00D95E !important;
+            .plusiconButton{
+                padding-right: 5px;
+            }
+        }
+    }
+    }
+      .bar {
+          background-color: #ffff!important;
+          // color: black!important;
+          box-shadow: none!important;
+          .title{
+              text-align: left;
+              width: 31%;
+              padding-left: 6rem;
+          }
+          .OptionDiv{
+              width: 37%;
+              display: flex;
+              cursor: pointer;
+              .option{
+                  padding: 20px;
+                  text-decoration: none;
+                  color: #D4D4D5;
+              }
+              .option:hover{
+                  padding: 20px;
+                  text-decoration: none;
+                  color: #4D66F0 !important;
+              }
+          }
+          .searchDiv {
+              text-align: left;
+              display: flex;
+              width: 27%;
+              // margin-left: 30%;
+              background-color: #EFF2FF;
+              border-radius: 8px;
+              margin-right: 28px;
+          }
+          .MuiInputBase-root{
+            width: 76%;
+          }
+        
+          // .bttn {
+          //     width: 20%;
+          // }
+      }
+         
+          
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (min-width: 320px) and (max-width: 480px) {
+      .allCustomerHeader{  
+      .Headerthing{
+            .ButtonDiv {
+                position: relative;
+                right: null !important;
+                // margin-left: 70rem;
+               text-align: center;
+            }
+            }
+        
+            .bar { 
+                         
+              .searchDiv {
+                   width: 70%;
+                  margin-left: 23%;               
+              }            
+          }   
+          .MuiToolbar-root {
+              display: block;
+             
+          }    
+          }
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 767px) and (min-width: 481px) and (max-width: 767px) {
+      .allCustomerHeader{ 
+      .bar {          
+        .searchDiv {
+             width: 70%;
+                 }            
+    }    }       
+    }    
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width: 320px) {
+      .allCustomerHeader{  
+        .Headerthing{
+            .ButtonDiv {
+                position: relative;
+                right: null !important;
+                // margin-left: 70rem;
+               text-align: center;
+            }
+            }
+            .bar { 
+              .title{
+                  text-align: center;
+                  width: 31%;
+                  padding-left: 1rem;
+              }         
+              .searchDiv {
+                   width: 70%;
+                  margin-left: 23%;               
+              }            
+          }   
+          .MuiToolbar-root {
+              display: block;
+             
+          }        
+           
+          }
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) {
+      .allCustomerHeader{ 
+      .bar {          
+        .searchDiv {
+             width: 40%;
+                 }            
+    }            
+    }}
+    /* iPads (landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    }
+    /* iPads (portrait) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      /* STYLES GO HERE */
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen and (min-width: 1224px) {
+      /* STYLES GO HERE */
+    }
+    /* Large screens ----------- */
+    @media only screen and (min-width: 1824px) {
+      /* STYLES GO HERE */
+    }
+    /* iPhone 5 (portrait &amp; landscape)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) {
+      /* STYLES GO HERE */
+    }
+    /* iPhone 5 (landscape)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+      /* STYLES GO HERE */
+    }
+    /* iPhone 5 (portrait)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
+      /* STYLES GO HERE */
+    }

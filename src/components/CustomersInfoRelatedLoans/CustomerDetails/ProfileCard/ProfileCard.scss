@@ -1,0 +1,242 @@
+.ProfileCard {
+  // width: 2%;
+  background-color: #4d66f0;
+  color: white;
+  position: fixed;
+  width: 27%;
+
+  .InsideProfileCard {
+    .Header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      .BackArrow {
+        color: white;
+        cursor: pointer;
+      }
+      .PersonalInfo {
+        cursor: pointer;
+        .InfoLink {
+          font-size: 14px;
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+    .Profile {
+      display: block;
+      .ProfileCardLayout {
+        text-align: center;
+        display: block;
+        width: 60%;
+        padding: 25px 0;
+        margin: auto;
+        .ProfileImg {
+          height: 72px;
+          width: 72px;
+          border-radius: 50%;
+        }
+        .PersonName {
+          margin-top: 5px;
+          margin-bottom: 2px;
+          font-size: 22px;
+        }
+        .LoanNumber {
+          margin: 0;
+          text-align: left;
+          padding-left: 48px;
+          margin-top: 3px;
+          font-weight: 300;
+          font-size: 13px;
+        }
+        .Contact {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 15px;
+          .phoneNo {
+            margin: 0;
+            font-weight: 300;
+            padding-left: 19px;
+            font-size: 14px;
+          }
+          .ContactIcon {
+            height: 13px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .NextPayment {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      .PaymentLayout {
+        text-align: right;
+        width: 50%;
+        .PaidButton {
+          border: none;
+          color: white;
+          background-color: #00d95e;
+          padding: 10px 25px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: inline-block;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+        .NotPaidButton {
+          border: none;
+          color: white;
+          background-color: #c10707;
+          padding: 10px 50px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: inline-block;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+      }
+      .PaymentDetails {
+        text-align: left;
+        .PaymentHeader {
+          margin-top: 0;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        .PaymentHeader1 {
+          margin-top: 0;
+          font-size: 14px;
+          font-weight: 300;
+          color: lightgrey;
+        }
+        .PaymentHeader2 {
+          margin-top: 0;
+          font-size: 20px;
+          font-weight: 500;
+          padding-top: 10px;
+        }
+        .PaymentHeader3 {
+          margin-top: 3px;
+          font-size: 14px;
+          font-weight: 300;
+          color: lightgrey;
+          width: max-content;
+        }
+      }
+    }
+    .PreviousTransaction {
+      text-align: left;
+      padding: 10px;
+      .TransactionHisHeader {
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .TransactionHisBody {
+        overflow: auto;
+        height: 15rem;
+      }
+      .TransactionHisBody::-webkit-scrollbar {
+        display: none;
+      }
+      .historyCard {
+        display: flex;
+        padding: 10px 0px;
+        .calenderLayout {
+          font-size: 13px;
+          width: 40px;
+          max-height: 45px;
+          text-align: center;
+          border-radius: 5px;
+          background-color: #223abf;
+          padding-top: 2px;
+          font-weight: 300;
+        }
+        .InstallmentLayout {
+          padding-left: 10px;
+          max-height: 45px;
+          width: 35%;
+
+          .InstallmentHeader {
+            display: flex;
+            justify-content: space-between;
+            .Installment {
+              margin: 0;
+              font-size: 17px;
+              font-weight: 500;
+            }
+          }
+          .Payment {
+            font-size: 13px;
+            font-weight: 300;
+            width: max-content;
+            .PaymentText{
+              font-size: 13px;
+              color: lightgrey;
+              font-weight: 300;
+            }
+          }
+        }
+        .paymentStatus {
+          display: flex;
+          font-size: 13px;
+          width: 60%;
+          justify-content: space-between;
+          margin-left: auto;
+          text-align: right;
+          color: #3e4664;
+          font-weight: bold;
+          text-transform: capitalize;
+
+          .green {
+            color: #00d95e;
+          }
+          .red {
+            color: #c10707;
+          }
+          .reasonLayout {
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 11px;
+            color: white;
+            font-weight: 500;
+            position: relative;
+            .reason {
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dropDown {
+  width: 135px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 5px;
+  border: none;
+  select:first-child,
+  select#f {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // background: transparent url(“/images/deffusion_select_br_down.png”) no-repeat right center;
+    left: -5px !important;
+  }
+  .dropDownOption {
+    height: 35px;
+  }
+}
+
+.cancelReasonLayout {
+  color: white;
+  height: 8rem;
+  .innerLayout {
+    padding: 10px;
+  }
+}

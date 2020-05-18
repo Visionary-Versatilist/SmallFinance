@@ -1,0 +1,199 @@
+{
+  "EditProfileDetails": {
+    "title": "Edit Profile",
+    "fname": "First name",
+    "lname": "Last name",
+    "phone": "Mobile number",
+    "email": "Email ID",
+    "lang": "Language",
+    "link": "Update Password?"
+  },
+  "UpdateAdminPassword": {
+    "title": "Edit Profile",
+    "subtitle": "Update Password",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "password": "Password"
+  },
+  "ProfileModal": {
+    "signout": "SignOut",
+    "Company": "Company Profile",
+    "Management": "User Management"
+  },
+  "CompanyProfile": {
+    "title": "Company Profile",
+    "cName": "Company Name",
+    "employees": "Number of employees",
+    "website": "Website",
+    "Address": "Address",
+    "country": "Country",
+    "subtitle": "Edit"
+  },
+  "UserManagement": {
+    "title": "User Management",
+    "Button": "Add User",
+    "Export": "Export to",
+    "member": "Members"
+  },
+  "AddUser": {
+    "Cat": "Category",
+    "Button": "Add User Page"
+  },
+  "FAQ": {
+    "title": "FAQs (Frequently asked Questions)",
+    "questions": [
+      {
+        "que": "Does Lendstack give out loans?",
+        "ans": "Lendstack doesn’t give out loans. Lendstack is a platform used by small and individual lenders to manage their lending process."
+      },
+      {
+        "que": "Why does Lendstack need to verify my details?",
+        "ans": "In some instances, we’re required to collect, verify and maintain certain information to help prevent potential fraud. We treat this information as extremely sensitive and take privacy and security for seriously"
+      },
+      {
+        "que": "As a lender what details can I request from my clients?",
+        "ans": "Apart from the contact information to create a profile, Lendstack leaves a lot up to you. However, you can select the which details you want to request from your client."
+      },
+      {
+        "que": "Can a borrower be a lender?",
+        "ans": "Yes, a borrower can be a lender as long as you have the capital to lend out."
+      },
+      {
+        "que": "Why did I not get a verification mail?",
+        "ans": "This is usually down to emails being considered junk or spam. Check your mailbox junk or spam folder. You can also contact our support for further assistance"
+      }
+    ]
+  },
+  "MessagingServices": {
+    "title": "Messaging Services",
+    "content": "Your Messaging Platform Coming Soon..."
+  },
+  "DeleteUser": {
+    "content": "Are you sure to Delete?"
+  },
+  "Dashboard": {
+    "Daily": "Daily Collection",
+    "Weekly": "Weekly Collection",
+    "Monthly": "Monthly Collection",
+    "Penality": "Penalty Collection",
+    "Agent": "Collection Agents",
+    "Graphname": "Collections",
+    "Days": "Daily",
+    "Months": "Monthly",
+    "Graphnames": "Status",
+    "secgraphtext": "Today",
+    "collamt": "Collected amt.",
+    "dueamt": "Due amt.",
+    "overamt": "Overdue amt."
+  },
+  "NewCustomer": {
+    "addbutton": "Add Customer",
+    "verifybtn": "Verify",
+    "addloanbtn": "Add loan",
+    "verify": "Verified",
+    "notver": "Not Verified",
+    "Date": "Created Date",
+    "loans": "No. of Loans"
+  },
+  "AddCustomer": {
+    "title": "New Customers",
+    "subtitle": "Add New Customer",
+    "fCard": "General Details",
+    "fname": "First Name",
+    "lname": "Last Name",
+    "gen": "Gender",
+    "genM": "Male",
+    "genF": "Female",
+    "genT": "Transgender",
+    "Dob": "DOB",
+    "phone": "Mobile Number",
+    "momname": "Mother's Name",
+    "dadname": "Father's Name",
+    "status": "Marital Status",
+    "stS": "Single",
+    "stMr": "Married",
+    "stDiv": "Divorced",
+    "stWid": "Widow",
+    "stWider": "Widower",
+    "email": "Email Id",
+    "depname": "Number of Dependents",
+    "annincome": "Annual Income",
+    "majscr": "Major Source of Income",
+    "addar": "Aadhaar Card Number",
+    "pan": "PAN Card Number",
+    "pic": "Photo",
+    "blank": "Blank / Cancelled Cheque",
+    "sCard": "Address Details",
+    "address": "Home Address",
+    "offaddrss": "Office/Commercial Address",
+    "check": "Same as Home Address",
+    "ThCard": "Collection Details",
+    "place": "Collection Place",
+    "time": "Collection Time",
+    "FCard": "Bank Details",
+    "bname": "Bank Name",
+    "ifsc": "IFSC / SWIFT Code",
+    "accnum": "Account Number",
+    "acctype": "Account Type",
+    "fifthCrad": "Reference Details",
+    "refname": "Reference 1 - Name",
+    "refphone": "Reference 1 - Contact Number",
+    "reffname": "Reference 2 - Name",
+    "reffphone": "Reference 2 - Contact Number",
+    "sixCard": "Proof ID",
+    "personalinfo": "Personal Info"
+  },
+  "sendMsg": {
+    "content": "Type Your Message Here"
+  },
+  "AddLoanType": {
+    "title": "Loan",
+    "subtitle": "Add Loan Type",
+    "Type": "Loan Type",
+    "amtrange": "Loan amount range",
+    "intrstrange": "Rate of interest range",
+    "tenuremonrange": "Loan Tenure months range",
+    "tenureweekrange": "Loan Tenure weeks range",
+    "tenuredayrange": "Loan Tenure days range",
+    "edit":"Edit"
+  },
+  "Loans":{
+    "Date":"Due Date",
+    "Collseq":"Collection Seq.",
+    "all":"All",
+    "due":"Due",
+    "over":"Overdue",
+    "open":"Open",
+    "close":"Closed",
+    "cancel":"Cancelled",
+    "anytime":"Any Time",
+    "filter":"Filter",
+    "buttn":"Add Loan",
+    "weeks":"Weekly",
+    "custmDate":"Custom date range",
+    "clear":"Clear Date"
+  },
+  "AddLoan":{
+    "title":"Loans",
+    "subtitle":"Add Loan",
+    "tenure":"Loan Tenure",
+    "method":"Method",
+    "amount":"Loan Amount",
+    "penality":"Penalty",
+    "instal":"Installment",
+    "date":"Start Date",
+    "customer":"Choose Customer",
+    "buttn1":"Calculate",
+    "buttn2":"Reset",
+    "tablename":"Amortisation Schedule",
+    "agents":"Assign to Collection Agent",
+    "monrange":"Monthly Range Is:",
+    "amtrange":"NOTE: Amount Range is",
+    "moratorm":"Moratorium",
+    "loandate":"Date of Loan",
+    "emi":"Rate of Interest",
+    "value":"Value after moratorium",
+    "circle":"Total amt. to be paid"
+  }
+}

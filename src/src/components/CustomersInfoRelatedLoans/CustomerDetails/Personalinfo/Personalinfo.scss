@@ -1,0 +1,192 @@
+.personInfoScrolling {
+  .personalinfocomponent {
+    .mainDiv {
+      background-color: #4d66f0;
+      text-align: center;
+      color: #fff;
+      .TopDiv {
+        display: flex;
+        margin: 7px;
+        margin-top: 1rem;
+        cursor: pointer;        
+        .firstTopDiv {
+          width: 62%;
+          text-align: left;
+         .personalLoanNumber {
+            border: 1px black;
+            color: black;
+            background-color: azure;
+            font-weight: 500;
+          }
+        }
+        .secTopDiv {
+          text-decoration: underline;
+          font-size: 0.7rem;
+        }
+      }
+      .secDiv {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .secDivOne {
+        width: 53%;
+        text-align: left;
+        margin: 0 auto;
+        // padding: 20px;
+        .thirdDiv {
+          margin-bottom: 15px;
+          font-size: 1.5rem;
+        }
+        .fourthDiv {
+          .incomefield {
+            width: 84% !important;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            height: 30px;
+            background-color: azure;
+            .MuiInput-root {
+              width: 100%;
+            }
+            .MuiInput-root:focus {
+              width: 100%;
+              background-color: transparent;
+            }
+          }
+          .incomefield:focus {
+            background-color: transparent;
+            width: 84%;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+          }
+          font-size: 1rem;
+          text-align: left;
+        }
+        .fifthDiv {
+          font-size: 0.8rem;
+          text-align: left;
+        }
+        .MobileNumberDiv {
+          display: flex;
+          margin-top: 1rem;
+          font-size: 12px;
+          .callIcon{
+            filter:brightness(200%);
+          }
+          .messageIcon {
+            filter:brightness(200%);
+            margin-left: 2rem;
+          }
+        }
+      }
+      .sixthDivTop {
+        margin-left: 16px;
+        margin-right: 16px;
+        .sixthDiv {
+          margin-top: 3rem;
+          display: flex;
+
+          .sixthDivone {
+            text-align: left;
+            font-size: 12px;
+          }
+        }
+        .PaidButton {
+          background-color: rgb(1, 185, 81);
+          border-radius: 5px;
+          height: 27px;
+          margin-left: 3.6rem;
+          .firstbtn {
+            font-size: 10px;
+            color: #fff;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+        }
+        .NotPaidButton {
+          background-color: rgb(199, 38, 10);
+          border-radius: 5px;
+          margin-top: 1rem;
+          height: 27px;
+          margin-left: 3.6rem;
+          .secondbtn {
+            font-size: 10px;
+            color: #fff;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .sevenDiv {
+        text-align: left;
+        margin-top: 1.5rem;
+        color: rgb(219, 213, 213);
+        margin-bottom: 10px;
+        font-size: 10px;
+      }
+      .eightDiv {
+        text-align: left;
+      }
+      .nineDiv {
+        text-align: left;
+        display: flex;
+        font-size: 11px;
+        margin-top: 5px;
+        margin-bottom: 5rem;
+        .nineDivText {
+          font-size: 11px;
+          font-weight: 300;
+          color: rgb(233, 231, 231);
+        }
+
+        .nineDivLetter {
+          font-size: 10px;
+          color: #fff;
+        }
+      }
+      .tenthDiv {
+        text-align: left;
+        font-size: 13px;
+      }
+      .elevenDiv {
+        display: flex;
+        margin-top: 1rem;
+        .elevenDivone {
+          background-color: #223abf;
+          border-radius: 5px;
+          width: 2rem;
+          // font-size: 12px;
+        }
+        .elevenDivtwo {
+          padding-left: 0.8rem;
+          .elevenDivtwoone {
+            display: flex;
+            .elevenDivtwooneone {
+            }
+            .elevenDivtwoonetwo {
+              margin-top: -1rem;
+              font-size: 13px;
+              color: rgb(77, 71, 71);
+              .elevenDivtwoonetwoLabel {
+                font-size: 1.9rem;
+                color: rgb(77, 71, 71);
+              }
+            }
+          }
+          .elevenDivtwotwo {
+            display: flex;
+            margin-top: 3px;
+            text-align: left;
+            .elevenDivtwotwoone {
+              font-size: 10px;
+              font-weight: 500;
+            }
+            .elevenDivtwotwoTwo{
+              color: #c6cac9;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

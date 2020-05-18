@@ -1,0 +1,364 @@
+
+.addloancomponent{
+    background-color: #FBFCFF;
+    .xyz{
+        margin-left: auto;
+        width: 15%;
+        margin-right: 6.5rem;
+        margin-bottom: 12px;
+    .LaontypeEntryDiv{
+        // float: right;
+        // // width:20%;
+        // padding-right: 60px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        .MuiSelect-icon{
+            right: -27px !important;
+        }
+        .MuiFormControl-root{
+            width: 85%;
+        }
+    }
+}
+.cardDiv {
+    margin: 7.6%;
+    margin-top: 0%;
+    margin-bottom: 28px;
+    margin-left: 12%;
+    padding-bottom: 2rem;
+    // padding-left: 3rem;
+    // padding-right: 3rem;
+
+.imgPreview{
+  text-align: center;
+  margin: auto;
+  margin-top:5%;
+  height: 134px;
+  width: 134px;
+  border: 1px solid #D4D4D5;
+  border-radius:100px;
+  position: relative;
+  img{
+        width: 134px;
+        height: 134px;
+        border-radius:100px;
+      }
+  .fileInput{
+    cursor: pointer;
+    border-radius:100px;
+    height: 134px;
+    width: 134px;
+    opacity:0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+.MuiInput-root {
+    position: relative;
+    // border: 1px solid #D4D4D5!important;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.InputLabel{
+    margin-bottom: 10px;
+    font-weight: 400;
+    margin-top:20px;
+    color: #8E8E98;
+}
+.MuiFormControl-root{
+    width: 29%;
+}
+.cameradefault {
+    position: absolute;
+    left: 53%;
+    bottom: 11%;
+}
+.categorytextFieldStyle {
+    // #standard-select {
+        .MuiInput-root{
+            width:100%;         
+        // }
+    }
+    .MuiSelect-select{
+        text-align: left;
+    }
+    .MuiSelect-select:focus{
+        background-color: transparent;
+    }
+}
+.savebutton {
+    background-color: #4D66F0;
+    text-transform: capitalize;
+    color: #fff;
+    height: 33px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    position: relative;
+    // left: 45px;
+}
+.cancelbutton {
+    border: 1px solid #E4E4E4;
+    text-transform: capitalize;
+    color: #8E8E98;
+    height: 33px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    margin: 3%;
+    position: relative;
+    // left: 45px;
+}
+.RadioDiv{
+    padding-left: 4rem;
+}
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid lightgray;
+    border-radius:50%;
+    outline:none;
+    box-shadow:none;
+    padding: 1px;
+    // -ms-transform: scale(1.5); /* IE 9 */
+    // -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    // transform: scale(1.5); 
+    cursor: pointer;
+}
+input[type='radio']:hover {
+    border:1px solid #00D95E;
+}
+input[type='radio']:focus {
+    border:1px solid #00D95E;
+}
+input[type='radio']:before {
+    content:'';
+    display:block;
+    width:50%;
+    height:50%;
+    margin: 20% auto;    
+    border-radius:50%;    
+}
+input[type='radio']:checked:before {
+    background:#00D95E;
+    border:1px solid #00D95E;
+    box-shadow:none;
+
+}
+.radio-item{
+    display: flex
+}
+.MuiFormControl-marginNormal{
+    margin-top: 0px;
+    width:84%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    .MuiInput-root{
+        width: 100%
+    }
+}
+.Loan {
+    .incomefield{
+        .MuiInput-root{
+            width: 100%;
+        }
+    }
+}
+.output{
+    border: none;
+    color: #4D66F0;
+    // padding-top: 9px;
+    // padding-right: 8px;
+    width: 93px;
+    outline: none;
+    text-align: center;
+}
+.output:focus{
+    border: none;
+    color: #4D66F0;
+    padding-top: 9px;
+    padding-right: 8px;
+    width: 71px;
+    outline: none;
+
+}
+.MoneyDisplay {
+    margin-right: 18rem;
+}
+.Money{
+    color:#3E4664;
+    font-weight:900;
+    font-size:14px;
+}
+.monthlySelect {
+    height: fit-content;
+    background-color: #EFF2FF;
+    border-radius: 3px;
+    border: none;
+    padding: 3px;
+    font-family: 'Lato';
+    font-size: 12px;
+    margin-top: 18px;
+    margin-left: 16px;
+    outline: none
+}
+.monthlySelect:focus {
+    height: fit-content;
+    background-color: #EFF2FF;
+    border-radius: 3px;
+    border: none;
+    padding: 3px;
+    font-family: 'Lato';
+    font-size: 12px;
+    margin-top: 18px;
+    margin-left: 16px;
+    outline: none
+}
+.outputDiv {
+    width: 110px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    height: 32px;
+    padding-left: 13px;
+    margin-left: auto;
+    margin-right: 13px;
+    margin-top: auto;
+}
+.TotalMoney{
+    height: 164px;
+    width:164px;
+    border-radius: 100%;
+    background-image: linear-gradient(to bottom left, #00D95E ,#4277DB );
+    margin-left: 8rem;
+    margin-top: 5rem;
+    .displaytotalmoney {
+        background-color: transparent;
+        margin-top: 3.5rem;
+        border: none;
+        height: 3rem;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-size: 22px;
+        width: 10rem;
+        outline: none
+    }
+    .displaytotalmoney:focus {
+        outline: none
+    }
+    .displaytotalmoney::placeholder {
+        color: white
+    }
+}
+.instalment{
+    display: inline-block;
+    margin-left: 9rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+}
+.cardDiv2{
+    margin: 7.6%;
+    margin-top: 0%;
+    margin-bottom: 28px;
+    margin-left: 12%;
+.Roww {
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0, -11.12);
+    .switchBtton {
+        color: #00D95E;
+    }
+}
+.Roww:hover {
+    background-image: linear-gradient(to right, #00D95E ,#4277DB );
+    .changetext {
+        color: #ffff !important;
+    }
+    
+} 
+.MuiTableCell-root{
+    padding:2px 22px 2px 22px !important;
+    font-weight: 400;
+}
+.MuiTableCell-alignRight {
+    text-align: left;
+}
+.MuiTableCell-head {
+    color: #B2B2B2 !important;
+}
+.MuiTableCell-body{
+    color: #3E4664 !important;
+    font-weight: 400;
+}
+}
+.cardDiv3 {
+    margin: 7.6%;
+    margin-top: 0%;
+    margin-bottom: 28px;
+    margin-left: 12%;
+    padding-bottom: 10rem;
+    background-color: #FBFCFF;
+    border: none;
+    box-shadow: none;
+    .assign{
+        margin-top: 3rem;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3E4664;
+    }
+    .field  {
+        background-color: #fff;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0);
+        .MuiInput-root{
+            width: 100%;
+        }
+    }
+    .save {
+        background-color: #00D95E;
+        text-transform: capitalize;
+        color: #fff;
+        height: 33px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 2px;
+        position: relative;
+        // margin-right: 6.5rem;
+    }
+        .save:hover {
+            background-color: #00D95E;
+            text-transform: capitalize;
+            color: #fff;
+            height: 33px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 2px;
+            position: relative;
+            // margin-right: 6.5rem;
+        }
+    .cancel {
+        border: 1px solid #E4E4E4;
+        text-transform: capitalize;
+        color: #8E8E98;
+        height: 33px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        margin: 2%;
+        position: relative;
+    }
+    
+}
+.aboutfield{
+    padding-left: 5px;
+    padding-top: 8px;
+    text-transform: capitalize;
+}
+.textBox {
+    width: 80%;
+    border-radius: 5px;
+    color:#DEDEDF
+}
+
+}

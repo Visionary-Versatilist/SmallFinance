@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="Group_27747" data-name="Group 27747" transform="translate(-590 -273)">
+    <g id="dot-circle-line_1_" data-name="dot-circle-line (1)" transform="translate(590 273)">
+      <path id="Path_36068" data-name="Path 36068" d="M9,16a7,7,0,1,1,7-7A7,7,0,0,1,9,16Zm.994-9.343c-3.383,0,3.921,2.653,3.921,6.035S5.617,15.125,9,15.125,5.712,10.349,5.712,6.966,13.377,6.657,9.994,6.657Z" transform="translate(-2 -2)" fill="#c10707"/>
+    </g>
+    <g id="window-close-line" transform="translate(567.427 250.103)">
+      <path id="Path_35747" data-name="Path 35747" d="M12.43,12.033,14.86,9.6a.333.333,0,0,0-.47-.47l-2.43,2.43L9.53,9.13a.333.333,0,0,0-.47.47l2.43,2.433-2.433,2.43a.333.333,0,1,0,.47.47L11.96,12.5l2.43,2.43a.333.333,0,0,0,.47-.47Z" transform="translate(17.632 17.848)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+.cardDiv2 {
+    margin-left: 7.5rem;
+    margin-right: 4rem;
+    .AddloanButton {
+        background-color: transparent;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: 1px solid #00D95E;
+        color: #00D95E;
+        border-radius: 5px;
+        height: 29px;
+        cursor: pointer;
+        .plusgreenButton{
+            margin-bottom: -3px;
+            margin-right: 5px;
+            width: 16px;
+        }
+    }
+    .nameDiv{
+        padding-top: 9px;
+        padding-left: 10px;
+        text-transform: capitalize;
+        font-weight: 900;
+    }
+    .MuiAvatar-colorDefault{
+        background-color: transparent;
+    }
+    .MuiTableCell-root{
+        padding:2px 22px 2px 22px !important;
+    }
+    .Roww {
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0, -11.12);
+        // .switchBtton {
+        //     color: #00D95E;
+        // }
+    }
+}

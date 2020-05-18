@@ -1,0 +1,308 @@
+.collectionfilterbuttonpage {
+  .filterButton {
+    // background: #f6f6f6 !important;
+    // border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: grey !important;
+    border: 1px solid lightgrey;
+    font-size: 0.875rem;
+    position: relative;
+    float: right;
+    margin-right:20px;
+  }
+  .filterImg {
+    padding-left: 10px;
+  }
+  .hoverMenu {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 19px;
+    // right:35px;
+    width:219px;
+    padding-inline-start: 0px;
+    .menuList {
+      list-style-type: none;
+      padding: 13px 13px;
+      text-align: left;
+      background: #50648c;
+      position: relative;
+      .floatRightIcon {
+        float: right;
+        padding-left: 15px;
+      }
+      .subList {
+        display: none;
+        top:0px;
+        position: absolute;
+        color: #fff;
+        border-radius: 5px;
+        padding-inline-start: 0px;
+        left:-200px;
+        width:200px;
+        .subListMenu {
+          list-style-type: block;
+          padding: 13px 15px;
+          text-align: left;
+          background: #50648c;
+        }
+        .subListMenu:hover{
+          background: #ccc;
+        }
+      }
+    }
+    .menuList:hover {
+      background: #ccc;
+      .subList {
+        display: block;
+      }
+    }
+  }
+  .hoverFunction:hover {
+    .hoverMenu {
+      display: block;
+    }
+    .filterButton {
+      background: #50648c !important;
+      color: #fff;
+    }
+  }
+  .MuiBadge-badge{
+    right: 22px !important;
+  }
+}
+.menuIcon{
+  float: right;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (min-width: 320px) and (max-width: 480px) {
+  .collectionfilterbuttonpage {
+    .filterButton {
+      // background: #f6f6f6 !important;
+      // border: none;
+      border-radius: 5px;
+      padding: 8px 20px;
+      background-color: transparent;
+      color: grey !important;
+      border: 1px solid lightgrey;
+      font-size: 0.875rem;
+      position: relative;
+      float: right;
+      // margin-right:35px;
+    }
+    .filterImg {
+      padding-left: 10px;
+    }
+    .hoverMenu {
+      display: none;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 19px;
+      // right:35px;
+      width:219px;
+      padding-inline-start: 0px;
+  
+      .menuList {
+        list-style-type: none;
+        padding: 13px 13px;
+        text-align: left;
+        background: #50648c;
+        position: relative;
+        .floatRightIcon {
+          float: right;
+          padding-left: 15px;
+        }
+        .subList {
+          display: none;
+          top:0px;
+          position: absolute;
+          color: #fff;
+          border-radius: 5px;
+          padding-inline-start: 0px;
+          left:-200px;
+          width:200px;
+          .subListMenu {
+            list-style-type: block;
+            padding: 13px 15px;
+            text-align: left;
+            background: #50648c;
+          }
+          .subListMenu:hover{
+            background: #ccc;
+          }
+        }
+      }
+      .menuList:hover {
+        background: #ccc;
+        .subList {
+          display: block;
+        }
+      }
+    }
+  
+    .hoverFunction:hover {
+      .hoverMenu {
+        display: block;
+      }
+      .filterButton {
+        background: #50648c !important;
+        color: #fff;
+      }
+    }
+  }
+  .menuIcon{
+    float: right;
+  }
+  
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) and (min-width: 481px) and (max-width: 767px) {
+  .collectionfilterbuttonpage {
+    .filterButton {
+    width: 100px;
+    }
+    .filterImg {
+      padding-left: 10px;
+    }
+    .hoverMenu {
+      display: none;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 19px;
+      // right:35px;
+      width:219px;
+      padding-inline-start: 0px;
+  
+      .menuList {
+        list-style-type: none;
+        padding: 13px 13px;
+        text-align: left;
+        background: #50648c;
+        position: relative;
+        .floatRightIcon {
+          float: right;
+          padding-left: 15px;
+        }
+        .subList {
+          display: none;
+          top:0px;
+          position: absolute;
+          color: #fff;
+          border-radius: 5px;
+          padding-inline-start: 0px;
+          left:-200px;
+          width:200px;
+          .subListMenu {
+            list-style-type: block;
+            padding: 13px 15px;
+            text-align: left;
+            background: #50648c;
+          }
+          .subListMenu:hover{
+            background: #ccc;
+          }
+        }
+      }
+      .menuList:hover {
+        background: #ccc;
+        .subList {
+          display: block;
+        }
+      }
+    }
+  
+    .hoverFunction:hover {
+      .hoverMenu {
+        display: block;
+      }
+      .filterButton {
+        background: #50648c !important;
+        color: #fff;
+      }
+    }
+  }
+  .menuIcon{
+    float: right;
+  }
+  
+ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  .customerMainHeader{
+  .Customerheader{    
+      .bar { 
+          .title{
+              text-align: center;
+              width: 31%;
+              padding-left: 1rem;
+          }         
+          .searchDiv {
+               width: 70%;
+              margin-left: 23%;               
+          }            
+      }   
+      .MuiToolbar-root {
+          display: block;
+         
+      }         
+  }
+}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) {
+  .customerMainHeader{
+  .Customerheader{    
+      .bar {          
+          .searchDiv {
+               width: 40%;
+                   }            
+      }            
+   } }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/* STYLES GO HERE */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+/* STYLES GO HERE */
+.Customerheader{    
+  .bar {          
+      .searchDiv {
+           width: 30%;
+               }            
+  }            
+}
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .Customerheader{    
+      .bar {          
+          .searchDiv {
+               width: 25%;
+                   }            
+      }            
+  }
+}
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) {
+/* STYLES GO HERE */
+}
+/* iPhone 5 (landscape)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+/* STYLES GO HERE */
+}
+/* iPhone 5 (portrait)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
+/* STYLES GO HERE */
+}

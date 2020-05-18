@@ -1,0 +1,135 @@
+// .deleteuserpage{
+    .dialogboxnotpaid{
+        padding:10%;
+        border-radius: 5%;
+        .MuiDialog-paperWidthSm{
+            // position: absolute!important;
+            left:0% !important;
+            top:0% !important;
+            // align-items: center;
+            // justify-content: center;
+            margin: 0 auto;
+            padding: 2rem 4rem 2rem 4rem;
+            width: 550px;
+            height: 20rem;
+        }
+        .MuiDialog-paperScrollPaper{
+            max-height: calc(100% - 2px);
+        }
+        .MuiFormControl-root{
+            min-width: 100%;
+            border: 1px solid lightgrey;
+            border-radius: 2px;
+            margin-top: 3px;
+        }
+        .TitleDiv1{
+            height: auto !important;
+            padding:0rem !important;
+            right:0rem;
+            .mainTitleDiv{
+                margin: 0rem;
+                width: 100%;
+                text-align: center;
+                font-size: 1.3rem;
+                //  padding-left: 10.7rem;
+                margin-top: -0.5rem !important;
+                color: rgb(100, 100, 104);
+            }
+            .headerDiv1{
+                display:flex;
+                height: 50px;
+                .dateDiv{
+                    float: left;
+                    margin:0rem;
+                    margin-top: -22px;
+                    font-size:0.9rem;
+                    color: #8E8E98;
+                    font-weight: 100;
+                }
+               
+                .closeButtonDiv{
+                    position: absolute;
+                            right: 4px;
+                            top: 4px;
+                            bottom: 0;
+                            color: rgb(100, 100, 104);
+                }
+            }
+            
+            .numaricTextField{
+                display:flex;
+                width:100%;
+                .numariconeone{
+                        .numariconeoneText1{
+                            margin:0rem;
+                            font-size: 27px;
+                            color: rgb(100, 100, 104);
+    
+                        }
+                        .numariconeoneText2{
+                            margin:0rem;
+                            font-size: 15px;
+                            color: rgb(201, 201, 201);
+                        }
+                        .numarictextBox{
+                            border: 1px solid rgb(155, 152, 152);
+                            width:550px;
+padding: 10px;
+                            // height: 50px;
+                           border-radius: 7px;
+                        }
+                    }
+                }
+                    .textBox{
+                        width:90%;
+                        border-radius: 5%;
+                    }
+                
+                    .InputLabel{
+                        width: 74%;
+                        margin-bottom: 0px;
+                        font-weight: 400;
+                        margin-top:45px;
+                        color: #8E8E98;
+                        .textBox{
+                            border:1px solid #D4D4D5 ;
+                        }
+                    }
+            
+            }
+        
+        .bottomPart {
+            text-align: end;
+            width:100%;
+            padding:0rem !important;
+            padding-top: 1rem !important;
+             margin-top: 2rem;
+          
+            .bottomDivtwo{
+                display:flex;
+                position: absolute;
+                right:5rem;
+            }
+            .cancelbutton{
+                border: 1px solid #E4E4E4;
+                text-transform: capitalize;
+                color: #8E8E98;
+                height: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 2px;
+                margin: 3%;
+            }
+            .savebutton{
+                background-color: #00D95E;
+                text-transform: capitalize;
+                color: #fff;
+                height: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 2px;
+                margin: 3%;
+            }
+        }
+    }
+    // }

@@ -17,7 +17,7 @@
     "password": "Password"
   },
   "ProfileModal": {
-    "signout": "Sign Out",
+    "signout": "Logout",
     "Company": "Company Profile",
     "Management": "User Management"
   },

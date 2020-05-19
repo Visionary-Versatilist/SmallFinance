@@ -3225,7 +3225,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.fname')}<span className="req">*</span></h6>
                                             <div className={'form-group' + (submitted && !firstname ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input className="textBox" type="text" required className="form-control" name="firstname" value={this.state.firstname || ''} style={{ height: '41px', border: this.state.firstnamee }} onClick={this.firstnameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ firstname: event.target.value }) }} />
+                                                <Input className="textBox" type="text" required className="form-control" name="firstname" placeholder="Given Name / Middle Name" value={this.state.firstname || ''} style={{ height: '41px', border: this.state.firstnamee }} onClick={this.firstnameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ firstname: event.target.value }) }} />
                                                 {submitted && !firstname &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>First name is required</div>
                                                 }
@@ -3234,7 +3234,7 @@ class AddCustomer extends Component {
                                         <div className="numaricTextField" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }}>{t('AddCustomer.lname')}<span className="req">*</span></h6>
                                             <div className={'form-group' + (submitted && !lastname ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input type="text" required className="form-control" name="lastname" value={this.state.lastname || ''} className="textBox" style={{ height: '41px', border: this.state.secondname, marginLeft: '70px' }} onClick={this.secondnameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lastname: event.target.value }) }} />
+                                                <Input type="text" required className="form-control" name="lastname" placeholder="Family Name / Surname" value={this.state.lastname || ''} className="textBox" style={{ height: '41px', border: this.state.secondname, marginLeft: '70px' }} onClick={this.secondnameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lastname: event.target.value }) }} />
                                                 {submitted && !lastname &&
                                                     <div className="help-block" style={{ marginLeft: "4.5rem" }}>Last name is required</div>
                                                 }
@@ -3277,7 +3277,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.phone')}<span className="req">*</span></h6>
                                             <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <input type="text" minlength="0" maxlength="10" className="textBox" required className="form-control" name="mobilenum" value={this.state.mobilenum || ''} style={{ height: '41px', border: this.state.mobnumber, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.mobnumberBox} onChange={this.validNum} />
+                                                <input type="text" minlength="0" maxlength="10" className="textBox" required className="form-control" name="mobilenum" placeholder="10-digit mobile number without prefixes" value={this.state.mobilenum || ''} style={{ height: '41px', border: this.state.mobnumber, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.mobnumberBox} onChange={this.validNum} />
                                                 <span style={{ display: this.state.numError, paddingLeft: "4.5rem" }} className="help-block">Mobile number must be 10 digit.</span>
                                                 {submitted && !mobilenum &&
                                                     <div className="help-block" style={{ marginLeft: "4.5rem" }}>Mobile number is required</div>
@@ -3289,11 +3289,11 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont">{t('AddCustomer.momname')}</h6>
-                                            <Input className="textBox" value={this.state.motherssname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ motherssname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="Full Name" value={this.state.motherssname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ motherssname: event.target.value }) }} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.dadname')}</h6>
-                                            <Input className="textBox" value={this.state.fathersname || ''} style={{ height: '41px', border: this.state.fathername, marginLeft: '70px' }} onClick={this.fathernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fathersname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="Full Name" value={this.state.fathersname || ''} style={{ height: '41px', border: this.state.fathername, marginLeft: '70px' }} onClick={this.fathernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fathersname: event.target.value }) }} />
                                         </div>
                                     </div>
                                     <div className="textFieldStyle">
@@ -3330,7 +3330,7 @@ class AddCustomer extends Component {
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.depname')}</h6>
-                                            <Input className="textBox" type="number" value={this.state.dependentname || ''} style={{ height: '41px', border: this.state.dependname, marginLeft: '70px' }} onClick={this.dependnameBox} onChange={(event) => { this.setState({ dependentname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="Number of Family Members" type="number" value={this.state.dependentname || ''} style={{ height: '41px', border: this.state.dependname, marginLeft: '70px' }} onClick={this.dependnameBox} onChange={(event) => { this.setState({ dependentname: event.target.value }) }} />
                                         </div>
                                     </div>
                                     <div style={{ display: 'flex' }}>
@@ -3360,18 +3360,18 @@ class AddCustomer extends Component {
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.majscr')}</h6>
-                                            <Input className="textBox" value={this.state.majorsource || ''} style={{ height: '41px', border: this.state.major, marginLeft: '70px' }} onClick={this.majorBox} onChange={(event) => this.setState({ majorsource: event.target.value })} />
+                                            <Input className="textBox" placeholder="E.g. Storekeeper, Vendor, Salaried, etc." value={this.state.majorsource || ''} style={{ height: '41px', border: this.state.major, marginLeft: '70px' }} onClick={this.majorBox} onChange={(event) => this.setState({ majorsource: event.target.value })} />
                                         </div>
                                     </div>
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.addar')}</h6>
-                                            <Input className="textBox"  value={this.state.adharcard || ''} style={{ height: '41px', border: this.state.adhar }} onClick={this.adharBox} onChange={this.validAdhar} />
+                                            <Input className="textBox" placeholder="12 digits [0-9] Aadhar Number"  value={this.state.adharcard || ''} style={{ height: '41px', border: this.state.adhar }} onClick={this.adharBox} onChange={this.validAdhar} />
                                             <span style={{ display: this.state.adharError }} className="help-block">Invalid aadhar number.</span>
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.pan')}</h6>
-                                            <input type="text" minlength="0" maxlength="10" className="textBox" value={this.state.pancard || ''} style={{ height: '36px', border: this.state.pan, width:'84%', borderRadius: "5px", marginLeft: '70px', paddingLeft: "10px" }} onClick={this.panBox} onChange={this.validPan} required />
+                                            <input type="text" minlength="0" maxlength="10" className="textBox" placeholder="digits [0-9] and alphabets [A-Z]" value={this.state.pancard || ''} style={{ height: '36px', border: this.state.pan, width:'84%', borderRadius: "5px", marginLeft: '70px', paddingLeft: "10px" }} onClick={this.panBox} onChange={this.validPan} required />
                                             <span style={{ display: this.state.panError, paddingLeft: "4.5rem" }} className="help-block">Invalid pan number.</span>
                                         </div>                                       
                                     </div>
@@ -3420,7 +3420,7 @@ class AddCustomer extends Component {
                                     <div className="textFieldStyle" style={{ width: '100%' }}>
                                         <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.address')}</h6>
                                         <div className={'form-group' + (submitted && !homeAddressLine ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                            <Input className="textBox" required className="form-control" name="homeAddressLine" placeholder="Flat / House No. / Floor / Building / Colony" value={this.state.homeAddressLine} style={{ height: '41px', border: this.state.flat }} onClick={this.flatBox} onChange={(event) => this.setState({ homeAddressLine: event.target.value })} />
+                                            <Input className="textBox" required className="form-control" name="homeAddressLine" placeholder="Flat / House No. / Floor / Building" value={this.state.homeAddressLine} style={{ height: '41px', border: this.state.flat }} onClick={this.flatBox} onChange={(event) => this.setState({ homeAddressLine: event.target.value })} />
                                             {submitted && !homeAddressLine &&
                                                 <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                             }
@@ -3430,7 +3430,7 @@ class AddCustomer extends Component {
                                     <div className="textFieldStyle" style={{ width: '100%' }}>
                                         <h6 className="InputLabel Fonts SizeFont" ></h6>
                                         <div className={'form-group' + (submitted && !homeAddressStreet ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                            <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Street / Locality" value={this.state.homeAddressStreet} style={{ height: '41px', border: this.state.street }} onClick={this.streetBox} onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} />
+                                            <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Colony / Street / Locality" value={this.state.homeAddressStreet} style={{ height: '41px', border: this.state.street }} onClick={this.streetBox} onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} />
                                             {submitted && !homeAddressStreet &&
                                                 <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                             }
@@ -3440,7 +3440,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '46%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" ></h6>
                                             <div className={'form-group' + (submitted && !homeAddressLandmark ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input required className="form-control" name="homeAddressLandmark" value={this.state.homeAddressLandmark} placeholder="Landmark" className="textBox" style={{ height: '41px', border: this.state.landmark }} onClick={this.landmarkBox} onChange={(event) => this.setState({ homeAddressLandmark: event.target.value })} />
+                                                <Input required className="form-control" name="homeAddressLandmark" value={this.state.homeAddressLandmark} placeholder="Landmark (E.g. Near Flyover, Behind Madras Talkies, etc.)" className="textBox" style={{ height: '41px', border: this.state.landmark }} onClick={this.landmarkBox} onChange={(event) => this.setState({ homeAddressLandmark: event.target.value })} />
                                                 {submitted && !homeAddressLandmark &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                 }
@@ -3449,7 +3449,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '46%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" ></h6>
                                             <div className={'form-group' + (submitted && !homeAddressCity ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input required className="form-control" name="homeAddressCity" value={this.state.homeAddressCity} className="textBox" placeholder="City" style={{ height: '41px', border: this.state.city }} onClick={this.cityBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ homeAddressCity: event.target.value }) }} />
+                                                <Input required className="form-control" name="homeAddressCity" value={this.state.homeAddressCity} className="textBox" placeholder="City / District / Muncipality / Taluk" style={{ height: '41px', border: this.state.city }} onClick={this.cityBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ homeAddressCity: event.target.value }) }} />
                                                 {submitted && !homeAddressCity &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                 }
@@ -3460,7 +3460,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '46%' }}>
                                             <h6 className="InputLabel Fonts SizeFont"></h6>
                                             <div className={'form-group' + (submitted && !homeAddressPincode ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode} type="text" maxlength="6" placeholder="Pincode" className="number" style={{ height: '41px', border: this.state.pin, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinBox} onChange={this.validHomePin} />
+                                                <input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode} type="text" maxlength="6" placeholder="6 Digits [0-9] pincode" className="number" style={{ height: '41px', border: this.state.pin, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinBox} onChange={this.validHomePin} />
                                                 <span style={{ display: this.state.homepinError }} className="help-block">Invalid pincode.</span>
                                                 {submitted && !homeAddressPincode &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
@@ -3520,7 +3520,7 @@ class AddCustomer extends Component {
                                             </div>
                                         </div>
                                         <div className={'form-group' + (submitted && !OfficeAddressLine ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                            <Input required className="form-control" name="OfficeAddressLine" value={this.state.OfficeAddressLine} placeholder="Flat / House No. / Floor / Building / Colony" className="textBox" style={{ height: '41px', border: this.state.flatoffice }} onClick={this.flatofficeBox} onChange={(event) => this.setState({ OfficeAddressLine: event.target.value })} />
+                                            <Input required className="form-control" name="OfficeAddressLine" value={this.state.OfficeAddressLine} placeholder="Flat / House No. / Floor / Building" className="textBox" style={{ height: '41px', border: this.state.flatoffice }} onClick={this.flatofficeBox} onChange={(event) => this.setState({ OfficeAddressLine: event.target.value })} />
                                             {submitted && !OfficeAddressLine &&
                                                 <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                             }
@@ -3530,7 +3530,7 @@ class AddCustomer extends Component {
                                     <div className="textFieldStyle" style={{ width: '100%' }}>
                                         <h6 className="InputLabel Fonts SizeFont" ></h6>
                                         <div className={'form-group' + (submitted && !OfficeAddressStreet ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                            <Input required className="form-control" name="OfficeAddressStreet" value={this.state.OfficeAddressStreet} placeholder="Street / Locality" className="textBox" style={{ height: '41px', border: this.state.streetoffice }} onClick={this.streetofficeBox} onChange={(event) => this.setState({ OfficeAddressStreet: event.target.value })} />
+                                            <Input required className="form-control" name="OfficeAddressStreet" value={this.state.OfficeAddressStreet} placeholder="Colony / Street / Locality" className="textBox" style={{ height: '41px', border: this.state.streetoffice }} onClick={this.streetofficeBox} onChange={(event) => this.setState({ OfficeAddressStreet: event.target.value })} />
                                             {submitted && !OfficeAddressStreet &&
                                                 <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                             }
@@ -3539,7 +3539,7 @@ class AddCustomer extends Component {
                                             <div className="textFieldStyle" style={{ width: '46%' }}>
                                                 <h6 className="InputLabel Fonts SizeFont" ></h6>
                                                 <div className={'form-group' + (submitted && !OfficeAddressLandmark ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input required className="form-control" name="OfficeAddressLandmark" value={this.state.OfficeAddressLandmark} placeholder="Landmark" className="textBox" style={{ height: '41px', border: this.state.cityoffice }} onClick={this.cityofficeBox} onChange={(event) => this.setState({ OfficeAddressLandmark: event.target.value })} />
+                                                    <Input required className="form-control" name="OfficeAddressLandmark" value={this.state.OfficeAddressLandmark} placeholder="Landmark (E.g. Near Flyover, Behind Madras Talkies, etc.)" className="textBox" style={{ height: '41px', border: this.state.cityoffice }} onClick={this.cityofficeBox} onChange={(event) => this.setState({ OfficeAddressLandmark: event.target.value })} />
                                                     {submitted && !OfficeAddressLandmark &&
                                                         <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                     }
@@ -3548,7 +3548,7 @@ class AddCustomer extends Component {
                                             <div className="textFieldStyle" style={{ width: '46%' }}>
                                                 <h6 className="InputLabel Fonts SizeFont" ></h6>
                                                 <div className={'form-group' + (submitted && !OfficeAddressCity ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input required className="form-control" name="OfficeAddressCity" value={this.state.OfficeAddressCity} placeholder="City" className="textBox" style={{ height: '41px', border: this.state.landmarkoffice }} onClick={this.landmarkofficeBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ OfficeAddressCity: event.target.value }) }} />
+                                                    <Input required className="form-control" name="OfficeAddressCity" value={this.state.OfficeAddressCity} placeholder="City / District / Muncipality / Taluk" className="textBox" style={{ height: '41px', border: this.state.landmarkoffice }} onClick={this.landmarkofficeBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ OfficeAddressCity: event.target.value }) }} />
                                                     {submitted && !OfficeAddressCity &&
                                                         <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                     }
@@ -3559,7 +3559,7 @@ class AddCustomer extends Component {
                                             <div className="textFieldStyle" style={{ width: '46%' }}>
                                                 <h6 className="InputLabel Fonts SizeFont" ></h6>
                                                 <div className={'form-group' + (submitted && !OfficeAddressPincode ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <input required type="text" maxlength="6" className="form-control" name="OfficeAddressPincode" value={this.state.OfficeAddressPincode} placeholder="Pincode" className="number" style={{ height: '41px', border: this.state.pinoffice, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinofficeBox} onChange={this.validOfficePin} />
+                                                    <input required type="text" maxlength="6" className="form-control" name="OfficeAddressPincode" value={this.state.OfficeAddressPincode} placeholder="6 Digits [0-9] pincode" className="number" style={{ height: '41px', border: this.state.pinoffice, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinofficeBox} onChange={this.validOfficePin} />
                                                     <span style={{ display: this.state.officepinError }} className="help-block">Invalid pincode.</span>
                                                     {submitted && !OfficeAddressPincode &&
                                                         <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>

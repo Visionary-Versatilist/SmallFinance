@@ -3325,7 +3325,7 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.email')}</h6>
-                                            <Input className="textBox" value={this.state.email || ''} style={{ height: '41px', border: this.state.emaill }} onClick={this.emailBox} onChange={this.validEmail} />
+                                            <Input className="textBox" placeholder="smith@example.com" value={this.state.email || ''} style={{ height: '41px', border: this.state.emaill }} onClick={this.emailBox} onChange={this.validEmail} />
                                             <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
@@ -3569,14 +3569,14 @@ class AddCustomer extends Component {
                                             <div className="textFieldStyle" style={{ width: '46%' }}>
                                                 <h6 className="InputLabel Fonts SizeFont" ></h6>
                                                 <div className={'form-group' + (submitted && !OfficeAddressState ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    {/* <Input required className="form-control" name="OfficeAddressState"  value={this.state.OfficeAddressState} placeholder="State" className="textBox"  style={{ height: '41px', border: this.state.stateoffice }} onClick={this.stateofficeBox} onChange={(event) => this.setState({ OfficeAddressState: event.target.value })} /> */}
+                                                    {/* <Input required className="form-control" name="OfficeAddressState"  value={this.state.OfficeAddressState} placeholder="Select" className="textBox"  style={{ height: '41px', border: this.state.stateoffice }} onClick={this.stateofficeBox} onChange={(event) => this.setState({ OfficeAddressState: event.target.value })} /> */}
                                                     <Select
                                                         id="standard-select-currency"
                                                         select
                                                         required className="form-control" name="OfficeAddressState"
                                                         className="incomefield textBox"
                                                         displayEmpty
-                                                        value={this.state.OfficeAddressState}
+                                                        value={this.state.OfficeAddressState} 
                                                         style={{ border: this.state.stateoffice }}
                                                         onClick={this.stateofficeBox}
                                                         onChange={(event) => this.setState({ OfficeAddressState: event.target.value })}
@@ -3664,11 +3664,11 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.bname')}</h6>
-                                            <Input className="textBox" value={this.state.bankname} style={{ height: '41px', border: this.state.banknamee }} onClick={this.banknameeBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ bankname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="E.g. SBI, ICICI, HDFC, etc" value={this.state.bankname} style={{ height: '41px', border: this.state.banknamee }} onClick={this.banknameeBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ bankname: event.target.value }) }} />
                                         </div>
                                         <div className="numaricTextField" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }}> {t('AddCustomer.ifsc')}</h6>
-                                            <Input type="text" value={this.state.bankifsc} className="textBox" style={{ height: '41px', border: this.state.ifsc, marginLeft: '70px' }} onClick={this.ifscBox} onChange={(event) => this.setState({ bankifsc: event.target.value })} />
+                                            <Input type="text" placeholder="IFSC" value={this.state.bankifsc} className="textBox" style={{ height: '41px', border: this.state.ifsc, marginLeft: '70px' }} onClick={this.ifscBox} onChange={(event) => this.setState({ bankifsc: event.target.value })} />
                                         </div>
                                     </div>
 
@@ -3676,7 +3676,7 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.accnum')}</h6>
-                                            <Input type="number" className="textBox" value={this.state.bankaccountnum} style={{ height: '41px', border: this.state.accnumber }} onClick={this.accnumberBox} onChange={(event) => this.setState({ bankaccountnum: event.target.value })} />
+                                            <Input type="number" placeholder="digits [0-9]" className="textBox" value={this.state.bankaccountnum} style={{ height: '41px', border: this.state.accnumber }} onClick={this.accnumberBox} onChange={(event) => this.setState({ bankaccountnum: event.target.value })} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.acctype')}</h6>
@@ -3715,11 +3715,11 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" > {t('AddCustomer.refname')}</h6>
-                                            <Input value={this.state.refname1} className="textBox" style={{ height: '41px', border: this.state.refername1 }} onClick={this.refername1Box} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ refname1: event.target.value }) }} />
+                                            <Input value={this.state.refname1} className="textBox" placeholder="Full Name" style={{ height: '41px', border: this.state.refername1 }} onClick={this.refername1Box} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ refname1: event.target.value }) }} />
                                         </div>
                                         <div className="numaricTextField" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }}> {t('AddCustomer.refphone')}</h6>
-                                            <input value={this.state.refcontactnum1} type="text" maxlength="10" className="textBox" style={{ height: '41px', border: this.state.refernum1, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.refernum1Box} onChange={this.validRefNum1} />
+                                            <input value={this.state.refcontactnum1} type="text" maxlength="10" className="textBox" placeholder="10-digit mobile number without prefixes" style={{ height: '41px', border: this.state.refernum1, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.refernum1Box} onChange={this.validRefNum1} />
                                             <span style={{ display: this.state.refnum1Error, marginLeft: "4.5rem" }} className="help-block">Contact number must be 10 digit.</span>
                                         </div>
                                     </div>
@@ -3727,11 +3727,11 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" > {t('AddCustomer.reffname')}</h6>
-                                            <Input value={this.state.refname2} className="textBox" style={{ height: '41px', border: this.state.refername2 }} onClick={this.refername2Box} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ refname2: event.target.value }) }} />
+                                            <Input value={this.state.refname2} className="textBox" placeholder="Full Name" style={{ height: '41px', border: this.state.refername2 }} onClick={this.refername2Box} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ refname2: event.target.value }) }} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} > {t('AddCustomer.reffphone')}</h6>
-                                            <input type="text" maxlength="10" value={this.state.refcontactnum2} className="textBox" style={{ height: '41px', border: this.state.refernum2, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.refernum2Box} onChange={this.validRefNum2}
+                                            <input type="text" maxlength="10" value={this.state.refcontactnum2} className="textBox" placeholder="10-digit mobile number without prefixes" style={{ height: '41px', border: this.state.refernum2, marginLeft: '70px', width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.refernum2Box} onChange={this.validRefNum2}
                                                 onKeyPress={this.onlyNos} />
                                             <span style={{ display: this.state.refnum2Error, marginLeft: "4.5rem" }} className="help-block">Contact number must be 10 digit.</span>
                                         </div>

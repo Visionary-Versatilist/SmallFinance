@@ -166,7 +166,7 @@ class UpdatePassword extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "27px" }}>{t('UpdateAdminPassword.oldPassword')}</h6>
                                     <div className={'form-group' + (submitted && !oldpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) => this.setState({ oldpassword: event.target.value })} />
+                                    <Input type="password" className="textBox" placeholder="Enter Old Password" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) => this.setState({ oldpassword: event.target.value })} />
                                     {submitted && !oldpassword &&
                                         <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>Old Password is required</div>
                                         }
@@ -175,7 +175,7 @@ class UpdatePassword extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "30px" }}>{t('UpdateAdminPassword.newPassword')}</h6>
                                     <div className={'form-group' + (submitted && !newpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) => this.setState({ newpassword: event.target.value })} />
+                                    <Input type="password" className="textBox" placeholder="Should be atleast 8 characters long" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) => this.setState({ newpassword: event.target.value })} />
                                     {submitted && !newpassword &&
                                         <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>New Password is required</div>
                                         }
@@ -184,7 +184,7 @@ class UpdatePassword extends Component {
                                 <div className="numaricTextField">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "40px" }}>{t('UpdateAdminPassword.confirmPassword')}</h6>
                                     <div className={'form-group' + (submitted && !confirmpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={(event)=> this.setState({confirmpassword:event.target.value})} />
+                                    <Input type="password" placeholder="Enter same characters as entered above" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={(event)=> this.setState({confirmpassword:event.target.value})} />
                                         {submitted && !confirmpassword &&
                                         <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>Confirm Password is required</div>
                                         }

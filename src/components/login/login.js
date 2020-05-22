@@ -206,8 +206,8 @@ if (now.getMonth() === 12) {
                 <div style={{marginTop: "7%"}}>
                     <div className="firstDiv">
                         <div className="firstDivOne">
-                            <div className="firstH3 TextColour">World's number one 360&#176; microfinance app</div>
-                            <div className="firstH4 ">Little description about application</div>
+                            <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
+                            <div className="firstH4 TextColour">World's First 360&#176; Small Finance App</div>
                         </div>
                     </div>
                     <div className="secondDiv">
@@ -223,7 +223,7 @@ if (now.getMonth() === 12) {
                             </div>
                         </div>
                         <div className="clickHere">
-                            Good to know about our application <a href="#">click here</a>
+                            Read our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
                         </div>
                     </div>
 
@@ -233,11 +233,11 @@ if (now.getMonth() === 12) {
                                 <Card className="CardDiv3">
                                     <div className="CardDiv4">
                                         <div className="CardDiv5 HighlightTextColour">
-                                            <h3 className="Fonts">Welcome!</h3>
+                                            <h3 className="Fonts">Welcome! Please, log into your account</h3>
                                         </div>
                                         <form name="form">
                                             <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input type="email" required placeholder="Enter your email or mobile number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
+                                                <Input type="email" required placeholder="Email Address or Mobile Number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
                                                 <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
                                                 {submitted && !emailid &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>Email id is required</div>
@@ -245,7 +245,7 @@ if (now.getMonth() === 12) {
                                             </div>
 
                                             <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input type="password" required className="form-control" name="password" placeholder="Enter your password" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ password: event.target.value })} onKeyPress={this.handleKey} />
+                                                <Input type="password" required className="form-control" name="password" placeholder="Password" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ password: event.target.value })} onKeyPress={this.handleKey} />
                                                 {submitted && !password &&
                                                     <div className="help-block">Password is required</div>
                                                 }
@@ -253,11 +253,11 @@ if (now.getMonth() === 12) {
                                         </form>
                                         <div className="btnDiv">
                                             <Button variant="outlined" fullWidth className="Fonts btnSizeFont btn" onClick={this.handleSubmit}>
-                                                Login
+                                                LOG IN
                                 </Button>
                                         </div>
                                         <div className="linkDiv HighlightTextColour">
-                                            <a className="linkFontSize HighlightTextColour Fonts" style={{ textDecoration: 'underline', cursor: "pointer" }} onClick={this.Forgetpassword.bind(this)}>Forget password</a></div>
+                                            <a className="linkFontSize HighlightTextColour Fonts" style={{ textDecoration: 'underline', cursor: "pointer" }} onClick={this.Forgetpassword.bind(this)}>FORGOT PASSWORD?</a></div>
                                     </div>
                                 </Card>
                             </div>

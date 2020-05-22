@@ -26,19 +26,19 @@ import { withNamespaces } from 'react-i18next';
 const axios = require('axios')
 const annualincome = [
     {
-        value: ' 0.00 -  250,000',
+        value: '0.00 -  250,000',
         label: '₹ 0.00 - ₹ 250,000',
     },
     {
-        value: ' 250,001 -  500,000',
+        value: '250,001 -  500,000',
         label: '₹ 250,001 - ₹ 500,000',
     },
     {
-        value: ' 500,001 -  1,000,000',
+        value: '500,001 -  1,000,000',
         label: '₹ 500,001 - ₹ 1,000,000',
     },
     {
-        value: ' 1,000,000 -  50,000,000',
+        value: '1,000,000 -  50,000,000',
         label: '₹ 1,000,000 - ₹ 50,000,000',
     },
     {
@@ -50,11 +50,11 @@ const annualincome = [
 const preferredtime = [
 
     {
-        value: ' 08:00 a.m - 11:00 a.m',
+        value: '08:00 a.m - 11:00 a.m',
         label: '08:00 a.m - 11:00 a.m',
     },
     {
-        value: ' 11:00 a.m - 02:00 p.m',
+        value: '11:00 a.m - 02:00 p.m',
         label: '11:00 a.m - 02:00 p.m',
     },
     {
@@ -74,11 +74,11 @@ const preferredtime = [
 
 const doctype = [
     {
-        value: ' aadharcard',
+        value: 'aadharcard',
         label: 'Aadhaar Card',
     },
     {
-        value: ' pancard',
+        value: 'pancard',
         label: 'Pan Card',
     },
     {
@@ -147,19 +147,19 @@ const accType = [
 ];
 const state = [
     {
-        value: ' Andhra Pradesh',
+        value: 'Andhra Pradesh',
         label: 'Andhra Pradesh',
     },
     {
-        value: ' Arunachal Pradesh',
+        value: 'Arunachal Pradesh',
         label: 'Arunachal Pradesh',
     },
     {
-        value: ' Assam',
+        value: 'Assam',
         label: 'Assam',
     },
     {
-        value: ' Bihar',
+        value: 'Bihar',
         label: 'Bihar',
     },
     {
@@ -167,15 +167,15 @@ const state = [
         label: 'Chhattisgarh',
     },
     {
-        value: ' Goa',
+        value: 'Goa',
         label: 'Goa',
     },
     {
-        value: ' Gujarat',
+        value: 'Gujarat',
         label: 'Gujarat',
     },
     {
-        value: ' Haryana',
+        value: 'Haryana',
         label: 'Haryana',
     },
     {
@@ -183,71 +183,67 @@ const state = [
         label: 'Himachal Pradesh',
     },
     {
-        value: ' Jammu and Kashmir',
-        label: 'Jammu and Kashmir',
-    },
-    {
-        value: ' Jharkhand',
+        value: 'Jharkhand',
         label: 'Jharkhand',
     },
     {
-        value: ' Karnataka',
+        value: 'Karnataka',
         label: 'Karnataka',
     },
     {
-        value: ' Kerala',
+        value: 'Kerala',
         label: 'Kerala',
     },
     {
-        value: ' Madhya Pradesh',
+        value: 'Madhya Pradesh',
         label: 'Madhya Pradesh',
     },
     {
-        value: ' Maharashtra',
+        value: 'Maharashtra',
         label: 'Maharashtra',
     },
     {
-        value: ' Manipur',
+        value: 'Manipur',
         label: 'Manipur',
     },
     {
-        value: ' Meghalaya',
+        value: 'Meghalaya',
         label: 'Meghalaya',
     },
     {
-        value: ' Mizoram',
+        value: 'Mizoram',
         label: 'Mizoram',
     },
     {
-        value: ' Nagaland',
+        value: 'Nagaland',
         label: 'Nagaland',
     },
     {
-        value: ' Odisha',
+        value: 'Odisha',
         label: 'Odisha',
     },
     {
-        value: ' Punjab',
+        value: 'Punjab',
         label: 'Punjab',
     },
     {
-        value: ' Rajasthan',
+        value: 'Rajasthan',
         label: 'Rajasthan',
     },
     {
-        value: ' Sikkim',
+        value: 'Sikkim',
         label: 'Sikkim',
     },
     {
-        value: ' Tamil Nadu',
+        value: 'Tamil Nadu',
         label: 'Tamil Nadu',
     },
     {
-        value: ' Telangana',
+        value: 'Telangana',
         label: 'Telangana',
     },
     {
-        value: ' Tripura',
+        value: 'Tripura',
         label: 'Tripura',
     },
     {
@@ -255,23 +251,23 @@ const state = [
         label: 'Uttarakhand',
     },
     {
-        value: ' Uttar Pradesh',
+        value: 'Uttar Pradesh',
         label: 'Uttar Pradesh',
     },
     {
-        value: ' West Bengal',
+        value: 'West Bengal',
         label: 'West Bengal',
     },
     {
-        value: ' Andaman and Nicobar Islands',
+        value: 'Andaman and Nicobar Islands',
         label: 'Andaman and Nicobar Islands',
     },
     {
-        value: ' Chandigarh',
+        value: 'Chandigarh',
         label: 'Chandigarh',
     },
     {
-        value: ' Dadra and Nagar Haveli',
+        value: 'Dadra and Nagar Haveli',
         label: 'Dadra and Nagar Haveli',
     },
     {
@@ -279,15 +275,23 @@ const state = [
         label: 'Daman and Diu',
     },
     {
-        value: ' Delhi',
+        value: 'Delhi',
         label: 'Delhi',
     },
     {
-        value: ' Lakshadweep',
+        value: 'Jammu and Kashmir',
+        label: 'Jammu and Kashmir',
+    },
+    {
+        value: 'Ladakh',
+        label: 'Ladakh',
+    },
+    {
+        value: 'Lakshadweep',
         label: 'Lakshadweep',
     },
     {
-        value: ' Puducherry',
+        value: 'Puducherry',
         label: 'Puducherry',
     },
 ];

@@ -184,8 +184,8 @@ class Signup extends Component {
                     <div style={{marginTop: "4%"}}>
                         <div className="firstDiv">
                             <div className="firstDivOne">
-                                <div className="firstH3 TextColour">World's number one 360&#176; microfinance app</div>
-                                <div className="firstH4 ">Little description about application</div>
+                                <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
+                                <div className="firstH4 TextColour">World's First 360&#176; Small Finance Lending App</div>
                             </div>
                         </div>
                         <div className="secondDiv">
@@ -201,7 +201,7 @@ class Signup extends Component {
                                         </div>
                                     </div>
                                     <div className="clickHere">
-                                        Good to know about our application <a href="#">click here</a>
+                                        Read our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
                                     </div>
                                 </div>
                             </div>
@@ -210,43 +210,43 @@ class Signup extends Component {
                                     <Card className="CardDiv3">
                                         <div className="CardDiv4">
                                             <div className="CardDiv5 HighlightTextColour">
-                                                <h3 className="Fonts">Welcome!</h3>
+                                                <h3 className="Fonts">Let's set up your account</h3>
                                             </div>
                                             <form>
                                                 <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input placeholder="First name" required className="form-control" name="fname" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ fname: event.target.value })} onKeyPress={this.handleKey} />
+                                                    <Input placeholder="First Name" required className="form-control" name="fname" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ fname: event.target.value })} onKeyPress={this.handleKey} />
                                                     {submitted && !fname &&
                                                         <div className="help-block"> First name is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input placeholder="Last name" required className="form-control" name="lname" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ lname: event.target.value })} onKeyPress={this.handleKey} />
+                                                    <Input placeholder="Last Name" required className="form-control" name="lname" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ lname: event.target.value })} onKeyPress={this.handleKey} />
                                                     {submitted && !lname &&
                                                         <div className="help-block">Last name is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input type="email" placeholder="Email address" required className="form-control" name="emailid" className="inputBoxContent Fonts SizeFont" fullWidth/*  onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
+                                                    <Input type="email" placeholder="Email Address" required className="form-control" name="emailid" className="inputBoxContent Fonts SizeFont" fullWidth/*  onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
                                                     <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
                                                     {submitted && !emailid &&
                                                         <div className="help-block" style={{ marginRight: "14rem" }}>Email id is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input type="number" placeholder="Phone number" required className="form-control" name="mobilenum" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ phone: event.target.value })} */ onChange={this.validNum} onKeyPress={this.handleKey} />
+                                                    <Input type="number" placeholder="10-digit Mobile Number without prefixes" required className="form-control" name="mobilenum" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ phone: event.target.value })} */ onChange={this.validNum} onKeyPress={this.handleKey} />
                                                     <span style={{ display: this.state.numError, }} className="help-block">Mobile number must be 10 digit.</span>
                                                     {submitted && !mobilenum &&
                                                         <div className="help-block" style={{ marginRight: "12rem" }}>Mobile number is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input type="password" placeholder="Password" required className="form-control" name="password" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ password: event.target.value })} onKeyPress={this.handleKey} />
+                                                    <Input type="password" placeholder="New Password" required className="form-control" name="password" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ password: event.target.value })} onKeyPress={this.handleKey} />
                                                     {submitted && !password &&
                                                         <div className="help-block">Password is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !confirmpassword ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input type="password" placeholder="Confirm password" required className="form-control" name="confirmpassword" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ confirmpassword: event.target.value })} onKeyPress={this.handleKey} />
+                                                    <Input type="password" placeholder="Confirm Password" required className="form-control" name="confirmpassword" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ confirmpassword: event.target.value })} onKeyPress={this.handleKey} />
                                                     {submitted && !confirmpassword &&
                                                         <div className="help-block">Confirm your password</div>
                                                     }
@@ -254,7 +254,7 @@ class Signup extends Component {
                                             </form>
                                             <div className="btnDiv">
                                                 <Button variant="outlined" fullWidth className="Fonts btnSizeFont btn" onClick={this.handleSubmit}>
-                                                    Signup
+                                                    SIGN UP
                                                 </Button>
                                                 {/* <button onClick={this.notify}>Notify !</button> */}
                                             </div>

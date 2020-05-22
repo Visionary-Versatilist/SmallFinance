@@ -224,7 +224,7 @@ class Usermanagement extends Component {
                   <IconButton className='iconButton' aria-label="search">
                   <img src={searchicon} alt="searchicon" className="iconButton" />
                   </IconButton>
-                  <InputBase className='input' placeholder="Search..." onChange={this.searchlist}/>
+                  <InputBase className='input' placeholder="Search" onChange={this.searchlist}/>
                   {/* <Divider className='divider' orientation="vertical" /> */}
               </div>
               <div className="ButtonDiv">
@@ -258,7 +258,7 @@ class Usermanagement extends Component {
     <Table className='table'>
       <TableHead>
         <TableRow style={{backgroundColor:"#E1F0FA", color:'#B2B2B2'}}>
-          <TableCell>Collection Agent Name</TableCell>
+          <TableCell>Collection Agent</TableCell>
           <TableCell align="right">Mobile Number</TableCell>
           <TableCell align="right">Email Id</TableCell>
           <TableCell align="right">Category</TableCell>

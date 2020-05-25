@@ -3769,7 +3769,7 @@ class AddCustomer extends Component {
                                                 }}
                                             >
                                                 {doctype.map(option => (
-                                                    <MenuItem key={option.value} value={option.value}>
+                                                    <MenuItem key={option.value} value={option.value} style={{width:"100%"}}>
                                                         {option.label}
                                                     </MenuItem>
                                                 ))}
@@ -3813,7 +3813,7 @@ class AddCustomer extends Component {
                                                     }}
                                                 >
                                                     {doctype.map(option => (
-                                                        <MenuItem key={option.value} value={option.value}>
+                                                        <MenuItem key={option.value} value={option.value} style={{width:"100%"}}>
                                                             {option.label}
                                                         </MenuItem>
                                                     ))}
@@ -3859,7 +3859,7 @@ class AddCustomer extends Component {
                                                     }}
                                                 >
                                                     {doctype.map(option => (
-                                                        <MenuItem key={option.value} value={option.value}>
+                                                        <MenuItem key={option.value} value={option.value} style={{width:"100%"}}>
                                                             {option.label}
                                                         </MenuItem>
                                                     ))}

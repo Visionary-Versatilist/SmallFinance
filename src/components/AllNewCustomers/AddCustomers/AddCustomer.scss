@@ -361,7 +361,9 @@ margin-bottom: -342px;
 
 }
 .MuiMenu-paper {
-    // top: 0 !important;
+    // top: 80px !important;
     overflow-y: scroll !important;
-    height: 16rem !important;
+    height: 15rem !important;
+    padding-bottom: 2rem;
+
 }

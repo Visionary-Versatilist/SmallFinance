@@ -1,5 +1,5 @@
-// export const ImageBaseUrl = "https://lendstack.app/";
-export const ImageBaseUrl = "http://167.71.234.126/";
+export const ImageBaseUrl = "https://lendstack.app/";
+// export const ImageBaseUrl = "http://167.71.234.126/";
 export const BaseUrl = ImageBaseUrl + "fintech/v1/api";
 export const headers = {
     'Authorization': 'Bearer '+ localStorage.getItem('token')

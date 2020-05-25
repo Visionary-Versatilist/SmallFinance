@@ -375,6 +375,7 @@ class AddCustomer extends Component {
             lastname: "",
             mobilenum: "",
             fathersname: "",
+            mothersname:"",
             email: "",
             dependentname: "",
             anualincome: "",
@@ -3293,7 +3294,7 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont">{t('AddCustomer.momname')}</h6>
-                                            <Input className="textBox" placeholder="Full Name" value={this.state.motherssname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ motherssname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="Full Name" value={this.state.mothersname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ mothersname: event.target.value }) }} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.dadname')}</h6>

@@ -312,7 +312,7 @@ class AddUser extends Component {
             </div>);
         }
         const Category = [
-            { value: 'Admin', label: 'Admin' },
+            { value: 'Admin', label: 'Super Admin' },
             { value: 'CollectionAgent', label: 'Collection Agent', },
             // { value: 'Executive', label: 'Executive', },
         ];

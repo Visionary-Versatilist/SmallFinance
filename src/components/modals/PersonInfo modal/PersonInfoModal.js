@@ -17,7 +17,9 @@ class PersonInfoModal extends Component {
     };
   }
   componentWillReceiveProps(nextProps) {
+    console.log("personal details",nextProps)
     let { customerInfo } = nextProps
+    console.log("personal addresses",customerInfo.addresses)
     this.setState({
       customerDetail: customerInfo
     });
@@ -70,7 +72,7 @@ class PersonInfoModal extends Component {
                         </div>
                         <div className="firstDivOneOneTwo Fonts">
                           <div className="firstDivOneOneTwoOne Fonts">
-                            <div className="CustomerName Fonts">{customerDetail.firstName ? customerDetail.firstName + " " + customerDetail.lastName : null}</div>
+                            <div className="CustomerName Fonts" style={{textTransform:'capitalize'}}>{customerDetail.firstName ? customerDetail.firstName + " " + customerDetail.lastName : null}</div>
                           </div>
                           <div className="firstDivOneOneTwoTwo Fonts">
                             <InputLabel className="CustomerInfo Fonts">
@@ -78,7 +80,7 @@ class PersonInfoModal extends Component {
                             </InputLabel>
                           </div>
                           <div className="firstDivOneOneTwoThree Fonts">
-                            <InputLabel className="CustomerInfo Fonts">
+                            <InputLabel className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>
                               {customerDetail.gender ? customerDetail.gender : null}
                             </InputLabel>
                           </div>
@@ -139,20 +141,20 @@ class PersonInfoModal extends Component {
                     <div className="firstDivTwo">
                       <div className="firstDivTwoOne Fonts">
                         <InputLabel>{t('AddCustomer.status')}</InputLabel>
-                        <div className="CustomerContentInfo Fonts">{customerDetail.maritalStatus ? customerDetail.maritalStatus : null}</div>
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.maritalStatus ? customerDetail.maritalStatus : null}</div>
                       </div>
                       <div className="firstDivTwoOne">
                         <InputLabel className="CustomerInfo Fonts">
                            {t('AddCustomer.dadname')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">{customerDetail.fatherName ? customerDetail.fatherName : null}</div>
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.fatherName ? customerDetail.fatherName : null}</div>
                       </div>
 
                       <div className="firstDivTwoOne">
                         <InputLabel className="CustomerInfo Fonts">
                           {t('AddCustomer.momname')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">{customerDetail.motherName ? customerDetail.motherName : null}</div>
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.motherName ? customerDetail.motherName : null}</div>
                       </div>
                       {/* <div className="firstDivTwoOne">
                         <InputLabel className="CustomerInfo">
@@ -183,13 +185,13 @@ class PersonInfoModal extends Component {
                         </InputLabel>
                         <div className="CustomerContentInfo Fonts">
                           {
-                            customerDetail.homeAddress ?
+                            customerDetail.addresses ?
                               <div>
-                                <div className="CustomerInfo Fonts">{customerDetail.homeAddress.AddressLine}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.homeAddress.AddressStreet}</div>
-                                <div className="CustomerInfo Fonts" >{customerDetail.homeAddress.AddressLandmark}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.homeAddress.AddressCity}</div>
-                                <div className="CustomerInfo Fonts">{`${customerDetail.homeAddress.AddressState} ${customerDetail.homeAddress.AddressPincode}`}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressLine}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressStreet}</div>
+                                <div className="CustomerInfo Fonts" >{customerDetail.addresses[0].AddressLandmark}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressCity}</div>
+                                <div className="CustomerInfo Fonts">{`${customerDetail.addresses[0].AddressState} ${customerDetail.addresses[0].AddressPincode}`}</div>
 
                               </div>
                               : null
@@ -203,13 +205,13 @@ class PersonInfoModal extends Component {
                         </InputLabel>
                         <div className="CustomerContentInfo Fonts">
                           {
-                            customerDetail.officeAddress ?
+                            customerDetail.addresses ?
                               <div>
-                                <div className="CustomerInfo Fonts">{customerDetail.officeAddress.AddressLine}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.officeAddress.AddressStreet}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.officeAddress.AddressLandmark}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.officeAddress.AddressCity}</div>
-                                <div className="CustomerInfo Fonts">{`${customerDetail.officeAddress.AddressState} ${customerDetail.officeAddress.AddressPincode}`}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressLine}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressStreet}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressLandmark}</div>
+                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressCity}</div>
+                                <div className="CustomerInfo Fonts">{`${customerDetail.addresses[1].AddressState} ${customerDetail.addresses[1].AddressPincode}`}</div>
 
                               </div>
                               : null

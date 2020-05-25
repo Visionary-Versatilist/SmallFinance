@@ -197,7 +197,9 @@ class CompanyProfileDetails extends Component {
       symbol: "",
       area: "",
       countryId: "",
-      description:""
+      description:"",
+      countryArea:"",
+      countrySymbol:""
     };
   }
 
@@ -223,7 +225,9 @@ class CompanyProfileDetails extends Component {
       if (resp.status === 200 || resp.status===304) {
         this.setState({
           CompanyProfile: resp.data,
-          country:resp.data.country?resp.data.country.countryName: ""
+          country:resp.data.country?resp.data.country.countryName: "",
+          countryArea:resp.data.country?resp.data.country.area: "",
+          countrySymbol:resp.data.country?resp.data.country.symbol: ""
         })
       } else {
         toast.error("Something went wrong. Please try again later!", {
@@ -293,6 +297,7 @@ const headers = {
     })
     this.state.CountryData.map(data => {
       if (e.target.value === data.countryName) {
+        console.log("country details", data)
         this.setState({
           symbol: data.symbol,
           area: data.area,
@@ -419,9 +424,9 @@ const headers = {
                           ))}
                         </TextField>
                         <div className="Fonts" style={{ fontSize: "13px" }}>
-                          <span style={{ marginRight: "253px" }}>{this.state.area}</span>
+                          <span style={{ marginRight: "198px" }}>{this.state.countryArea}</span>
                           <Tooltip title={description} placement="right">
-                            <span>{this.state.symbol}</span>
+                            <span>{this.state.countrySymbol}</span>
                           </Tooltip>
                         </div>
 
@@ -433,7 +438,7 @@ const headers = {
                   {/* <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "9px", marginBottom: '4px' }}>Address</h6>
                                         <TextField className="textBox" value={this.state.CompanyProfile.address} margin="dense" multiline rowsMax="10"  style={{borderRadius: '5px', paddingTop: '10px', border: this.state.changeColoraddress }} onClick={this.addressBox} onChange={(event) => this.setState({ address: event.target.value })} disabled ></TextField> */}
                   {/* </div> */}
-                </div>
+                </div> 
               </form>
             </div>
           </Card>

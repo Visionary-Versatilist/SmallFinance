@@ -3271,7 +3271,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.Dob')}</h6>
                                             <MuiPickersUtilsProvider utils={DateFnsUtils} style={{ height: "41px" }}>
-                                            <KeyboardDatePicker margin="normal" format="dd MMM yyyy" id="date-picker-inline" value={this.state.SelectedDate ? this.state.SelectedDate :  new Date()} onChange={this.handleDateChange.bind(this)} KeyboardButtonProps={{ 'aria-label': 'change date', }} />
+                                            <KeyboardDatePicker margin="normal" format="dd/MMM/yyyy" id="date-picker-inline" value={this.state.SelectedDate ? this.state.SelectedDate :  new Date()} onChange={this.handleDateChange.bind(this)} KeyboardButtonProps={{ 'aria-label': 'change date', }} />
                                             {/* <DatePicker
                                                 onChange={this.handleDateChange}
                                                 value={this.state.SelectedDate ? this.state.SelectedDate : new Date()}
@@ -3335,7 +3335,7 @@ class AddCustomer extends Component {
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.depname')}</h6>
-                                            <Input className="textBox" placeholder="Number of Family Members" type="number" value={this.state.dependentname || ''} style={{ height: '41px', border: this.state.dependname, marginLeft: '70px' }} onClick={this.dependnameBox} onChange={(event) => { this.setState({ dependentname: event.target.value }) }} />
+                                            <Input className="textBox" minlength="0" maxlength="2" placeholder="Number of Family Members" type="number" value={this.state.dependentname || ''} style={{ height: '41px', border: this.state.dependname, marginLeft: '70px' }} onClick={this.dependnameBox} onChange={(event) => { this.setState({ dependentname: event.target.value }) }} />
                                         </div>
                                     </div>
                                     <div style={{ display: 'flex' }}>

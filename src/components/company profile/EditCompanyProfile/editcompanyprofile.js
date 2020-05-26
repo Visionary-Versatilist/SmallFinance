@@ -17,147 +17,151 @@ import { withNamespaces } from 'react-i18next';
 const axios = require('axios')
 const state = [
     {
-      value: ' Andhra Pradesh',
+      value: 'Andhra Pradesh',
       label: 'Andhra Pradesh',
     },
     {
-      value: ' Arunachal Pradesh',
+      value: 'Arunachal Pradesh',
       label: 'Arunachal Pradesh',
     },
     {
-        value: ' Assam',
+        value: 'Assam',
         label: 'Assam',
       },
       {
-        value: ' Bihar',
+        value: 'Bihar',
         label: 'Bihar',
       },
       {
-        value: ' Chhattisgarh',
+        value: 'Chhattisgarh',
         label: 'Chhattisgarh',
       },
       {
-        value: ' Goa',
+        value: 'Goa',
         label: 'Goa',
       },
       {
-        value: ' Gujarat',
+        value: 'Gujarat',
         label: 'Gujarat',
       },
       {
-        value: ' Haryana',
+        value: 'Haryana',
         label: 'Haryana',
       },
       {
-        value: ' Himachal Pradesh',
+        value: 'Himachal Pradesh',
         label: 'Himachal Pradesh',
       },
       {
-        value: ' Jammu and Kashmir',
-        label: 'Jammu and Kashmir',
-      },
-      {
-        value: ' Jharkhand',
+        value: 'Jharkhand',
         label: 'Jharkhand',
       },
       {
-        value: ' Karnataka',
+        value: 'Karnataka',
         label: 'Karnataka',
       },
       {
-        value: ' Kerala',
+        value: 'Kerala',
         label: 'Kerala',
       },
       {
-        value: ' Madhya Pradesh',
+        value: 'Madhya Pradesh',
         label: 'Madhya Pradesh',
       },
       {
-        value: ' Maharashtra',
+        value: 'Maharashtra',
         label: 'Maharashtra',
       },
       {
-        value: ' Manipur',
+        value: 'Manipur',
         label: 'Manipur',
       },
       {
-        value: ' Meghalaya',
+        value: 'Meghalaya',
         label: 'Meghalaya',
       },
       {
-        value: ' Mizoram',
+        value: 'Mizoram',
         label: 'Mizoram',
       },
       {
-        value: ' Nagaland',
+        value: 'Nagaland',
         label: 'Nagaland',
       },
       {
-        value: ' Odisha',
+        value: 'Odisha',
         label: 'Odisha',
       },
       {
-        value: ' Punjab',
+        value: 'Punjab',
         label: 'Punjab',
       },
       {
-        value: ' Rajasthan',
+        value: 'Rajasthan',
         label: 'Rajasthan',
       },
       {
-        value: ' Sikkim',
+        value: 'Sikkim',
         label: 'Sikkim',
       },
       {
-        value: ' Tamil Nadu',
+        value: 'Tamil Nadu',
         label: 'Tamil Nadu',
       }, 
       {
-        value: ' Telangana',
+        value: 'Telangana',
         label: 'Telangana',
       }, 
       {
-        value: ' Tripura',
+        value: 'Tripura',
         label: 'Tripura',
       }, 
       {
-        value: ' Uttarakhand',
+        value: 'Uttarakhand',
         label: 'Uttarakhand',
       },
        {
-        value: ' Uttar Pradesh',
+        value: 'Uttar Pradesh',
         label: 'Uttar Pradesh',
       }, 
       {
-        value: ' West Bengal',
+        value: 'West Bengal',
         label: 'West Bengal',
       }, 
       {
-        value: ' Andaman and Nicobar Islands',
+        value: 'Andaman and Nicobar Islands',
         label: 'Andaman and Nicobar Islands',
       }, 
       {
-        value: ' Chandigarh',
+        value: 'Chandigarh',
         label: 'Chandigarh',
       }, 
       {
-        value: ' Dadra and Nagar Haveli',
+        value: 'Dadra and Nagar Haveli',
         label: 'Dadra and Nagar Haveli',
       }, 
       {
-        value: ' Daman and Diu',
+        value: 'Daman and Diu',
         label: 'Daman and Diu',
       }, 
       {
-        value: ' Delhi',
+        value: 'Delhi',
         label: 'Delhi',
+      },
+      {
+        value: 'Jammu and Kashmir',
+        label: 'Jammu and Kashmir',
+      },
+      {
+        value: 'Ladakh',
+        label: 'Ladakh',
       }, 
       {
-        value: ' Lakshadweep',
+        value: 'Lakshadweep',
         label: 'Lakshadweep',
       }, 
       {
-        value: ' Puducherry',
+        value: 'Puducherry',
         label: 'Puducherry',
       },  
   ];
@@ -543,7 +547,7 @@ const headers = {
             })
         } else {
             this.setState({
-                emailError: "none"
+                emailError: "Please enter valid Email ID"
             })
         }
     }
@@ -689,12 +693,12 @@ const headers = {
                               <div style={{ margin: 'auto', textAlign: "center" , marginTop: '34px' }}>
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel One Fonts fontSize" style={{ marginLeft: "31px" }} >{t('CompanyProfile.cName')} </h6>
-                                      <Input className="textBox"   value={this.state.name?this.state.name:""}  style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={ (event) => this.setState({ name: event.target.value })}  />
+                                      <Input className="textBox" placeholder="Company Name" value={this.state.name?this.state.name:""}  style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={ (event) => this.setState({ name: event.target.value })}  />
                                   </div>
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "49px" }} >{t('CompanyProfile.employees')}</h6>
                                       {/* <div className={'form-group' + (submitted && !totalemployees ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                      <Input type="number" className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
+                                      <Input type="number" className="textBox" placeholder="Number of Employees" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
                                       {/* {submitted && !totalemployees &&
                                       <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
                                       }
@@ -702,23 +706,23 @@ const headers = {
                                   </div>
                                   <div className="numaricTextField">
                                       <h6 className="InputLabel Three Fonts fontSize" style={{ marginLeft: "30px" }}>{t('EditProfileDetails.phone')}</h6>
-                                      <Input type="number"  value={this.state.mobilenum?this.state.mobilenum:""}  className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum}  />
-                                      <span style={{ display: this.state.numError, paddingLeft:"25.2rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                            
+                                      <Input type="number" placeholder="10-digit mobile number without prefixes" value={this.state.mobilenum?this.state.mobilenum:""}  className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum}  />
+                                      <span style={{ display: this.state.numError, paddingLeft:"36rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                            
                                   </div>
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Four Fonts fontSize" style={{ marginLeft: "9px" }}> {t('EditProfileDetails.email')}</h6>
-                                      <Input className="textBox"  value={this.state.emailid?this.state.emailid:""}  style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
-                                      <span style={{ display: this.state.emailError, paddingLeft:"25.2rem"}} className="help-block">Invalid Email id.</span>                                    
+                                      <Input className="textBox" placeholder="smith@example.com"  value={this.state.emailid?this.state.emailid:""}  style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
+                                      <span style={{ display: this.state.emailError, paddingLeft:"36rem"}} className="help-block">Invalid Email id.</span>                                    
                                   </div>
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Five Fonts fontSize" style={{ marginLeft: "9px" }}> {t('CompanyProfile.website')}</h6>
-                                      <Input className="textBox"  value={this.state.website?this.state.website:""}  style={{ height: '38px', border: this.state.changeColorwebsite }} onClick={this.websiteBox} onChange={(event) => this.setState({ website: event.target.value })} />
+                                      <Input className="textBox" placeholder="www.example.com"  value={this.state.website?this.state.website:""}  style={{ height: '38px', border: this.state.changeColorwebsite }} onClick={this.websiteBox} onChange={(event) => this.setState({ website: event.target.value })} />
                                   </div>
                                   <div style={{width:'100%' }}>
                                       <div className="textFieldStyle" style={{ width: '100%' }}>
                                           <h6 className="InputLabel Six Fonts fontSize" style={{width:"75%"}} > {t('CompanyProfile.Address')}</h6>                                                                                                                                                                                                                                                                                                                             
                                       {/* <div className={'form-group' + (submitted && !homeAddressLine ? ' has-error' : '')} style={{marginTop: '10px', width:"100%"}}>                                                                                                                                                                             */}
-                                          <Input className="textBox" required className="form-control" name="homeAddressLine" placeholder="Flat / House No. / Floor / Building / Colony" value={this.state.homeAddressLine?this.state.homeAddressLine:""}  style={{ height: '41px', border: this.state.flat }} onClick={this.flatBox} onChange={(event) => this.setState({ homeAddressLine: event.target.value })} />
+                                          <Input className="textBox" required className="form-control" name="homeAddressLine" placeholder="Flat / House No. / Floor / Building" value={this.state.homeAddressLine?this.state.homeAddressLine:""}  style={{ height: '41px', border: this.state.flat }} onClick={this.flatBox} onChange={(event) => this.setState({ homeAddressLine: event.target.value })} />
                                           {/* {submitted && !homeAddressLine &&
                                        <div className="help-block" style={{marginRight:"14rem"}}>Address is required</div>
                                       }
@@ -728,7 +732,7 @@ const headers = {
                                       <div className="textFieldStyle" style={{ width: '100%' }}>
                                       <h6 className="InputLabel Fonts fontSize" ></h6>
                                       {/* <div className={'form-group' + (submitted && !homeAddressStreet ? ' has-error' : '')} style={{marginTop: '10px'}}>                                                                                                                                                                             */}
-                                          <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Street / Locality" value={this.state.homeAddressStreet?this.state.homeAddressStreet:""}  style={{ height: '41px', border: this.state.street }} onClick={this.streetBox} onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} />
+                                          <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Street / Locality / Colony" value={this.state.homeAddressStreet?this.state.homeAddressStreet:""}  style={{ height: '41px', border: this.state.street }} onClick={this.streetBox} onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} />
                                           {/* {submitted && !homeAddressStreet &&
                                        <div className="help-block" style={{marginRight:"14rem"}}>Address is required</div>
                                       }
@@ -758,7 +762,7 @@ const headers = {
                                       <div className="textFieldStyle" style={{ width: '100%' }}>
                                       <h6 className="InputLabel Fonts fontSize" ></h6>
                                       {/* <div className={'form-group' + (submitted && !homeAddressPincode ? ' has-error' : '')} style={{marginTop: '10px'}}>                                                                                                                                                                             */}
-                                          <Input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode?this.state.homeAddressPincode:""} type="number" placeholder="Pincode" className="number"  style={{ height: '41px', border: this.state.pin }} onClick={this.pinBox} onChange={this.validHomePin} />
+                                          <Input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode?this.state.homeAddressPincode:""} type="number" placeholder="6 Digits [0-9] pincode" className="number"  style={{ height: '41px', border: this.state.pin }} onClick={this.pinBox} onChange={this.validHomePin} />
                                           <span style={{ display: this.state.homepinError, marginLeft:"36%"}} className="help-block">Invalid pincode.</span>                                                                                    
                                           {/* {submitted && !homeAddressPincode &&
                                        <div className="help-block" style={{marginRight:"14rem"}}>Address is required</div>

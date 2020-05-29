@@ -66,7 +66,7 @@ class AddUser extends Component {
     _handleImageChange(e) {
         e.preventDefault();
         if(e.target.files[0].size > 1000000){
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -393,7 +393,7 @@ class AddUser extends Component {
                                         <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                         <Input className="textBox" placeholder="New Password" type="password" required className="form-control" name="password" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ password: event.target.value })} />
                                         {submitted && !password &&
-                                        <div className="help-block-user">Password is required</div>
+                                        <div className="help-block-user">New Password is required</div>
                                         }
                                         </div>
                                     </div>
@@ -402,14 +402,14 @@ class AddUser extends Component {
                                         <div className={'form-group' + (submitted && !confrimpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                         <Input className="textBox" placeholder="Confirm Password" type="password" required className="form-control" name="confrimpassword" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ confrimpassword: event.target.value })} />
                                         {submitted && !confrimpassword &&
-                                        <div className="help-block-user">Password is required</div>
+                                        <div className="help-block-user">Confirm Password is required</div>
                                         }
                                         </div>
                                     </div>
                                     <div className="categorytextFieldStyle">
                                         <h6 className="InputLabel Seven Fonts fontSize" style={{ marginLeft: "10px" }}>{t('AddUser.Cat')}</h6>
                                         <div className={'form-group' + (submitted && !category ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <TextField id="standard-select" select value={this.state.category} required className="form-control" name="category" className="textBox" placeholder="Select" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
+                                        <TextField id="standard-select" select value={this.state.category} required className="form-control" name="category" className="textBox" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
                                             onChange={this.handleChange} >
                                             {Category.map(option => (
                                                 <MenuItem key={option.label} value={option.label}>

@@ -138,11 +138,11 @@ const doctype = [
 const accType = [
     {
         value: 'Savings',
-        label: 'Savings',
+        label: 'Savings Account',
     },
     {
         value: 'Current',
-        label: 'Current',
+        label: 'Current Account',
     },
 ];
 const state = [
@@ -163,7 +163,7 @@ const state = [
         label: 'Bihar',
     },
     {
-        value: ' Chhattisgarh',
+        value: 'Chhattisgarh',
         label: 'Chhattisgarh',
     },
     {
@@ -179,7 +179,7 @@ const state = [
         label: 'Haryana',
     },
     {
-        value: ' Himachal Pradesh',
+        value: 'Himachal Pradesh',
         label: 'Himachal Pradesh',
     },
     {
@@ -247,7 +247,7 @@ const state = [
         label: 'Tripura',
     },
     {
-        value: ' Uttarakhand',
+        value: 'Uttarakhand',
         label: 'Uttarakhand',
     },
     {
@@ -2211,7 +2211,7 @@ class AddCustomer extends Component {
             })
             console.log("date format", moment(SelectedDate).format("DD MMM YYYY"))
         } else {
-            toast.error("Your age is below 18", {
+            toast.error(" Entered age is below 18 years", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -2489,7 +2489,7 @@ class AddCustomer extends Component {
     _handleImageChange(e) {
         e.preventDefault();
         if (e.target.files[0].size > 1000000) {
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -2521,7 +2521,7 @@ class AddCustomer extends Component {
     _handleImageChangeCheck(e) {
         e.preventDefault();
         if (e.target.files[0].size > 1000000) {
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -2556,7 +2556,7 @@ class AddCustomer extends Component {
 
         // uploadField.onchange = function() {
         if (e.target.files[0].size > 1000000) {
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -2591,7 +2591,7 @@ class AddCustomer extends Component {
     _handleImageChangedoc2(e) {
         e.preventDefault();
         if (e.target.files[0].size > 1000000) {
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -2624,7 +2624,7 @@ class AddCustomer extends Component {
     _handleImageChangedoc3(e) {
         e.preventDefault();
         if (e.target.files[0].size > 1000000) {
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("File size should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -2778,7 +2778,7 @@ class AddCustomer extends Component {
                 });
                 this.props.history.push('/allnewcustomers')
             } else {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -2789,7 +2789,7 @@ class AddCustomer extends Component {
             }
         }).catch(err => {
             if (err.request.status !== 200) {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -2899,7 +2899,7 @@ class AddCustomer extends Component {
             headers: headers,
         }).then(resp => {
             if (resp.status === 200) {
-                toast.success("Customer Details Filled Successfully !", {
+                toast.success("Customer Details Filled Successfully!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -2909,7 +2909,7 @@ class AddCustomer extends Component {
                 });
                 this.props.history.push('/allnewcustomers')
             } else {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -2920,7 +2920,7 @@ class AddCustomer extends Component {
             }
         }).catch(err => {
             if (err.request.status !== 200) {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -3372,12 +3372,12 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.addar')}</h6>
                                             <Input className="textBox" placeholder="12 digits [0-9] Aadhar Number"  value={this.state.adharcard || ''} style={{ height: '41px', border: this.state.adhar }} onClick={this.adharBox} onChange={this.validAdhar} />
-                                            <span style={{ display: this.state.adharError }} className="help-block">Invalid aadhar number.</span>
+                                            <span style={{ display: this.state.adharError }} className="help-block">Invalid Aadhar Number.</span>
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.pan')}</h6>
                                             <input type="text" minlength="0" maxlength="10" className="textBox" placeholder="digits [0-9] and alphabets [A-Z]" value={this.state.pancard || ''} style={{ height: '36px', border: this.state.pan, width:'84%', borderRadius: "5px", marginLeft: '70px', paddingLeft: "10px" }} onClick={this.panBox} onChange={this.validPan} required />
-                                            <span style={{ display: this.state.panError, paddingLeft: "4.5rem" }} className="help-block">Invalid pan number.</span>
+                                            <span style={{ display: this.state.panError, paddingLeft: "4.5rem" }} className="help-block">Invalid Pan Number.</span>
                                         </div>                                       
                                     </div>
 

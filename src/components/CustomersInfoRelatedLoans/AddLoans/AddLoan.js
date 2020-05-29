@@ -653,7 +653,7 @@ const headers = {
 
                     {/* <div className="textFieldStyle">
                       <h6 className="InputLabel Fonts SizeFont">penalty</h6>
-                      <Input className="textBox" style={{ height: '35px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={(event) => this.setState({ fees: event.target.value })} />
+                      <Input className="textBox" placeholder="Penaly Charges on Default" style={{ height: '35px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={(event) => this.setState({ fees: event.target.value })} />
                     </div> */}
                     <div className="textFieldStyle" style={{ width: '95%' }}>
                       <h6 className="InputLabel Fonts SizeFont" > {t('AddLoan.loandate')}</h6>

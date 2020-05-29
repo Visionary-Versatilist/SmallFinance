@@ -194,7 +194,7 @@ class AddUser extends Component {
             headers: headers,
         }).then(resp => {
             if(resp.request.status===200) {
-                toast.success("User Added Successfully !", {
+                toast.success("User Added Successfully!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -353,7 +353,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel One Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                         <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
+                                        <Input className="textBox" placeholder= "Given Name/Middle Name" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
                                         {submitted && !fname &&
                                         <div className="help-block-user">First name is required</div>
                                         }
@@ -362,7 +362,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.lname')}</h6>
                                         <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
+                                        <Input className="textBox" placeholder= "Family Name/Surname" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
                                         {submitted && !lname &&
                                         <div className="help-block-user">Last name is required</div>
                                         }
@@ -371,17 +371,17 @@ class AddUser extends Component {
                                     <div className="numaricTextField">
                                         <h6 className="InputLabel Three Fonts fontSize" style={{ marginLeft: "30px" }}>{t('EditProfileDetails.phone')}</h6>
                                         <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input type="number" required className="form-control" name="mobilenum" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
+                                        <Input type="number"  placeholder="10-digit mobile number without prefixes" required className="form-control" name="mobilenum" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
                                         <span style={{ display: this.state.numError, paddingLeft:"25rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                                    
                                         {submitted && !mobilenum &&
-                                        <div className="help-block-user" style={{display:this.state.reqnum}}>Phone no. is required</div>
+                                        <div className="help-block-user" style={{display:this.state.reqnum}}>Mobile Number is required</div>
                                         }
                                         </div>
                                     </div>
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Four Fonts fontSize" style={{ marginLeft: "9px" }}>{t('EditProfileDetails.email')}</h6>
                                         <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" required className="form-control" name="emailid" style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
+                                        <Input className="textBox" placeholder="smith@example.com" required className="form-control" name="emailid" style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
                                         <span style={{ display: this.state.emailError, paddingLeft:"25rem"}} className="help-block">Invalid Email id.</span>                                       
                                         {submitted && !emailid &&
                                         <div className="help-block-user"  style={{display:this.state.reqemail}}>Email id is required</div>
@@ -391,7 +391,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Five Fonts fontSize" style={{ marginLeft: "9px" }}>{t('UpdateAdminPassword.password')}</h6>
                                         <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" type="password" required className="form-control" name="password" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ password: event.target.value })} />
+                                        <Input className="textBox" placeholder="New Password" type="password" required className="form-control" name="password" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ password: event.target.value })} />
                                         {submitted && !password &&
                                         <div className="help-block-user">Password is required</div>
                                         }
@@ -400,7 +400,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Six Fonts fontSize" style={{ marginLeft: "38px" }}>{t('UpdateAdminPassword.confirmPassword')}</h6>
                                         <div className={'form-group' + (submitted && !confrimpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" type="password" required className="form-control" name="confrimpassword" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ confrimpassword: event.target.value })} />
+                                        <Input className="textBox" placeholder="Confirm Password" type="password" required className="form-control" name="confrimpassword" style={{ height: '38px', border: this.state.changeColorpassword }} onClick={this.passwordBox} onChange={(event) => this.setState({ confrimpassword: event.target.value })} />
                                         {submitted && !confrimpassword &&
                                         <div className="help-block-user">Password is required</div>
                                         }
@@ -409,7 +409,7 @@ class AddUser extends Component {
                                     <div className="categorytextFieldStyle">
                                         <h6 className="InputLabel Seven Fonts fontSize" style={{ marginLeft: "10px" }}>{t('AddUser.Cat')}</h6>
                                         <div className={'form-group' + (submitted && !category ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <TextField id="standard-select" select value={this.state.category} required className="form-control" name="category" className="textBox" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
+                                        <TextField id="standard-select" select value={this.state.category} required className="form-control" name="category" className="textBox" placeholder="Select" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
                                             onChange={this.handleChange} >
                                             {Category.map(option => (
                                                 <MenuItem key={option.label} value={option.label}>

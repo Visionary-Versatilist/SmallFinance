@@ -19,6 +19,7 @@ import moment from 'moment';
 import './AddCustomer.scss';
 import Eyeline from "../../../assets/images/eyeline.svg";
 import Cloud from "../../../assets/images/cloud.svg";
+import {KeyboardDatePicker,MuiPickersUtilsProvider} from '@material-ui/pickers';
 
 import ImageModal from '../../modals/ImageModal/ImageModal';
 import { withNamespaces } from 'react-i18next';
@@ -49,11 +50,11 @@ const annualincome = [
 const preferredtime = [
 
     {
-        value: '08:00 a.m - 11:00 a.m',
+        value: ' 08:00 a.m - 11:00 a.m',
         label: '08:00 a.m - 11:00 a.m',
     },
     {
-        value: '11:00 a.m - 02:00 p.m',
+        value: ' 11:00 a.m - 02:00 p.m',
         label: '11:00 a.m - 02:00 p.m',
     },
     {
@@ -73,11 +74,11 @@ const preferredtime = [
 
 const doctype = [
     {
-        value: 'aadharcard',
+        value: ' aadharcard',
         label: 'Aadhaar Card',
     },
     {
-        value: 'pancard',
+        value: ' pancard',
         label: 'Pan Card',
     },
     {
@@ -146,147 +147,147 @@ const accType = [
 ];
 const state = [
     {
-        value: 'Andhra Pradesh',
+        value: ' Andhra Pradesh',
         label: 'Andhra Pradesh',
     },
     {
-        value: 'Arunachal Pradesh',
+        value: ' Arunachal Pradesh',
         label: 'Arunachal Pradesh',
     },
     {
-        value: 'Assam',
+        value: ' Assam',
         label: 'Assam',
     },
     {
-        value: 'Bihar',
+        value: ' Bihar',
         label: 'Bihar',
     },
     {
-        value: 'Chhattisgarh',
+        value: ' Chhattisgarh',
         label: 'Chhattisgarh',
     },
     {
-        value: 'Goa',
+        value: ' Goa',
         label: 'Goa',
     },
     {
-        value: 'Gujarat',
+        value: ' Gujarat',
         label: 'Gujarat',
     },
     {
-        value: 'Haryana',
+        value: ' Haryana',
         label: 'Haryana',
     },
     {
-        value: 'Himachal Pradesh',
+        value: ' Himachal Pradesh',
         label: 'Himachal Pradesh',
     },
     {
-        value: 'Jammu and Kashmir',
+        value: ' Jammu and Kashmir',
         label: 'Jammu and Kashmir',
     },
     {
-        value: 'Jharkhand',
+        value: ' Jharkhand',
         label: 'Jharkhand',
     },
     {
-        value: 'Karnataka',
+        value: ' Karnataka',
         label: 'Karnataka',
     },
     {
-        value: 'Kerala',
+        value: ' Kerala',
         label: 'Kerala',
     },
     {
-        value: 'Madhya Pradesh',
+        value: ' Madhya Pradesh',
         label: 'Madhya Pradesh',
     },
     {
-        value: 'Maharashtra',
+        value: ' Maharashtra',
         label: 'Maharashtra',
     },
     {
-        value: 'Manipur',
+        value: ' Manipur',
         label: 'Manipur',
     },
     {
-        value: 'Meghalaya',
+        value: ' Meghalaya',
         label: 'Meghalaya',
     },
     {
-        value: 'Mizoram',
+        value: ' Mizoram',
         label: 'Mizoram',
     },
     {
-        value: 'Nagaland',
+        value: ' Nagaland',
         label: 'Nagaland',
     },
     {
-        value: 'Odisha',
+        value: ' Odisha',
         label: 'Odisha',
     },
     {
-        value: 'Punjab',
+        value: ' Punjab',
         label: 'Punjab',
     },
     {
-        value: 'Rajasthan',
+        value: ' Rajasthan',
         label: 'Rajasthan',
     },
     {
-        value: 'Sikkim',
+        value: ' Sikkim',
         label: 'Sikkim',
     },
     {
-        value: 'Tamil Nadu',
+        value: ' Tamil Nadu',
         label: 'Tamil Nadu',
     },
     {
-        value: 'Telangana',
+        value: ' Telangana',
         label: 'Telangana',
     },
     {
-        value: 'Tripura',
+        value: ' Tripura',
         label: 'Tripura',
     },
     {
-        value: 'Uttarakhand',
+        value: ' Uttarakhand',
         label: 'Uttarakhand',
     },
     {
-        value: 'Uttar Pradesh',
+        value: ' Uttar Pradesh',
         label: 'Uttar Pradesh',
     },
     {
-        value: 'West Bengal',
+        value: ' West Bengal',
         label: 'West Bengal',
     },
     {
-        value: 'Andaman and Nicobar Islands',
+        value: ' Andaman and Nicobar Islands',
         label: 'Andaman and Nicobar Islands',
     },
     {
-        value: 'Chandigarh',
+        value: ' Chandigarh',
         label: 'Chandigarh',
     },
     {
-        value: 'Dadra and Nagar Haveli',
+        value: ' Dadra and Nagar Haveli',
         label: 'Dadra and Nagar Haveli',
     },
     {
-        value: 'Daman and Diu',
+        value: ' Daman and Diu',
         label: 'Daman and Diu',
     },
     {
-        value: 'Delhi',
+        value: ' Delhi',
         label: 'Delhi',
     },
     {
-        value: 'Lakshadweep',
+        value: ' Lakshadweep',
         label: 'Lakshadweep',
     },
     {
-        value: 'Puducherry',
+        value: ' Puducherry',
         label: 'Puducherry',
     },
 ];
@@ -370,6 +371,7 @@ class AddCustomer extends Component {
             lastname: "",
             mobilenum: "",
             fathersname: "",
+            mothersname:"",
             email: "",
             dependentname: "",
             anualincome: "",
@@ -2200,12 +2202,10 @@ class AddCustomer extends Component {
             age--;
         }
         if (age >= 18) {
-            console.log("date format", moment(SelectedDate).format("DD/MM/YYYY"))
-
             this.setState({
-                SelectedDate: moment(SelectedDate).format("DD/MM/YYYY")
+                SelectedDate: SelectedDate
             })
-            console.log("date format", moment(SelectedDate).format("DD/MM/YYYY"))
+            console.log("date format", moment(SelectedDate).format("DD MMM YYYY"))
         } else {
             toast.error("Your age is below 18", {
                 position: "top-center",
@@ -2230,7 +2230,12 @@ class AddCustomer extends Component {
         if (firstname && lastname && mobilenum && homeAddressLine && homeAddressStreet && homeAddressLandmark && homeAddressCity &&
             homeAddressPincode && homeAddressState && OfficeAddressLine && OfficeAddressStreet && OfficeAddressCity &&
             OfficeAddressLandmark && OfficeAddressPincode && OfficeAddressState) {
-            this.savegeneralinfo();
+                if(this.props.location.params){
+                    this.updatecustomers()
+                }else {
+                    this.savegeneralinfo();
+
+                }
         }
     }
     validateEmail(email) {
@@ -2891,7 +2896,7 @@ class AddCustomer extends Component {
         formData.append("profilepic", this.state.file);
         formData.append("blankcheck", this.state.filecheck);
 
-        axios.post(BaseUrl + '/customer/postCustomerMobile', formData, {
+        axios.post(BaseUrl + '/customer/postCustomer', formData, {
             headers: headers,
         }).then(resp => {
             if (resp.status === 200) {
@@ -2915,8 +2920,17 @@ class AddCustomer extends Component {
                 });
             }
         }).catch(err => {
-            if (err.request.status !== 200) {
-                toast.error("Please fill correct data!", {
+            if (err.request.status === 413) {
+                toast.error("File size should be less than 1 mb", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            } else {
+                toast.error("Something went wrong, Please try again later", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -3212,7 +3226,8 @@ class AddCustomer extends Component {
                 <img src={backbuttn} alt="backicon" style={{paddingLeft: '50px',paddingTop: '23px', cursor:'pointer'}} onClick={this.back.bind(this)} />
                 </div> */}
                     <div>
-                        <h3 className="Fonts headFontSize" style={{ marginLeft: '45px' }}><span className="backLink" onClick={this.backLinkAction.bind(this)}>{t('AddCustomer.title')}</span> / {t('AddCustomer.subtitle')}</h3>
+                   { this.props.location.params? <h3 className="Fonts headFontSize" style={{ marginLeft: '45px' }}><span className="backLink" onClick={this.backLinkAction.bind(this)}>{t('AddCustomer.title')}</span> /  Update Customer Info </h3>
+                        : <h3 className="Fonts headFontSize" style={{ marginLeft: '45px' }}><span className="backLink" onClick={this.backLinkAction.bind(this)}>{t('AddCustomer.title')}</span> / {t('AddCustomer.subtitle')}</h3>}
                     </div>
                 </div>
 
@@ -3266,14 +3281,13 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.Dob')}</h6>
-                                            {/* <MuiPickersUtilsProvider utils={DateFnsUtils} style={{ height: "41px" }}> */}
-                                            {/* <KeyboardDatePicker disableToolbar variant="inline" format="DD/MM/YYYY" margin="normal" id="date-picker-inline" value={this.state.SelectedDate} onChange={this.handleDateChange.bind(this)} KeyboardButtonProps={{ 'aria-label': 'change date', }} /> */}
-                                            <DatePicker
+                                            <MuiPickersUtilsProvider utils={DateFnsUtils} style={{ height: "41px" }}>
+                                            <KeyboardDatePicker margin="normal" format="dd MMM yyyy" id="date-picker-inline" value={this.state.SelectedDate ? this.state.SelectedDate :  new Date()} onChange={this.handleDateChange.bind(this)} KeyboardButtonProps={{ 'aria-label': 'change date', }} />
+                                            {/* <DatePicker
                                                 onChange={this.handleDateChange}
                                                 value={this.state.SelectedDate ? this.state.SelectedDate : new Date()}
-                                                dateFormat="MMMM dd, yyyy"
-                                            />
-                                            {/* </MuiPickersUtilsProvider> */}
+                                            /> */}
+                                            </MuiPickersUtilsProvider>
 
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
@@ -3291,7 +3305,7 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont">{t('AddCustomer.momname')}</h6>
-                                            <Input className="textBox" value={this.state.motherssname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ motherssname: event.target.value }) }} />
+                                            <Input className="textBox" value={this.state.mothersname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ mothersname: event.target.value }) }} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.dadname')}</h6>
@@ -3766,7 +3780,7 @@ class AddCustomer extends Component {
                                                 }}
                                             >
                                                 {doctype.map(option => (
-                                                    <MenuItem key={option.value} value={option.value}>
+                                                    <MenuItem key={option.value} value={option.value}  style={{ width: "100%" }} >
                                                         {option.label}
                                                     </MenuItem>
                                                 ))}
@@ -3822,7 +3836,8 @@ class AddCustomer extends Component {
                                             <Input value={this.state.refcontactnum1} type="text" className="textBox" style={{ height: '41px', border: this.state.changeColornumber, marginLeft: '70px' }} onClick={this.numberBox} onChange={(event) => this.setState({ refcontactnum1: event.target.value })} /> */}
                                                     <div className="imgPreviewdoc">
                                                         {/* {$imagePreviewdoc} */}
-                                                        <input placeholder="Upload" value={this.state.filename2 || ""} style={{ border: "none", marginTop: "13px", paddingLeft: "8px", width: "90%" }} onChange={(e) => this._handleImageChangedoc2(e)} />
+                                                    <img src={Cloud} alt="cloud" className="cloud" style={this.state.upload === false?{display:""}:{display:"none"}} />
+                                                        <input placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Upload" value={this.state.filename2 || ""} style={{ border: "none", marginTop: "13px", paddingLeft: "8px", width: "90%" }} onChange={(e) => this._handleImageChangedoc2(e)} />
                                                         <input className="fileInputdoc"
                                                             type="file"
                                                             onChange={(e) => this._handleImageChangedoc2(e)} />
@@ -3867,7 +3882,8 @@ class AddCustomer extends Component {
                                             <Input value={this.state.refcontactnum1} type="text" className="textBox" style={{ height: '41px', border: this.state.changeColornumber, marginLeft: '70px' }} onClick={this.numberBox} onChange={(event) => this.setState({ refcontactnum1: event.target.value })} /> */}
                                                     <div className="imgPreviewdoc">
                                                         {/* {$imagePreviewdoc} */}
-                                                        <input placeholder="Upload" value={this.state.filename3 || ""} style={{ border: "none", marginTop: "13px", paddingLeft: "8px", width: "90%" }} onChange={(e) => this._handleImageChangedoc3(e)} />
+                                                    <img src={Cloud} alt="cloud" className="cloud" style={this.state.upload === false?{display:""}:{display:"none"}} />
+                                                        <input placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Upload" value={this.state.filename3 || ""} style={{ border: "none", marginTop: "13px", paddingLeft: "8px", width: "90%" }} onChange={(e) => this._handleImageChangedoc3(e)} />
                                                         <input className="fileInputdoc"
                                                             type="file"
                                                             onChange={(e) => this._handleImageChangedoc3(e)} />
@@ -3893,7 +3909,7 @@ class AddCustomer extends Component {
                         <Button style={{ display: this.state.addcustmr }} className="savebutton btnSizeFont Fonts" onClick={this.handleSubmit}>
                             Save
                         </Button>
-                        <Button style={{ display: this.state.updatesave }} className="savebutton btnSizeFont Fonts" onClick={this.updatecustomers.bind(this)} >
+                        <Button style={{ display: this.state.updatesave }} className="savebutton btnSizeFont Fonts" onClick={this.handleSubmit} >
                             Update
                         </Button>
                     </div>

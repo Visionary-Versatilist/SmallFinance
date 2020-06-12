@@ -197,7 +197,9 @@ class CompanyProfileDetails extends Component {
       symbol: "",
       area: "",
       countryId: "",
-      description:""
+      description:"",
+      countryArea:"",
+      countrySymbol:""
     };
   }
 
@@ -223,7 +225,9 @@ class CompanyProfileDetails extends Component {
       if (resp.status === 200 || resp.status===304) {
         this.setState({
           CompanyProfile: resp.data,
-          country:resp.data.country?resp.data.country.countryName: ""
+          country:resp.data.country?resp.data.country.countryName: "",
+          countryArea:resp.data.country?resp.data.country.area: "",
+          countrySymbol:resp.data.country?resp.data.country.symbol: ""
         })
       } else {
         toast.error("Something went wrong. Please try again later!", {
@@ -293,6 +297,7 @@ const headers = {
     })
     this.state.CountryData.map(data => {
       if (e.target.value === data.countryName) {
+        console.log("country details", data)
         this.setState({
           symbol: data.symbol,
           area: data.area,
@@ -323,8 +328,8 @@ const headers = {
           <Card className="cardDiv">
             <div className="previewComponent">
               <form onSubmit={(e) => this._handleSubmit(e)}>
-                <div style={{ position: 'absolute', right: '8%', top: '15%', cursor: 'pointer' }} onClick={this.editcompanyprofile.bind(this)}>
-                  <img src={editpencil} alt="editpencil" className="editIMage" />
+                <div style={{ position: 'absolute', right: '10%', top: '15%', cursor: 'pointer' }} onClick={this.editcompanyprofile.bind(this)}>
+                  <span className="Fonts SizeFont">EDIT&nbsp;&nbsp;</span> <img src={editpencil} alt="editpencil" className="editIMage" />
                 </div>
                 <div style={{ margin: 'auto', textAlign: "center", marginTop: '34px' }}>
                   <div className="textFieldStyle">
@@ -419,9 +424,9 @@ const headers = {
                           ))}
                         </TextField>
                         <div className="Fonts" style={{ fontSize: "13px" }}>
-                          <span style={{ marginRight: "253px" }}>{this.state.area}</span>
+                          <span style={{ marginRight: "198px" }}>{this.state.countryArea}</span>
                           <Tooltip title={description} placement="right">
-                            <span>{this.state.symbol}</span>
+                            <span>{this.state.countrySymbol}</span>
                           </Tooltip>
                         </div>
 

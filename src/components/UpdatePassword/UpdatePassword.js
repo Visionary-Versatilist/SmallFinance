@@ -6,9 +6,12 @@ import Button from '@material-ui/core/Button';
 import Sidebar from '../sidebar/sidebar';
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {BaseUrl,headers} from "../../Environment";
+import {BaseUrl} from "../../Environment";
 import { withNamespaces } from 'react-i18next';
 import i18n from '../../i18n';
+import eyehide from '../../assets/images/eyehide.png';
+import eye from '../../assets/images/eye.png';
+
 
 const axios = require('axios')
 
@@ -23,8 +26,10 @@ class UpdatePassword extends Component {
             newpassword:"",
             confirmpassword:"",
             emailid:"",
-            submitted: false
-
+            submitted: false,
+            passwordSetting: 'false',
+            passwordconfSetting:'false',
+            passwordnewSetting:'false'
         };
         this.nameBox = this.nameBox.bind(this)
         this.nameBox1 = this.nameBox1.bind(this)
@@ -87,7 +92,10 @@ class UpdatePassword extends Component {
     }
     updatepassword(){
         let loggedinUser = JSON.parse(localStorage.getItem("loggedinUser"))
-
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
+          }
           const userdetails = {
                "userEmail":this.state.emailid,
                "password":this.state.newpassword,
@@ -143,6 +151,21 @@ class UpdatePassword extends Component {
     backLinkAction(){
         this.props.history.push('/updateadmin');
       }
+      seePassword=(value)=>{
+          this.setState({
+            passwordSetting:value
+          })
+      }
+      seenewPassword=(value)=>{
+        this.setState({
+          passwordnewSetting:value
+        })
+    }
+    seeconfPassword=(value)=>{
+        this.setState({
+          passwordconfSetting:value
+        })
+    }
 
     render() {
         const { t } = this.props;
@@ -166,7 +189,9 @@ class UpdatePassword extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "27px" }}>{t('UpdateAdminPassword.oldPassword')}</h6>
                                     <div className={'form-group' + (submitted && !oldpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) => this.setState({ oldpassword: event.target.value })} />
+                                    <Input type={this.state.passwordSetting === 'false'?"password":"text"} className="textBox" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) => this.setState({ oldpassword: event.target.value })} />
+                                   { this.state.passwordSetting === 'false'?<img src={eye} onClick={this.seePassword.bind(this,'true')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%", top:'20.5%'}}/>
+                                    :<img src={eyehide} onClick={this.seePassword.bind(this,'false')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%",  top:'20.5%'}} />}
                                     {submitted && !oldpassword &&
                                         <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>Old Password is required</div>
                                         }
@@ -175,16 +200,20 @@ class UpdatePassword extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "30px" }}>{t('UpdateAdminPassword.newPassword')}</h6>
                                     <div className={'form-group' + (submitted && !newpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) => this.setState({ newpassword: event.target.value })} />
+                                    <Input type={this.state.passwordnewSetting === 'false'?"password":"text"} className="textBox" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) => this.setState({ newpassword: event.target.value })} />
+                                    { this.state.passwordnewSetting === 'false'?<img src={eye} onClick={this.seenewPassword.bind(this,'true')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%", top:'33.5%'}}/>
+                                    :<img src={eyehide} onClick={this.seenewPassword.bind(this,'false')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%",  top:'33.5%'}} />}
                                     {submitted && !newpassword &&
-                                        <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>New Passowrd is required</div>
+                                        <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>New Password is required</div>
                                         }
                                         </div>
                                 </div>
                                 <div className="numaricTextField">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "40px" }}>{t('UpdateAdminPassword.confirmPassword')}</h6>
                                     <div className={'form-group' + (submitted && !confirmpassword ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="password" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={(event)=> this.setState({confirmpassword:event.target.value})} />
+                                    <Input type={this.state.passwordconfSetting === 'false'?"password":"text"} className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={(event)=> this.setState({confirmpassword:event.target.value})} />
+                                    { this.state.passwordconfSetting === 'false'?<img src={eye} onClick={this.seeconfPassword.bind(this,'true')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%", top:'46%'}}/>
+                                    :<img src={eyehide} onClick={this.seeconfPassword.bind(this,'false')} alt="searchicon" style={{width:'1.8%', position:"absolute",right:"37%",  top:'46%'}} />}
                                         {submitted && !confirmpassword &&
                                         <div className="help-block-user" style={{paddingLeft: "21.5rem"}}>Confirm Password is required</div>
                                         }

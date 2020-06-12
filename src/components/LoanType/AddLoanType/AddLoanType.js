@@ -332,10 +332,14 @@ class AddLoanType extends Component {
         e.preventDefault();
 
         this.setState({ submitted: true });
-        const { loantype, loanAmuontRangefrom,loanAmuontRangeto, rateOfRangeInterestfrom, rateOfRangeInterestto, loanTenureMonthsfrom,loanTenureMonthsto,
-            loanTenureWeeksfrom, loanTenureWeeksto,loanTenureDaysfrom,loanTenureDaysto } = this.state;
-        if (loantype && loanAmuontRangefrom && loanAmuontRangeto && rateOfRangeInterestfrom && rateOfRangeInterestto && loanTenureMonthsfrom &&loanTenureMonthsto &&
-            loanTenureWeeksfrom && loanTenureWeeksto &&loanTenureDaysfrom &&loanTenureDaysto) {
+        // const { loantype, loanAmuontRangefrom,loanAmuontRangeto, rateOfRangeInterestfrom, rateOfRangeInterestto, loanTenureMonthsfrom,loanTenureMonthsto,
+        //     loanTenureWeeksfrom, loanTenureWeeksto,loanTenureDaysfrom,loanTenureDaysto } = this.state;
+            const { loantype, loanAmuontRangefrom,loanAmuontRangeto,submitted } = this.state;
+        // if (loantype && loanAmuontRangefrom && loanAmuontRangeto && rateOfRangeInterestfrom && rateOfRangeInterestto && loanTenureMonthsfrom &&loanTenureMonthsto &&
+        //     loanTenureWeeksfrom && loanTenureWeeksto &&loanTenureDaysfrom &&loanTenureDaysto) {
+        //     this.addLoanType();
+        // }
+        if (loantype && loanAmuontRangefrom && loanAmuontRangeto) {
             this.addLoanType();
         }
     }
@@ -349,8 +353,9 @@ class AddLoanType extends Component {
     render() {
         const { t } = this.props;
         toast.configure({});
-        const { loantype, loanAmuontRangefrom,loanAmuontRangeto, rateOfRangeInterestfrom, rateOfRangeInterestto, loanTenureMonthsfrom,loanTenureMonthsto,
-            loanTenureWeeksfrom, loanTenureWeeksto,loanTenureDaysfrom,loanTenureDaysto, submitted } = this.state;
+        // const { loantype, loanAmuontRangefrom,loanAmuontRangeto, rateOfRangeInterestfrom, rateOfRangeInterestto, loanTenureMonthsfrom,loanTenureMonthsto,
+        //     loanTenureWeeksfrom, loanTenureWeeksto,loanTenureDaysfrom,loanTenureDaysto, submitted } = this.state;
+            const { loantype, loanAmuontRangefrom,loanAmuontRangeto,submitted } = this.state;
         
         return (
             <div>
@@ -410,38 +415,38 @@ class AddLoanType extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddLoanType.intrstrange')}</h6>
                                             <div style={{display:"flex"}}>
-                                    <div className={'form-group' + (submitted && !rateOfRangeInterestfrom ? ' has-error' : '')} style={{width:"34%"}}>                                            
+                                    {/* <div className={'form-group' + (submitted && !rateOfRangeInterestfrom ? ' has-error' : '')} style={{width:"34%"}}>                                             */}
                                             <Input type="number" className="textBox" value={this.state.rateOfRangeInterestfrom} style={{ height: '41px',width: '97%' , border: this.state.rateOfRangeInterestBorder1 }} onClick={this.rateOfRangeInterestBox1} onChange={(event) => this.setState({ rateOfRangeInterestfrom: event.target.value })} />
-                                            {submitted && !rateOfRangeInterestfrom &&
-                                    <div className="help-block">rateOfRangeInterest is required</div>
+                                            {/* {submitted && !rateOfRangeInterestfrom && */}
+                                    {/* <div className="help-block">rateOfRangeInterest is required</div>
                                 }
-                                </div>
+                                </div> */}
                                            <span style={{marginTop:"11px"}}> &nbsp;% </span> &nbsp;&nbsp; <span style={{marginTop:"11px"}}> &nbsp; &nbsp;-&nbsp;&nbsp;</span> &nbsp;
-                                    <div className={'form-group' + (submitted && !rateOfRangeInterestto ? ' has-error' : '')} style={{width:"34%"}}>                                                                                        
+                                    {/* <div className={'form-group' + (submitted && !rateOfRangeInterestto ? ' has-error' : '')} style={{width:"34%"}}>                                                                                         */}
                                             <Input type="number" className="textBox" value={this.state.rateOfRangeInterestto} style={{ height: '41px',width: '97%', border: this.state.rateOfRangeInterestBorder2 }} onClick={this.rateOfRangeInterestBox2} onChange={(event) => this.setState({ rateOfRangeInterestto: event.target.value })} />
-                                            {submitted && !rateOfRangeInterestto &&
+                                            {/* {submitted && !rateOfRangeInterestto &&
                                     <div className="help-block">rateOfRangeInterest is required</div>
                                 }
-                                </div>
+                                </div> */}
                                         <span style={{marginTop:"11px"}}> &nbsp;%</span>
                                         </div>
                                         </div>
                                         <div className="numaricTextField" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }}>{t('AddLoanType.tenuremonrange')}</h6>
                                             <div style={{display:"flex"}}>
-                                    <div className={'form-group' + (submitted && !loanTenureMonthsfrom ? ' has-error' : '')}>                                                                                                                                   
+                                    {/* <div className={'form-group' + (submitted && !loanTenureMonthsfrom ? ' has-error' : '')}>                                                                                                                                    */}
                                             <Input type="number" value={this.state.loanTenureMonthsfrom} className="textBox" style={{ height: '41px',width: '66%', border: this.state.loanTenureMonthsBorder1, marginLeft: '70px' }} onClick={this.loanTenureMonthsBox1} onChange={(event) => this.setState({ loanTenureMonthsfrom: event.target.value })} />    
-                                            {submitted && !loanTenureMonthsfrom &&
+                                            {/* {submitted && !loanTenureMonthsfrom &&
                                     <div className="help-block"  style={{marginLeft:"4.5rem"}}>loanTenureMonths is required</div>
                                 }
-                                </div>
+                                </div> */}
                                             <span style={{marginTop:"-8px"}}> &nbsp; &nbsp;-</span> &nbsp; &nbsp;  
-                                    <div className={'form-group' + (submitted && !loanTenureMonthsto ? ' has-error' : '')}>                                                                                                                                   
+                                    {/* <div className={'form-group' + (submitted && !loanTenureMonthsto ? ' has-error' : '')}>                                                                                                                                    */}
                                             <Input type="number" value={this.state.loanTenureMonthsto} className="textBox" style={{ height: '41px',width: '95%', border: this.state.loanTenureMonthsBorder2, marginLeft: '4px' }} onClick={this.loanTenureMonthsBox2} onChange={(event) => this.setState({ loanTenureMonthsto: event.target.value })} />
-                                            {submitted && !loanTenureMonthsto &&
+                                            {/* {submitted && !loanTenureMonthsto &&
                                     <div className="help-block">loanTenureMonths is required</div>
                                 }
-                                </div>
+                                </div> */}
                                 </div>
                                         </div>
                                     </div>
@@ -451,40 +456,40 @@ class AddLoanType extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddLoanType.tenureweekrange')}</h6>
                                             <div style={{display:"flex"}}>
-                                    <div className={'form-group' + (submitted && !loanTenureWeeksfrom ? ' has-error' : '')} style={{width:"40%"}}>                                                                                                                                                                               
+                                    {/* <div className={'form-group' + (submitted && !loanTenureWeeksfrom ? ' has-error' : '')} style={{width:"40%"}}>                                                                                                                                                                                */}
                                             <Input type="number" className="textBox" value={this.state.loanTenureWeeksfrom} style={{ height: '41px',width: '97%' , border: this.state.loanTenureWeeksBorder1 }} onClick={this.loanTenureWeeksBox1} onChange={(event) => this.setState({ loanTenureWeeksfrom: event.target.value })} />
-                                            {submitted && !loanTenureWeeksfrom &&
+                                            {/* {submitted && !loanTenureWeeksfrom &&
                                     <div className="help-block">loanTenureWeeks is required</div>
                                 }
-                                </div>
+                                </div> */}
                                             <span style={{marginTop:"10px"}}> &nbsp; &nbsp;-</span> &nbsp; &nbsp;
-                                    <div className={'form-group' + (submitted && !loanTenureWeeksto ? ' has-error' : '')}>                                                                                                                                   
+                                    {/* <div className={'form-group' + (submitted && !loanTenureWeeksto ? ' has-error' : '')}>                                                                                                                                    */}
                                            
                                             <Input type="number" className="textBox" value={this.state.loanTenureWeeksto} style={{ height: '41px',width: '85%', border: this.state.loanTenureWeeksBorder2 }} onClick={this.loanTenureWeeksBox2} onChange={(event) => this.setState({ loanTenureWeeksto: event.target.value })} />
-                                            {submitted && !loanTenureWeeksto &&
+                                            {/* {submitted && !loanTenureWeeksto &&
                                     <div className="help-block">loanTenureWeeks is required</div>
                                 }
-                                </div>
+                                </div> */}
                                 </div>
                                         </div>
                                         <div className="numaricTextField" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }}>{t('AddLoanType.tenuredayrange')}</h6>
                                             <div  style={{display:"flex"}}>
-                                    <div className={'form-group' + (submitted && !loanTenureDaysfrom ? ' has-error' : '')}>                                                                                                                                   
+                                    {/* <div className={'form-group' + (submitted && !loanTenureDaysfrom ? ' has-error' : '')}>                                                                                                                                    */}
                                             
                                             <Input type="number" value={this.state.loanTenureDaysfrom} className="textBox" style={{ height: '41px',width: '65%', border: this.state.loanTenureDaysBorder1, marginLeft: '70px' }} onClick={this.loanTenureDaysBox1} onChange={(event) => this.setState({ loanTenureDaysfrom: event.target.value })} />    
-                                            {submitted && !loanTenureDaysfrom &&
+                                            {/* {submitted && !loanTenureDaysfrom &&
                                     <div className="help-block"  style={{marginLeft:"4.5rem"}}>loanTenureDays is required</div>
                                 }
-                                </div>
+                                </div> */}
                                             <span style={{marginTop:"-8px"}}> &nbsp; &nbsp;-</span> &nbsp; &nbsp;
-                                    <div className={'form-group' + (submitted && !loanTenureDaysto ? ' has-error' : '')}>                                                                                                                                   
+                                    {/* <div className={'form-group' + (submitted && !loanTenureDaysto ? ' has-error' : '')}>                                                                                                                                    */}
                                             
                                             <Input type="number" value={this.state.loanTenureDaysto} className="textBox" style={{ height: '41px',width: '95%', border: this.state.loanTenureDaysBorder2, marginLeft: '4px' }} onClick={this.loanTenureDaysBox2} onChange={(event) => this.setState({ loanTenureDaysto: event.target.value })} />
-                                            {submitted && !loanTenureDaysto &&
+                                            {/* {submitted && !loanTenureDaysto &&
                                     <div className="help-block">loanTenureDays is required</div>
                                 }
-                                </div>
+                                </div> */}
                                         </div>
                                         </div>
                                     </div>

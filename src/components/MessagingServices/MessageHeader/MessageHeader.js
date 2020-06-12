@@ -48,7 +48,7 @@ class MessageHeader extends Component {
                       <div className="messageHeaderOne">
                         <div  className="messageHeaderOneOne">
                    <Typography variant="h6" className='title' >
-                        <img src={companylogo} className="companyLogo" alt="logo"/>
+                        <img style={{width:'65%'}} src={companylogo} className="companyLogo" alt="logo"/>
                         </Typography>
                         </div>
                 <div className="msgText Fonts">

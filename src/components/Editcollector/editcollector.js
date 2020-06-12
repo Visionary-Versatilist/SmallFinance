@@ -61,7 +61,7 @@ class EditCollectorProfile extends Component {
     _handleImageChange(e) {
         e.preventDefault();
         if(e.target.files[0].size > 1000000){
-            toast.error("File Size Should be less than 1 Mb", {
+            toast.error("Image Size Should be less than 1 Mb", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -191,17 +191,30 @@ class EditCollectorProfile extends Component {
                     draggable: true,
                     });
             }
-        }).catch(err => {
-            if(err.request.status!==200){
-            toast.error("Something went wrong. Please try again later!!", {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                });
+        }).catch(error => {
+            if (error.request.status === 401) {               
+                if (error.response.data.message === "user already exists with the above mail") {
+                    toast.error(error.response.data.message, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                    });
+                } else {
+                    toast.error(error.response.data.message, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                    });
+
+                }
             }
+            
         })
     }
       backLinkAction() {
@@ -298,9 +311,9 @@ class EditCollectorProfile extends Component {
             </div>);
         }
         const Category = [
-            { value: 'admin', label: 'Admin' },
-            { value: 'CollectionAgent', label: 'CollectionAgent', },
-            // { value: 'executive', label: 'Executive', },
+            { value: 'Admin', label: 'Super Admin' },
+            { value: 'CollectionAgent', label: 'Collection Agent', },
+            // { value: 'Executive', label: 'Executive', },
         ];
         const { fname, lname, category, emailid, mobilenum, submitted } = this.state;
 
@@ -357,7 +370,7 @@ class EditCollectorProfile extends Component {
                                 <div className="numaricTextField">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "30px" }}> {t('EditProfileDetails.phone')}</h6>
                                     <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="number" value={this.state.mobilenum} className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum}  disabled />
+                                    <Input type="number" value={this.state.mobilenum} className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
                                     <span style={{ display: this.state.numError, paddingLeft:"25rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                                    
                                         {submitted && !mobilenum &&
                                         <div className="help-block-user">Phone no. is required</div>
@@ -367,7 +380,7 @@ class EditCollectorProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "9px" }}>{t('EditProfileDetails.email')}</h6>
                                     <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input className="textBox" value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail}  disabled />
+                                    <Input className="textBox" value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
                                     <span style={{ display: this.state.emailError, paddingLeft:"25rem"}} className="help-block">Invalid Email id.</span>                                       
                                         {submitted && !emailid &&
                                         <div className="help-block-user">Email id is required</div>
@@ -386,7 +399,7 @@ class EditCollectorProfile extends Component {
                                 <div className="categorytextFieldStyle" >
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "10px" }}> {t('AddUser.Cat')}</h6>
                                     <div className={'form-group' + (submitted && !category ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <TextField id="standard-select" select value={this.state.category} className="textBox" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
+                                    <TextField id="standard-select" select value={this.state.category?this.state.category: 'Collection Agent'} className="textBox" style={{ width: "29%", marginLeft: "0%", borderRadius: '5px', border: this.state.changeColorcategory }} onClick={this.categoryBox}
                                         onChange={this.handleChange} disabled >
                                         {Category.map(option => (
                                             <MenuItem key={option.label} value={option.label}>

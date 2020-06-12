@@ -325,7 +325,7 @@ const headers = {
                   <div className="headerDiv">
                     <div className="headerDivOne">
                     <Typography variant="h6" className='title' style={{width:"67%"}}>
-                    <img src={companylogo} alt="logo"/>
+                    <img style={{width:"187%"}} src={companylogo} alt="logo"/>
                     </Typography>
                     </div>
                     {/* <div className="OptionDiv">

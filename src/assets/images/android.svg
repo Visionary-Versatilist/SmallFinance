@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="158" viewBox="0 0 158 158">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3760c9"/>
+      <stop offset="1" stop-color="#123aa1"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_28362" data-name="Group 28362" transform="translate(-507 -77)">
+    <rect id="Rectangle_2866" data-name="Rectangle 2866" width="158" height="158" rx="12" transform="translate(507 77)" fill="#dbe3ff"/>
+    <g id="Group_28334" data-name="Group 28334" transform="translate(-184 -615)">
+      <g id="Group_28328" data-name="Group 28328" transform="translate(340 -2)">
+        <path id="Path_36765" data-name="Path 36765" d="M44.2,2.792V29.354A11.719,11.719,0,0,1,32.485,41.073H5.923A11.719,11.719,0,0,1-5.8,29.354V2.792A11.719,11.719,0,0,1,5.923-8.927H32.485A11.719,11.719,0,0,1,44.2,2.792Z" transform="translate(410.796 740.927)" fill="url(#linear-gradient)"/>
+        <g id="Group_28327" data-name="Group 28327" transform="translate(1.715)">
+          <g id="Group_28326" data-name="Group 28326" transform="translate(1 2)">
+            <path id="Path_36766" data-name="Path 36766" d="M-2.194,0H24a8,8,0,0,1,8,8V19a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8C0,3.582-6.612,0-2.194,0Z" transform="translate(413 742)" fill="#f2f2f2"/>
+            <rect id="Rectangle_2854" data-name="Rectangle 2854" width="19" height="3" rx="1.5" transform="translate(419 748)" fill="#bfbfbf"/>
+            <rect id="Rectangle_2853" data-name="Rectangle 2853" width="19" height="3" rx="1.5" transform="translate(419 754)" fill="#bfbfbf"/>
+            <rect id="Rectangle_2855" data-name="Rectangle 2855" width="11" height="3" rx="1.5" transform="translate(419 759)" fill="#bfbfbf"/>
+          </g>
+        </g>
+      </g>
+      <text id="Android_Messages" data-name="Android
+Messages" transform="translate(770 808)" fill="#3e4664" font-size="18" font-family="Lato-Regular, Lato"><tspan x="-31.532" y="0">Android</tspan><tspan x="-38.493" y="22">Messages</tspan></text>
+    </g>
+  </g>
+</svg>

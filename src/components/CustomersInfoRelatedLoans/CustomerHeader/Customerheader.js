@@ -660,7 +660,7 @@ class CustomerHeader extends Component {
     let  loggedinUser= localStorage.getItem("loggedinUserCompany")
 
     const headers = {
-      'Authorization': 'Bearer' + ls.get('token')
+      'Authorization': 'Bearer ' + ls.get('token')
     }
 
     axios.get(BaseUrl + '/loanType/getAllLoanTypes?loanType=&companyId=' + loggedinUser, {
@@ -1052,7 +1052,7 @@ class CustomerHeader extends Component {
             <AppBar position="static" className='bar'>
               <Toolbar>
                 <Typography variant="h6" className='title' component={'div'}>
-                  <img src={companylogo} alt="logo" />
+                  <img style={{width:"42%"}} src={companylogo} alt="logo" />
                 </Typography>
                 <div className="OptionDiv" style={{ display: this.state.allbuttnscard }}>
                   <div style={{ color: this.state.openText, fontWeight: this.state.openWeight }} onClick={this.opencustomer.bind(this)} className="option Fonts btnSizeFont">

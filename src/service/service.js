@@ -268,11 +268,14 @@ const modifiyJSONFormat = (key, rawData) => {
             isLastDue = rawData.loanCollections.filter(obj => obj.collectionStatus === null).length === 1
 
             //profile pic
-            profilePhoto = rawData?rawData.customer.proofs.find(obj => obj.proofType === 'profilepic'):""
-            if (profilePhoto !== undefined) {
+            console.log('before 271')
+            profilePhoto = rawData?rawData.customer.proofs?rawData.customer.proofs.find(obj => obj.proofType === 'profilepic'):"":""
+            console.log('after 271')
+            if (profilePhoto !== "") {
                 console.log('monday offer',profilePhoto)
                 profilePhoto =DOMAIN+ profilePhoto.proofImagePath
             } else {
+                console.log('else offer',profilePhoto)
                 profilePhoto = infoimag
             }
 

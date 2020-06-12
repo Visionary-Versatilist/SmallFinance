@@ -9,7 +9,7 @@ import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
-import {BaseUrl,headers, ImageBaseUrl} from "../../Environment";
+import {BaseUrl, ImageBaseUrl} from "../../Environment";
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { withNamespaces } from 'react-i18next';
@@ -78,19 +78,50 @@ class UpdateAdminProfile extends Component {
 
     _handleImageChange(e) {
         e.preventDefault();
+        if(e.target.files[0].size > 1000000){
+            toast.error("Image Size Should be less than 1 Mb", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                });         //    this.value = "";
+         } else{
 
         let reader = new FileReader();
         let file = e.target.files[0];
+        let tempName = file.name
+        tempName = tempName.split('.');
+        let name  = tempName[0] + Date.now() + '.' + tempName[1];
+        let data;
+         let temp = new File([file], name, {type: file.type})
+
 
         reader.onloadend = () => {
             this.setState({
-                file: file,
+                file: temp,
+                filename:name,
                 imagePreviewUrl: reader.result
             });
         }
 
         reader.readAsDataURL(file)
+        // e.preventDefault();
+
+        // let reader = new FileReader();
+        // let file = e.target.files[0];
+
+        // reader.onloadend = () => {
+        //     this.setState({
+        //         file: file,
+        //         imagePreviewUrl: reader.result
+        //     });
+        // }
+
+        // reader.readAsDataURL(file)
     }
+}
     handleChange = event => {
         this.setState({ category: event.target.value });
         // this.setState({ vehiclemodel: event.target.value })
@@ -169,6 +200,10 @@ class UpdateAdminProfile extends Component {
              let formData = new FormData();
         formData.append('alldetails', JSON.stringify(userdetails)); 
         formData.append("userprofilepic", this.state.file);
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
+          }
         
         axios.put(BaseUrl + '/user/updateUser',formData,{
             headers: headers,
@@ -194,7 +229,16 @@ class UpdateAdminProfile extends Component {
                     });
             }
         }).catch(err => {
-            if(err.request.status!==200){
+            if(err.request.status === 413){
+                toast.error("Profile Image should be less than 1 mb!!", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    });
+            } else {
             toast.error("Something went wrong. Please try again later!!", {
                 position: "top-center",
                 autoClose: 2000,
@@ -232,7 +276,7 @@ class UpdateAdminProfile extends Component {
                       imagePreviewUrl:resp.data.userImagePath? ImageBaseUrl + resp.data.userImagePath:null,
                       userid:localStorage.getItem('userid'),
                       userType:resp.data.userType,
-                      language:resp.data.language
+                      language:resp.data.language?resp.data.language:'English'
                   })
                   i18n.changeLanguage(resp.data.language)
                 } else {
@@ -345,6 +389,7 @@ class UpdateAdminProfile extends Component {
                                         {$imagePreview}
                                         <input className="fileInput"
                                             type="file"
+                                            accept="image/png, image/jpeg"
                                             onChange={(e) => this._handleImageChange(e)} 
                                             id="icon-button-file"
                                             />
@@ -360,7 +405,7 @@ class UpdateAdminProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                     {/* <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                    <Input className="textBox" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ fname: event.target.value })}} />
+                                    <Input className="textBox" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, '');  this.setState({ fname: event.target.value })}} />
                                   
                                          {submitted && !fname &&
                                     <div className="help-block"> First name is required</div>
@@ -369,7 +414,7 @@ class UpdateAdminProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.lname')}</h6>
                                     {/* <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                    <Input className="textBox" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ lname: event.target.value })}} />
+                                    <Input className="textBox" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, '');  this.setState({ lname: event.target.value })}} />
                                    
                                          {submitted && !lname &&
                                     <div className="help-block">Last name is required</div>
@@ -378,7 +423,7 @@ class UpdateAdminProfile extends Component {
                                 <div className="numaricTextField">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "30px" }}>{t('EditProfileDetails.phone')}</h6>
                                     {/* <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                    <Input type="number"  value={this.state.mobilenum}  className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} /* onChange={(event) => this.setState({ mobilenum: event.target.value })} */ onChange={this.validNum}  disabled />
+                                    <Input type="number"  value={this.state.mobilenum}  className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} /* onChange={(event) => this.setState({ mobilenum: event.target.value })} */ onChange={this.validNum}  />
                                     
                                          <span style={{ display: this.state.numError,marginLeft:"28rem" }} className="help-block">Mobile number must be 10 digit.</span>                                        
                                          {submitted && !mobilenum &&
@@ -387,7 +432,7 @@ class UpdateAdminProfile extends Component {
                                 </div>
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "9px" }}>{t('EditProfileDetails.email')}</h6>
-                                        <Input className="textBox"  value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail}  disabled />
+                                        <Input className="textBox"  value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
                                         <span style={{ display: this.state.emailError,marginLeft:"28rem" }} className="help-block">Invalid Email id.</span>
                                         {submitted && !emailid &&
                                          <div className="help-block" style={{marginRight:"14rem"}}>Email id is required</div>

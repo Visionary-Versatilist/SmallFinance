@@ -629,7 +629,8 @@ const headers = {
 
       }
     }).catch(err => {
-      toast.error("Please fill correct data!", {
+      console.log("catch err==>", err)
+      toast.error(err.response.data.msg, {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
@@ -662,7 +663,8 @@ const headers = {
       if (res.request.status === 200) {
         // {this.state.choosecustomer}
         let custname = this.state.choosecustomer
-        toast.success("Loan Added Successfully to" + " " + custname, {
+        let laontype = this.state.laontype
+        toast.success(laontype + " " + "Added Successfully to" + " " + custname, {
           position: "top-center",
           autoClose: 3000,
           hideProgressBar: true,

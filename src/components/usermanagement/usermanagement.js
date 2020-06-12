@@ -258,7 +258,7 @@ class Usermanagement extends Component {
     <Table className='table'>
       <TableHead>
         <TableRow style={{backgroundColor:"#E1F0FA", color:'#B2B2B2'}}>
-          <TableCell>CollectionAgent name</TableCell>
+          <TableCell>Collection Agent Name</TableCell>
           <TableCell align="right">Mobile Number</TableCell>
           <TableCell align="right">Email Id</TableCell>
           <TableCell align="right">Category</TableCell>
@@ -278,7 +278,7 @@ class Usermanagement extends Component {
             </TableCell>
             <TableCell align="right" className="changetext" >{row.userPhone}</TableCell>
             <TableCell align="right" className="changetext">{row.userEmail}</TableCell>
-            <TableCell align="right" className="changetext">{row.userType}</TableCell>
+            <TableCell align="right" className="changetext">{row.userType === "superAdmin"? "Super Admin":"Collection Agent"}</TableCell>
             <TableCell align="right">
             <img src={penciledit} alt="searchicon" className="iconedit" style={row.userType === "superAdmin" ? { display:"none" } : { display:"initial" }} onClick={this.edituser.bind(this,row)} />
             <img src={deleteicon} alt="deleteicon" className="icondelet" style={row.userType === "superAdmin" ? { display:"none" } : { display:"initial" }} onClick={this.deleteuser.bind(this, row, i)} />

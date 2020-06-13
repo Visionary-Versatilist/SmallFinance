@@ -116,6 +116,7 @@ axios.get(BaseUrl + '/loanType/getAllLoanTypes?loanType=&companyId=' + loggedinU
   }
   editLoanType(loanTypeId){
     // this.props.history.push('/loan/editloan')
+    localStorage.setItem("EditLoanTypeID", loanTypeId)
     this.props.history.push({pathname:'/loan/editloan',params:loanTypeId})
 
   }

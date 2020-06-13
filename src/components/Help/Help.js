@@ -35,36 +35,6 @@ class Help extends Component {
             <div>
                 <Sidebar />
                 <div className="HelpMainDiv Fonts">
-                    {/* <div className="Helphead">
-                        <h3>Help</h3>
-                    </div>
-                    <Card style={{ margin: "4.6%", padding: "3%" }}>
-                        <div style={{ textAlign: "center" }}>
-                            <TextareaAutosize style={{ width: "51%", height: "110px", borderRadius: "5px", padding: "15px" }} aria-label="emptytextarea" placeholder="Kindly share your thought here." />
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
-                            <FormControl component="fieldset" style={{ border: "none", width: "47%" }}>
-                                <RadioGroup aria-label="position" name="position" value={this.state.takereply} onChange={this.handleChange} row className="Fonts">
-                                    <FormControlLabel
-                                        value="phonenumber"
-                                        control={<Radio style={{ color: "#00D95E" }} />}
-                                        label="Get reply by phone number"
-                                        labelPlacement="end"
-                                    />
-                                    <FormControlLabel
-                                        value="email"
-                                        className="partialPayment"
-                                        control={<Radio style={{ color: "#00D95E" }} />}
-                                        label="Get reply by email"
-                                        labelPlacement="end"
-                                    />
-                                </RadioGroup>
-                            </FormControl>
-                            <div>
-                                <button className="SaveButton Fonts">submit</button>
-                            </div>
-                        </div>
-                    </Card> */}
                     <div style={{ textAlign: "center",paddingTop: "2rem" }}>
                         <h2>{t('FAQ.title')}</h2>
                     </div>

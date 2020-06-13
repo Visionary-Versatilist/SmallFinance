@@ -9,6 +9,9 @@ import GooglePlay from '../../assets/images/Group 28315.svg';
 import AppStore from '../../assets/images/Group 28316.svg';
 import 'react-toastify/dist/ReactToastify.css';
 import { BaseUrl } from "../../Environment";
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 const axios = require('axios')
 class Signup extends Component {
     constructor() {
@@ -27,7 +30,7 @@ class Signup extends Component {
             validemail: true,
             validnum: true,
             numError: "none",
-
+            checkedA: false,
         }
         this.Register = this.Register.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,21 +45,24 @@ class Signup extends Component {
             "password": this.state.password,
             "isActive": true,
             "createdAt": this.state.curTime,
-            "updatedAt": this.state.curTime
+            "updatedAt": this.state.curTime,
+            "agreement": this.state.checkedA
         })
         axios.post(BaseUrl + '/user/signUp', userdetails, {
 
         }).then(resp => {
             if (resp.request.status === 200) {
-                toast.success("Registered successfully !", {
-                    position: "top-center",
-                    autoClose: 2000,
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: true,
-                });
-                this.props.history.push('/')
+                // toast.success("Registered successfully !", {
+                //     position: "top-center",
+                //     autoClose: 2000,
+                //     hideProgressBar: true,
+                //     closeOnClick: true,
+                //     pauseOnHover: false,
+                //     draggable: true,
+                // });
+                // this.props.history.push('/')
+                // this.props.history.push('/verifynumber')
+                this.sentOtp()
             } else {
                 toast.error("Please fill correct data!", {
                     position: "top-center",
@@ -80,6 +86,53 @@ class Signup extends Component {
             }
         })
     }
+    
+    sentOtp=()=>{
+        const userdetails = ({
+            "userEmail": this.state.emailid,
+            "userPhone": this.state.mobilenum,
+            "createdAt": this.state.curTime,
+            "updatedAt": this.state.curTime,
+        })
+        axios.post(BaseUrl + '/user/sendOtp', userdetails, {
+
+        }).then(resp => {
+            if (resp.request.status === 200) {
+                toast.success("OTP has been sent to your Email id and Phone number!", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+                localStorage.setItem("registeredEmail", this.state.emailid)
+                localStorage.setItem("registeredPhone", this.state.mobilenum)
+                this.props.history.push('/verifynumber')
+            } else {
+                toast.error("Please fill correct data!", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            }
+        }).catch(err => {
+            if (err.request.status === 401) {
+                toast.error(err.response.data.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            }
+        }) 
+    }
+
     componentDidMount() {
         setInterval(() => {
             this.setState({
@@ -92,7 +145,7 @@ class Signup extends Component {
         e.preventDefault();
 
         this.setState({ submitted: true });
-        const { lname, fname, emailid, mobilenum, password, confirmpassword } = this.state;
+        const { lname, fname, emailid, mobilenum, password, confirmpassword, checkedA } = this.state;
         if (password !== confirmpassword) {
             // alert("Passwords don't match");
             toast.error("confirm password did not match with new password!!", {
@@ -103,7 +156,7 @@ class Signup extends Component {
                 pauseOnHover: false,
                 draggable: true,
             });
-        } else if (lname && fname && emailid && mobilenum && password && confirmpassword) {
+        }else if (lname && fname && emailid && mobilenum && password && confirmpassword && checkedA) {
             // this.props.login(username, password);
             this.Register()
         }
@@ -158,34 +211,32 @@ class Signup extends Component {
             })
         }
     }
-    //   notify = () => toast.success("register successful !", {
-    //     position: "top-center",
-    //     autoClose: 2000,
-    //     hideProgressBar: true,
-    //     closeOnClick: true,
-    //     pauseOnHover: false,
-    //     draggable: true,
-    //     });
+     Termscheck = (event) => {
+        // setState({ ...state, [event.target.name]: event.target.checked });
+        console.log("checkedA",event.target.checked )
+        if(this.state.checkedA === false) {
+        this.setState({
+            checkedA: true
+        })
+    } else {
+        this.setState({
+            checkedA: false
+        })
+    }
+      };
 
     render() {
-        toast.configure({
-            // autoClose: 2000,
-            // draggable: false,
-            // Transition:'flip',
-            // hideProgressBar: 'true'.
-            // // pauseOnHover: 'false',
-            // position="top-center"
-            //etc you get the idea
-        });
-        const { lname, fname, emailid, password, mobilenum, confirmpassword, submitted } = this.state;
+        toast.configure({});
+        const { lname, fname, emailid, password, mobilenum, confirmpassword, submitted, checkedA } = this.state;
         return (
             <div className="signupPage">
                 <div className="mainDiv">
-                    <div style={{marginTop: "4%"}}>
+                    <div style={{ marginTop: "4%", display:'flex' }}>
+                        <div style={{marginLeft: 'auto'}}>
                         <div className="firstDiv">
                             <div className="firstDivOne">
                                 <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
-                                <div className="firstH4 TextColour">World's First 360&#176; Small Finance Lending App</div>
+                                <div className="firstH4 ">World’s Best in Class Small Finance Lending App</div>
                             </div>
                         </div>
                         <div className="secondDiv">
@@ -201,11 +252,13 @@ class Signup extends Component {
                                         </div>
                                     </div>
                                     <div className="clickHere">
-                                        Read our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                                    Read our <a target="_blank" href='https://lendstack.app/#/termsofservice'>Terms of Service</a> and <a target="_blank" href='https://lendstack.app/#/privacypolicy'>Privacy Policy</a>
                                     </div>
                                 </div>
                             </div>
-                            <div className="CardDiv">
+                        </div>
+                        </div>
+                        <div className="CardDiv">
                                 <div className="CardDiv2">
                                     <Card className="CardDiv3">
                                         <div className="CardDiv4">
@@ -251,10 +304,20 @@ class Signup extends Component {
                                                         <div className="help-block">Confirm your password</div>
                                                     }
                                                 </div>
+                                                <FormGroup row>
+                                                    <FormControlLabel
+                                                        control={<Checkbox checked={this.state.checkedA} onChange={this.Termscheck} name="checkedA"  required className="form-control"/>}
+                                                        label={<div> I accept the <a target="_blank" href='https://lendstack.app/#/termsofservice'>Terms of Service</a> and <a target="_blank" href='https://lendstack.app/#/privacypolicy'>  Privacy Policy</a></div>}
+                                                    />
+                                                    {submitted && !checkedA &&
+                                                        <div className="help-block">Accept terms of service and privacy policy</div>
+                                                    }
+                                                </FormGroup>
                                             </form>
                                             <div className="btnDiv">
+                                            {/* onClick={this.handleSubmit} */}
                                                 <Button variant="outlined" fullWidth className="Fonts btnSizeFont btn" onClick={this.handleSubmit}>
-                                                    SIGN UP
+                                                    Next
                                                 </Button>
                                                 {/* <button onClick={this.notify}>Notify !</button> */}
                                             </div>
@@ -262,7 +325,6 @@ class Signup extends Component {
                                     </Card>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

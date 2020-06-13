@@ -226,7 +226,7 @@ class AddUser extends Component {
                         draggable: true,
                     });
                 } else {
-                    toast.error("Please fill registered Email Id", {
+                    toast.error(error.response.data.message, {
                         position: "top-center",
                         autoClose: 4000,
                         hideProgressBar: true,
@@ -312,7 +312,7 @@ class AddUser extends Component {
             </div>);
         }
         const Category = [
-            { value: 'Admin', label: 'Super Admin' },
+            { value: 'Admin', label: 'Admin' },
             { value: 'CollectionAgent', label: 'Collection Agent', },
             // { value: 'Executive', label: 'Executive', },
         ];
@@ -353,7 +353,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel One Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                         <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" placeholder= "Given Name/Middle Name" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
+                                        <Input className="textBox" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
                                         {submitted && !fname &&
                                         <div className="help-block-user">First name is required</div>
                                         }
@@ -362,7 +362,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.lname')}</h6>
                                         <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" placeholder= "Family Name/Surname" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
+                                        <Input className="textBox" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
                                         {submitted && !lname &&
                                         <div className="help-block-user">Last name is required</div>
                                         }

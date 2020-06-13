@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import GooglePlay from '../../assets/images/Group 28315.svg';
 import AppStore from '../../assets/images/Group 28316.svg';
 import { BaseUrl } from "../../Environment"
+
 const axios = require('axios');
 class Login extends Component {
     constructor() {
@@ -24,8 +25,9 @@ class Login extends Component {
         }
         this.Login = this.Login.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.LoggedinUser = this.LoggedinUser.bind(this)
+        this.LoggedinUser = this.LoggedinUser.bind(this);
     }
+
     LoggedinUser() {
         const headers = {
             'Content-Type': 'application/json',
@@ -125,8 +127,8 @@ class Login extends Component {
                             pauseOnHover: false,
                             draggable: true,
                         });
-                    } else {
-                        toast.error("Please fill registered Email Id", {
+                    } else if(error.response.data.message === "Your Account is not verify yet") {
+                        toast.error(error.response.data.message, {
                             position: "top-center",
                             autoClose: 2000,
                             hideProgressBar: true,
@@ -134,10 +136,65 @@ class Login extends Component {
                             pauseOnHover: false,
                             draggable: true,
                         });
-
+                        this.sentOtp()
+                    } else {
+                        toast.error(error.response.data.msg, {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: false,
+                            draggable: true,
+                        });
                     }
                 }
             })
+    }
+
+    sentOtp=()=>{
+        const userdetails = ({
+            "userEmail": this.state.emailid,
+            // "userPhone": this.state.mobilenum,
+            "createdAt": this.state.curTime,
+            "updatedAt": this.state.curTime,
+        })
+        axios.post(BaseUrl + '/user/sendOtp', userdetails, {
+
+        }).then(resp => {
+            if (resp.request.status === 200) {
+                toast.success("OTP has been sent to your Email id or Phone number!", {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+                localStorage.setItem("registeredEmail", this.state.emailid)
+                localStorage.setItem("registeredPhone", this.state.mobilenum)
+                this.props.history.push({ pathname: '/verifynumber', params: this.state.emailid })
+            } else {
+                toast.error("Please fill correct data!", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            }
+        }).catch(err => {
+            if (err.request.status === 401) {
+                toast.error(err.response.data.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            }
+        }) 
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -158,8 +215,8 @@ class Login extends Component {
         }
     }
     validateEmail(emailid) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g
-        return re.test(emailid)
+        // const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g
+        // return re.test(emailid)
     }
     validEmail = (event) => {
         const emailid = event.target.value
@@ -178,7 +235,31 @@ class Login extends Component {
             })
         }
     }
+
+// Test = () => {
+//     const headers = {
+//         'Content-Type': 'application/json',
+//         'Authorization': 'eyJraWQiOiJESHh1RHpHa25zOFwvc0haR09TOHhcL2hlVVd6ZnRmb016dkpXdzg4R3E1aTA9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwZDIyODg4YS0xMmViLTRiMjQtOTcwNC1kMGE3MDJkZDg1YWEiLCJhdWQiOiI1NjRqMWFkOTNnY3VlMzRzNGU1ZXQ0bGFtaSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImY2YjI2NWY1LWE5NDUtNDJhZS1iOWVhLWM2ZWFmZGU5NmVjYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTg5OTE2MDQyLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGgtMS5hbWF6b25hd3MuY29tXC9hcC1zb3V0aC0xX25IeTBhUm5lMiIsImNvZ25pdG86dXNlcm5hbWUiOiIwZDIyODg4YS0xMmViLTRiMjQtOTcwNC1kMGE3MDJkZDg1YWEiLCJleHAiOjE1ODk5MTk2NDIsImlhdCI6MTU4OTkxNjA0MiwiZW1haWwiOiJhZG1pbkBhcmtpaGl2ZS5jb20ifQ.MMrehkchD3ACMTC5Q7S-M_vcI5qLXdJb7bkUITz-eyaAJfjiVRchrjRCqKtiLt03KjRlK_LgMiK9FDpM1SjquWtbrfqPUpHtdBx1uTDiOnzqFOBpNL9H0ZFjOTbpkdhqHLtcF3rMESinyO6lBEDwXIFBlH5I2z3Xocsx_9qLVfSrZg0upN35yU9PsleNMHU8FZGhzOs4o5hOHMIbpmn2yV3sFIJstf7O20TOchMn6vZWQWe2OEL3nysb6MrJpv1u1nMhv1s39QSvOa1nONapqZqGCPslPo4cEjpEmXg6cF_9gwMcsq48dnCrUqZTHOzP2lkhRZtd5gjgQB6xG39X3g',
+//         'AllowOrigin': "'*'"
+//     }
+//     axios.get('https://vchrggusx0.execute-api.ap-south-1.amazonaws.com/dev/get/admin/materialCategory', {
+//         headers: headers
+//     }).then(resp => {
+//         console.log('test response is:', resp);
+//     })
+//         .catch(error => {
+//             console.log("test error is:", error);
+//             console.log("test error status is:",error.response.status);
+//             console.log("test error req is:",error.request);
+//             console.log("test error message is:", error.message);
+//             console.log("test error data is:",error.response.data);
+//             console.log("test error header is:",error.response.headers);
+//         })
+
+// }
+
     componentDidMount(){
+        // this.Test()
         console.log("today2",new Date().toLocaleDateString('en-GB'))
     var today = new Date();
     var nextweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()+6).toLocaleDateString('en-GB');
@@ -203,11 +284,12 @@ if (now.getMonth() === 12) {
         return (
             <div className="loginPage">
                 <div className="mainDiv">
-                <div style={{marginTop: "7%"}}>
+                <div style={{marginTop: "4%", display:'flex'}}>
+                <div style={{marginLeft: 'auto'}}>
                     <div className="firstDiv">
                         <div className="firstDivOne">
                             <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
-                            <div className="firstH4 TextColour">World's First 360&#176; Small Finance App</div>
+                            <div className="firstH4 ">World’s Best in Class Small Finance Lending App</div>
                         </div>
                     </div>
                     <div className="secondDiv">
@@ -223,12 +305,14 @@ if (now.getMonth() === 12) {
                             </div>
                         </div>
                         <div className="clickHere">
-                            Read our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                        Read our <a target="_blank" href='https://lendstack.app/#/termsofservice'>Terms of Service</a> and <a target="_blank" href='https://lendstack.app/#/privacypolicy'>Privacy Policy</a>
                         </div>
                     </div>
 
                         </div>
-                        <div className="CardDiv">
+                        </div>
+                    </div>
+                    <div className="CardDiv">
                             <div className="CardDiv2">
                                 <Card className="CardDiv3">
                                     <div className="CardDiv4">
@@ -237,10 +321,10 @@ if (now.getMonth() === 12) {
                                         </div>
                                         <form name="form">
                                             <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input type="email" required placeholder="Email Address or Mobile Number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
-                                                <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
+                                                <Input type="email" required placeholder="Enter your email or mobile number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
+                                                {/* <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span> */}
                                                 {submitted && !emailid &&
-                                                    <div className="help-block" style={{ marginRight: "14rem" }}>Email id is required</div>
+                                                    <div className="help-block" style={{ marginRight: "9rem" }}>Email id or Phone number is required</div>
                                                 }
                                             </div>
 
@@ -253,8 +337,8 @@ if (now.getMonth() === 12) {
                                         </form>
                                         <div className="btnDiv">
                                             <Button variant="outlined" fullWidth className="Fonts btnSizeFont btn" onClick={this.handleSubmit}>
-                                                LOG IN
-                                </Button>
+                                                Login
+                                            </Button>
                                         </div>
                                         <div className="linkDiv HighlightTextColour">
                                             <a className="linkFontSize HighlightTextColour Fonts" style={{ textDecoration: 'underline', cursor: "pointer" }} onClick={this.Forgetpassword.bind(this)}>FORGOT PASSWORD?</a></div>
@@ -262,7 +346,6 @@ if (now.getMonth() === 12) {
                                 </Card>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

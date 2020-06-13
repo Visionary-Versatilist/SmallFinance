@@ -88,6 +88,7 @@
     }
     .CardDiv:hover {
         background-image: linear-gradient(to bottom right, #00D95E ,#4277DB );
+        cursor: pointer;
         .NameDiv {
             font-size: 18px;
             font-weight: 900;

@@ -6,6 +6,7 @@ import { fetchAPIData } from '../../../../service/service';
 import PaymentProcess from '../../../modals/PaymentProcess/PaymentProcess';
 import PersoanlInfoModel from '../../../modals/PersonInfo modal/PersonInfoModal';
 import "./ProfileCard.scss";
+import MessageForCustomer from '../../../modals/MessageForCustomer/MessageForCustomer'
 
 import {
     redcross as redCross, message as Sms, infoimag as profileImg,
@@ -31,7 +32,8 @@ class ProfileCard extends Component {
             paymentAction: null,
             isPersonalInfoActive: false,
             customerInfo: {},
-
+            openmodal: false,
+            row: "",
         };
 
     }
@@ -83,6 +85,17 @@ class ProfileCard extends Component {
     notDone = () => {
         alert("Oops! sorry, this features is under construction")
     }
+    messagecustomer = (details, value) => {
+        this.setState({
+          openmodal: true,
+          row: details
+        })
+      }
+      closemodal=()=> {
+        this.setState({
+          openmodal: false
+        })
+      }
 
     onPaymentBtnClk = async (nextDue, loanID) => {
         const { action } = this.props
@@ -130,9 +143,9 @@ class ProfileCard extends Component {
                             <h6 className="LoanNumber Fonts" > Loan Number</h6>
                             <div className="Contact Fonts">
                                 <h4 className="phoneNo Fonts" >
-                                    <Call className="ContactIcon Fonts" onClick={this.notDone} />
+                                    <Call className="ContactIcon Fonts" />
                                     {personalDetails.phoneNo}  </h4>
-                                <img className="ContactIcon" onClick={this.notDone} src={Sms} alt={'sms'} />
+                                <img className="ContactIcon" onClick={this.messagecustomer.bind(this, personalDetails.phoneNo)} src={Sms} alt={'sms'} />
                             </div>
                         </div>
                     </div>
@@ -180,6 +193,7 @@ class ProfileCard extends Component {
 
                     </div>
                 </div>
+              <MessageForCustomer open={this.state.openmodal} close={this.closemodal} rowData={this.state.row} />
             </div>
         );
     }

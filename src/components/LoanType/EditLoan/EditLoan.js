@@ -7,7 +7,7 @@ import Sidebar from '../../sidebar/sidebar';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'date-fns';
-import {BaseUrl, headers} from "../../../Environment";
+import {BaseUrl} from "../../../Environment";
 import { withNamespaces } from 'react-i18next';
 
 const axios = require('axios')
@@ -338,8 +338,13 @@ class EditLoan extends Component {
     } 
       
       loantypeinfoGet(){
+          let selectedLoanId = localStorage.getItem("EditLoanTypeID")
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
+          }
       
-        axios.get(BaseUrl + '/loanType/getLoanTypeDetails?loanTypeId=' +this.props.location.params,{
+        axios.get(BaseUrl + '/loanType/getLoanTypeDetails?loanTypeId=' +selectedLoanId,{
             headers: headers,
         }).then(resp => {
             if(resp.status===200) {
@@ -395,6 +400,10 @@ class EditLoan extends Component {
            "tenureDaysFrom":   this.state.loanTenureDaysfrom,            
            "tenureDaysTo":    this.state.loanTenureDaysto,         
            "isDefault":false
+          }
+          const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
           }
 
         axios.put(BaseUrl + '/loanType/putLoanType',data,{

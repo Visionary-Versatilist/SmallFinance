@@ -113,7 +113,7 @@ class AllNewCustomerHeader extends Component {
                 <AppBar position="static" className='bar'>
                     <Toolbar>
                         <Typography variant="h6" className='title' style={{width:"67%"}}>
-                        <img src={companylogo} alt="logo"/>
+                        <img style={{width:"19%"}} src={companylogo} alt="logo"/>
                         </Typography>
                         <div className="searchDiv">
                     <IconButton className='iconButton' aria-label="search">

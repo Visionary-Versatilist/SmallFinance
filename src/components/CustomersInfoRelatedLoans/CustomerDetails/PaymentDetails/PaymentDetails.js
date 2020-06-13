@@ -40,6 +40,13 @@ class PaymentDetails extends Component {
   componentWillReceiveProps = nextProps => {
     const { tentureType, isLoanActive, loanHistoryDetailList, method } = nextProps
     const isInstallmentCalculator = method === 'Installment Calculator'
+    loanHistoryDetailList.sort(function compare(a, b) {
+      var dateA = new Date(a.date);
+      var dateB = new Date(b.date);
+      return dateA - dateB;
+    });
+    
+    console.log(loanHistoryDetailList);
     this.setState({ tentureType, isLoanActive, loanHistoryDetailList, isInstallmentCalculator });
   }
 

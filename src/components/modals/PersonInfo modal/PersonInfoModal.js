@@ -166,7 +166,7 @@ class PersonInfoModal extends Component {
                         <InputLabel className="CustomerInfo Fonts">
                            {t('AddCustomer.majscr')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">{customerDetail.incomeSource ? customerDetail.incomeSource : null}</div>
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.incomeSource ? customerDetail.incomeSource : null}</div>
                       </div>
                       <div className="firstDivTwoOne">
                         <InputLabel className="CustomerInfo Fonts">
@@ -187,11 +187,11 @@ class PersonInfoModal extends Component {
                           {
                             customerDetail.addresses ?
                               <div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressLine}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressStreet}</div>
-                                <div className="CustomerInfo Fonts" >{customerDetail.addresses[0].AddressLandmark}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[0].AddressCity}</div>
-                                <div className="CustomerInfo Fonts">{`${customerDetail.addresses[0].AddressState} ${customerDetail.addresses[0].AddressPincode}`}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[0].AddressLine}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[0].AddressStreet}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[0].AddressLandmark}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[0].AddressCity}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{`${customerDetail.addresses[0].AddressState} ${customerDetail.addresses[0].AddressPincode}`}</div>
 
                               </div>
                               : null
@@ -207,11 +207,11 @@ class PersonInfoModal extends Component {
                           {
                             customerDetail.addresses ?
                               <div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressLine}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressStreet}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressLandmark}</div>
-                                <div className="CustomerInfo Fonts">{customerDetail.addresses[1].AddressCity}</div>
-                                <div className="CustomerInfo Fonts">{`${customerDetail.addresses[1].AddressState} ${customerDetail.addresses[1].AddressPincode}`}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[1].AddressLine}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[1].AddressStreet}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[1].AddressLandmark}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{customerDetail.addresses[1].AddressCity}</div>
+                                <div className="CustomerInfo Fonts" style={{textTransform:'capitalize'}}>{`${customerDetail.addresses[1].AddressState} ${customerDetail.addresses[1].AddressPincode}`}</div>
 
                               </div>
                               : null
@@ -251,7 +251,7 @@ class PersonInfoModal extends Component {
                         <InputLabel className="CustomerInfo Fonts">
                           {t('AddCustomer.bname')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>
                           {customerDetail.bankDetail ? customerDetail.bankDetail.bankName : null}
                         </div>
                       </div>
@@ -291,7 +291,7 @@ class PersonInfoModal extends Component {
                         <InputLabel className="CustomerInfo Fonts">
                            {t('AddCustomer.refname')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>
                           {customerDetail.referenceDetail ? customerDetail.referenceDetail.referenceName1 : null}
                         </div>
                       </div>
@@ -299,7 +299,7 @@ class PersonInfoModal extends Component {
                         <InputLabel className="CustomerInfo Fonts">
                           {t('AddCustomer.reffname')}
                         </InputLabel>
-                        <div className="CustomerContentInfo Fonts">
+                        <div className="CustomerContentInfo Fonts" style={{textTransform:'capitalize'}}>
                           {customerDetail.referenceDetail ? customerDetail.referenceDetail.referenceName2 : null}
                         </div>
                       </div>
@@ -330,7 +330,7 @@ class PersonInfoModal extends Component {
                     {customerDetail.proofs ?
                       customerDetail.proofs
                         .map((proof, index) =>
-                          <Proof key={index} proof={proof} />
+                          <Proof style={{textTransform:'capitalize'}} key={index} proof={proof} />
                         )
                       : null}
 

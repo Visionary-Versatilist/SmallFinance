@@ -120,10 +120,10 @@ class ForgetPassword extends Component {
           <div className="firstDiv">
             <div className="firstDivOne">
               <div className="firstH3 TextColour">
-                World's number one 360&#176; microfinance app
+              LEND LIKE A PRO!
               </div>
               <div className="firstH4 ">
-                Littile discription about application
+              World’s Best in Class Small Finance Lending App
               </div>
             </div>
           </div>

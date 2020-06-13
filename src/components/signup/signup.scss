@@ -7,7 +7,7 @@
   .firstDiv {
     align-items: center;
     justify-content: center;
-    margin: 2rem;
+    // margin: 2rem;
     margin-bottom: 0.5rem !important;
   }
   .firstDivOne {
@@ -29,9 +29,10 @@
     width: 100%;
   }
   .ImageDiv {
-    width: 50%;
+    width: 65%;
     text-align: end;
     padding-top: 1rem;
+    margin-left: 10%;
   }
   .storeButtons {
     // margin-top: -10rem;
@@ -85,7 +86,7 @@
     padding: 0rem 0rem 1rem 0rem !important;
   }
   .btnDiv {
-    padding: 2rem 0rem 1rem 0rem !important;
+    padding: 0rem 0rem 1rem 0rem !important;
   }
   .linkDiv {
     text-align: end;
@@ -295,6 +296,17 @@
       padding: 0% 5%;
     }
   }
+}
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #00D95E !important;
+}
+.MuiSvgIcon-root {
+  width: 21px !important;
+}
+.MuiTypography-body1 {
+  font-size: 12px !important;
+  font-family: 'Lato'!important;
+  color: #3E4664;
 }
 
 /* iPads (landscape) ----------- */

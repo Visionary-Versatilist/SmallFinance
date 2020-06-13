@@ -250,7 +250,7 @@ class CollectionReportHeader extends Component {
           <AppBar position="static" className="bar">
             <Toolbar>
               <Typography variant="h6" className="title">
-                <img src={companylogo} alt="logo" />
+                <img style={{width:"40%"}} src={companylogo} alt="logo" />
               </Typography>
 
             </Toolbar>

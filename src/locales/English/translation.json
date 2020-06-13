@@ -17,7 +17,7 @@
     "password": "Password"
   },
   "ProfileModal": {
-    "signout": "Logout",
+    "signout": "SignOut",
     "Company": "Company Profile",
     "Management": "User Management"
   },
@@ -44,8 +44,8 @@
     "title": "FAQs (Frequently asked Questions)",
     "questions": [
       {
-        "que": "Does Lendstack give out loans?",
-        "ans": "Lendstack doesn’t give out loans. Lendstack is a platform used by small and individual lenders to manage their lending process."
+        "que": "What is Lendstack?",
+        "ans": "Lendstack is a software platform for small and individual lenders to originate loans, collect and recover loans, and provide reports and analytics. In the next version, we are going to include credit scores using credit bureau services,messaging services and machine learning algorithms."
       },
       {
         "que": "What is the minimum/maximum amount I can lend out?",
@@ -60,9 +60,69 @@
         "ans": "Lendstack does not give out loans. Lendstack is a platform used by small and individual lenders to manage their lending process."
       },
       {
+        "que": "In which Countries does Lendstack Operate?",
+        "ans": "Lendstack can be operated across the world by changing the currency and location in the Settings Panel."
+      },
+	  {
+        "que": "Who is an Individual Lender?",
+        "ans": "An individual lender is anyone who lends on the Lendstack Platform as a side hustle without a Money Lender License."
+      },
+	  {
+        "que": "Who is a Business Lender?",
+        "ans": "A business lender is a registered business with a Money Lenders License. A business lender runs lending as a full-time business."
+      },
+	  {
+        "que": "In which Countries does Lendstack Operate?",
+        "ans": "Lendstack can be operated across the world by changing the currency and location in the Settings Panel."
+      },
+	  {
+        "que": "Why does Lendstack need to verify my details?",
+        "ans": "In some instances, we're required to collect, authenticate and maintain certain information to help prevent potential fraud. We treat this information as extremely sensitive and take privacy and security seriously."
+      },
+	  {
         "que": "Why did I not get a verification mail?",
-        "ans": "This is usually down to emails being considered junk or spam. Check your mailbox junk or spam folder. You can also contact our support for further assistance"
-      }
+        "ans": "It is usually down to emails being considered junk or spam. Check your mailbox junk or spam folder. You can also contact our support for further assistance."
+      },
+	  {
+        "que": "As a lender, what details can I request from my clients?",
+        "ans": "Apart from the contact information to create a profile, Lendstack leaves a lot up to you. However, you can select which details you want to request from your client."
+      },
+	  {
+        "que": "Can anyone be a lender?",
+        "ans": "Yes, anyone can be a lender as long as you have the capital to lend out."
+      },
+	  {
+        "que": "Can an individual without a money lender License use Lendstack?",
+        "ans": "Yes, you can register as an individual lender and use Lendstack for your lending."
+      },
+	  {
+        "que": "Can I lend more than one Loan?",
+        "ans": "Yes, as a lender, you can have more than one loan product on your profile for your borrowers. You can add different types of loan product according to your requirements"
+      },
+	  {
+        "que": "What is the minimum/maximum interest rate that I can charge as a Lender?",
+        "ans": "Lendstack does not meddle with the business of lenders. Hence, lenders can dictate the interest that best meets their business needs."
+      },
+	  {
+        "que": "Can Lender have automated payback from the borrowers' Bank account?",
+        "ans": "In future, Lendstack will have automatic repayment feature (NACH for India) that enables Lender to recover their cash from the borrowers' Bank account."
+      },
+	  {
+        "que": "How do I change my personal / company details?",
+        "ans": "To edit your personal / company details, go to 'Settings' and click 'Company Details' to edit your personal / company details"
+      },
+	  {
+        "que": "Can I trust Lendstack with my Bank and account details?",
+        "ans": "Lendstack uses world-class data security and encryption techniques to protect all the information you share with us. We do not sell your data or credit profile."
+      },
+	  {
+        "que": "What are your Terms of Use and Privacy Policy?",
+        "ans": "Please read our 'Terms of Use' and 'Privacy Policy'."
+      },
+	  {
+	  "que": "How do I close my account?",
+	  "ans": "If you would like to close your account, ensure that you do not have any active loan products with borrowers and then reach out to support, after which your account will be deleted."
+	  }
     ]
   },
   "MessagingServices": {

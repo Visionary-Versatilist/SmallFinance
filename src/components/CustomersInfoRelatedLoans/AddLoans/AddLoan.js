@@ -33,7 +33,7 @@ class AddLoan extends Component {
 
       category: "collector",
       collectionagent: "",
-      SelectedDate: new Date().toLocaleString(),
+      SelectedDate: new Date(),
       amountvalues: 0,
       tenurevalues: 0,
       interestvalues: 0,
@@ -236,7 +236,8 @@ class AddLoan extends Component {
   };
   handleInputChange = event => {
     this.setState({
-      amountvalues: event.target.value === '' ? '' : Number(event.target.value)
+      amountvalues: event.target.value === '' ? '' : Number(event.target.value),
+      // maxValue:event.target.value === '' ? 0 :parseInt(event.target.value)
     })
   };
   handleSliderChange = (event, newValue) => {
@@ -252,13 +253,19 @@ class AddLoan extends Component {
   }
   handleInputtenureChange = event => {
     this.setState({
-      tenurevalues: event.target.value === '' ? '' : Number(event.target.value)
+      tenurevalues: event.target.value === '' ? '' : Number(event.target.value),
+      // maxtenureDaysValue:event.target.value === '' ? 0 :parseInt(event.target.value),
+      // maxtenureMonthValue:event.target.value === '' ? 0 :parseInt(event.target.value),
+      // maxtenureWeekValue:event.target.value === '' ? 0 :parseInt(event.target.value),
+      // maxtenureValue:event.target.value === '' ? 0 :parseInt(event.target.value),
+
     })
 
   }
   handleInputinterestChange = event => {
     this.setState({
-      interestvalues: event.target.value === '' ? '' : Number(event.target.value)
+      interestvalues: event.target.value === '' ? '' : Number(event.target.value),
+      // maxinterestValue:event.target.value === '' ? 0 :parseInt(event.target.value),
     })
 
   }
@@ -330,16 +337,16 @@ const headers = {
       if (event.target.value === item.loanType) {
         this.setState({
           loanTypeId: item.loanTypeId,
-          minValue: item.loanAmtRangeFrom,
-          maxValue: item.loanAmtRangeTo,
-          mintenureDaysValue: item.tenureDaysFrom,
-          maxtenureDaysValue: item.tenureDaysTo,
-          mintenureWeekValue: item.tenureWeeksFrom,
-          maxtenureWeekValue: item.tenureWeeksTo,
-          mintenureMonthValue: item.tenureMonthsFrom,
-          maxtenureMonthValue: item.tenureMonthsTo,
-          mintenureValue: item.tenureMonthsFrom,
-          maxtenureValue: item.tenureMonthsTo,
+          minValue: parseInt(item.loanAmtRangeFrom),
+          maxValue: parseInt(item.loanAmtRangeTo),
+          mintenureDaysValue: parseInt(item.tenureDaysFrom),
+          maxtenureDaysValue: parseInt(item.tenureDaysTo),
+          mintenureWeekValue: parseInt(item.tenureWeeksFrom),
+          maxtenureWeekValue: parseInt(item.tenureWeeksTo),
+          mintenureMonthValue: parseInt(item.tenureMonthsFrom),
+          maxtenureMonthValue: parseInt(item.tenureMonthsTo),
+          mintenureValue: parseInt(item.tenureMonthsFrom),
+          maxtenureValue: parseInt(item.tenureMonthsTo),
           mininterestValue:parseInt(item.roiFrom),
           maxinterestValue:parseInt(item.roiTo),
         })
@@ -552,9 +559,9 @@ const headers = {
       }).then(res => {
         console.log("Interest", res)
         if (res.request.status === 200) {
-          // {this.state.choosecustomer}
           let custname = this.state.choosecustomer
-          toast.success("Loan Added Successfully to" + " " + custname, {
+          let laontype = this.state.laontype
+          toast.success(laontype + " " + "Added Successfully to" + " " + custname, {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: true,
@@ -564,9 +571,7 @@ const headers = {
           });
           window.history.back(); 
         }
-      })
-    // }
-  
+      })  
     }
 
   AllLoanTypeList() {
@@ -621,6 +626,7 @@ const headers = {
   }
 
   render() {
+    console.log("this.state.maxValue", this.state.maxValue)
     const { t } = this.props;
 
     const { brands ,tenure} = this.state;
@@ -695,7 +701,7 @@ const headers = {
                       </div>
                     </div>
                     <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", }}>
-                      <Slider value={typeof this.state.amountvalues === 'number' ? this.state.amountvalues : null} max={this.state.maxValue} min={this.state.minValue} step={this.state.step} onChange={this.handleSliderChange} aria-labelledby="input-slider" />
+                      <Slider value={typeof this.state.amountvalues === 'number' ? this.state.amountvalues : null}  min={this.state.minValue} step={this.state.step} max={this.state.maxValue} onChange={this.handleSliderChange} aria-labelledby="input-slider" />
                       <span className="MoneyDisplay Money Fonts">&#x20b9;{this.state.minValue}</span>
                       <span className="Fonts Money">&#x20b9;{this.state.maxValue}</span>
                     </div><br></br>

@@ -32,6 +32,9 @@ import ResetPassword from './components/login/ResetPassword/ResetPassword';
 import Help from "./components/Help/Help"
 import NotFound from './components/NotFound/NotFound';
 import NetworkDetector from './NetworkDetector';
+import TermsOfService from './components/modals/TermsOfService/TermsOfService';
+import PrivacyPolicy from './components/modals/PrivacyPolicy/PrivacyPolicy';
+import VerifyNumber from './components/VerifyNumber/VerifyNumber';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -73,6 +76,9 @@ class App extends React.Component {
           <Route exact path="/updatepassword" component={UpdatePassword} />
           <Route exact path="/customers/customerinfo" component={CustomerDetails} />
           <Route exact path="/customers/allcustomerlist" component={AllCustomerListView} />
+          <Route exact path="/termsofservice" component={TermsOfService} />
+          <Route exact path="/privacypolicy" component={PrivacyPolicy} />
+          <Route exact path="/verifynumber" component={VerifyNumber} />
           <Route path="**" component={NotFound} />
         </Switch>
       </Router>

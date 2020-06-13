@@ -208,7 +208,7 @@ class NewCustomerCardView extends Component {
         {this.props.list !== "list" ?
           <div>
             <div className="Newcustomercardviewpage">
-              <Grid container spacing={1} style={{display: "grid", gridTemplateColumns: "repeat( auto-fit, minmax(250px, 1fr) )"}}>
+              <Grid container spacing={1} style={{display: "grid", gridTemplateColumns: "repeat( auto-fill, minmax(250px, 1fr) )"}}>
                 {this.state.allCustomer && this.state.allCustomer.map((details, index) => {
                   return <Grid  key={index}>
                     <Card className="CardDiv" onMouseOver={(event) => this.CardOver(index)} onMouseOut={(event) => this.CardOut(index)}>

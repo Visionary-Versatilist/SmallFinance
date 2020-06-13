@@ -272,7 +272,7 @@ let Header = props => {
     return (
 
         <section className='header'  >
-            <div><img src={companylogo} alt="logo" /></div>
+            <div><img style={{width:"70%"}} src={companylogo} alt="logo" /></div>
             <div className='filterLayout' >
                 <CollectionAgentFilter collectionAgents={collectionAgents} changeCAgent={changeCAgent} />
                 <Dropdown dayFilter={dayFilter} changeFilter={changeDashDayFilter} />

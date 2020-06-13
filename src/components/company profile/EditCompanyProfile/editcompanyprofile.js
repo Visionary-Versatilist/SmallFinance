@@ -698,7 +698,7 @@ const headers = {
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "49px" }} >{t('CompanyProfile.employees')}</h6>
                                       {/* <div className={'form-group' + (submitted && !totalemployees ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                      <Input type="number" className="textBox" placeholder="Number of Employees" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
+                                      <Input type="number" className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
                                       {/* {submitted && !totalemployees &&
                                       <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
                                       }

@@ -32,27 +32,27 @@ class MessagingService extends Component {
                 <div style={{display:"flex", justifyContent:"center"}}>
                  <div style={{padding:"5px"}}>
                    <a target="_blank" href='https://web.whatsapp.com/'>
-                  <img src={whatsapp} alt="Whatsapp" className="gridtypeicon" style={{width:"70px"}} />
+                  <img src={whatsapp} alt="Whatsapp" className="gridtypeicon" style={{width:"200px"}} />
                   </a>
                 </div>
                 <div className="imagDiv"  style={{padding:"5px"}}>
                 <a target="_blank" href='https://www.messenger.com/'>
-                  <img src={messanger} alt="messanger" className="gridtypeicon" style={{width:"70px"}} />
+                  <img src={messanger} alt="messanger" className="gridtypeicon" style={{width:"200px"}} />
                 </a>
                 </div>
                 <div className="imagDiv"  style={{padding:"5px"}}>
-                <a>
-                  <img src={android} alt="messanger" className="gridtypeicon" style={{width:"70px"}} />
+                <a target="_blank" href='https://messages.google.com/web/'>
+                  <img src={android} alt="messanger" className="gridtypeicon" style={{width:"200px"}} />
                 </a>
                 </div>
                 <div className="imagDiv"  style={{padding:"5px"}}>
                 <a target="_blank" href='https://hangouts.google.com/'>
-                  <img src={hangout} alt="messanger" className="gridtypeicon" style={{width:"70px"}} />
+                  <img src={hangout} alt="messanger" className="gridtypeicon" style={{width:"200px"}} />
                 </a>
                 </div>
                 <div className="imagDiv"  style={{padding:"5px"}}>
                 <a target="_blank" href='https://web.telegram.org/#/login'>
-                  <img src={telegram} alt="messanger" className="gridtypeicon" style={{width:"70px"}} />
+                  <img src={telegram} alt="messanger" className="gridtypeicon" style={{width:"200px"}} />
                 </a>
                 </div>
                 </div>

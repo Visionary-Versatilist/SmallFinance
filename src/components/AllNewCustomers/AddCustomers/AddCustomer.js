@@ -50,11 +50,11 @@ const annualincome = [
 const preferredtime = [
 
     {
-        value: ' 08:00 a.m - 11:00 a.m',
+        value: '08:00 a.m - 11:00 a.m',
         label: '08:00 a.m - 11:00 a.m',
     },
     {
-        value: ' 11:00 a.m - 02:00 p.m',
+        value: '11:00 a.m - 02:00 p.m',
         label: '11:00 a.m - 02:00 p.m',
     },
     {
@@ -74,11 +74,11 @@ const preferredtime = [
 
 const doctype = [
     {
-        value: ' aadharcard',
+        value: 'aadharcard',
         label: 'Aadhaar Card',
     },
     {
-        value: ' pancard',
+        value: 'pancard',
         label: 'Pan Card',
     },
     {

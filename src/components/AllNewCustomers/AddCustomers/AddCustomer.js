@@ -147,147 +147,151 @@ const accType = [
 ];
 const state = [
     {
-        value: ' Andhra Pradesh',
+        value: 'Andhra Pradesh',
         label: 'Andhra Pradesh',
     },
     {
-        value: ' Arunachal Pradesh',
+        value: 'Arunachal Pradesh',
         label: 'Arunachal Pradesh',
     },
     {
-        value: ' Assam',
+        value: 'Assam',
         label: 'Assam',
     },
     {
-        value: ' Bihar',
+        value: 'Bihar',
         label: 'Bihar',
     },
     {
-        value: ' Chhattisgarh',
+        value: 'Chhattisgarh',
         label: 'Chhattisgarh',
     },
     {
-        value: ' Goa',
+        value: 'Goa',
         label: 'Goa',
     },
     {
-        value: ' Gujarat',
+        value: 'Gujarat',
         label: 'Gujarat',
     },
     {
-        value: ' Haryana',
+        value: 'Haryana',
         label: 'Haryana',
     },
     {
-        value: ' Himachal Pradesh',
+        value: 'Himachal Pradesh',
         label: 'Himachal Pradesh',
     },
     {
-        value: ' Jammu and Kashmir',
-        label: 'Jammu and Kashmir',
-    },
-    {
-        value: ' Jharkhand',
+        value: 'Jharkhand',
         label: 'Jharkhand',
     },
     {
-        value: ' Karnataka',
+        value: 'Karnataka',
         label: 'Karnataka',
     },
     {
-        value: ' Kerala',
+        value: 'Kerala',
         label: 'Kerala',
     },
     {
-        value: ' Madhya Pradesh',
+        value: 'Madhya Pradesh',
         label: 'Madhya Pradesh',
     },
     {
-        value: ' Maharashtra',
+        value: 'Maharashtra',
         label: 'Maharashtra',
     },
     {
-        value: ' Manipur',
+        value: 'Manipur',
         label: 'Manipur',
     },
     {
-        value: ' Meghalaya',
+        value: 'Meghalaya',
         label: 'Meghalaya',
     },
     {
-        value: ' Mizoram',
+        value: 'Mizoram',
         label: 'Mizoram',
     },
     {
-        value: ' Nagaland',
+        value: 'Nagaland',
         label: 'Nagaland',
     },
     {
-        value: ' Odisha',
+        value: 'Odisha',
         label: 'Odisha',
     },
     {
-        value: ' Punjab',
+        value: 'Punjab',
         label: 'Punjab',
     },
     {
-        value: ' Rajasthan',
+        value: 'Rajasthan',
         label: 'Rajasthan',
     },
     {
-        value: ' Sikkim',
+        value: 'Sikkim',
         label: 'Sikkim',
     },
     {
-        value: ' Tamil Nadu',
+        value: 'Tamil Nadu',
         label: 'Tamil Nadu',
     },
     {
-        value: ' Telangana',
+        value: 'Telangana',
         label: 'Telangana',
     },
     {
-        value: ' Tripura',
+        value: 'Tripura',
         label: 'Tripura',
     },
     {
-        value: ' Uttarakhand',
+        value: 'Uttarakhand',
         label: 'Uttarakhand',
     },
     {
-        value: ' Uttar Pradesh',
+        value: 'Uttar Pradesh',
         label: 'Uttar Pradesh',
     },
     {
-        value: ' West Bengal',
+        value: 'West Bengal',
         label: 'West Bengal',
     },
     {
-        value: ' Andaman and Nicobar Islands',
+        value: 'Andaman and Nicobar Islands',
         label: 'Andaman and Nicobar Islands',
     },
     {
-        value: ' Chandigarh',
+        value: 'Chandigarh',
         label: 'Chandigarh',
     },
     {
-        value: ' Dadra and Nagar Haveli',
+        value: 'Dadra and Nagar Haveli',
         label: 'Dadra and Nagar Haveli',
     },
     {
-        value: ' Daman and Diu',
+        value: 'Daman and Diu',
         label: 'Daman and Diu',
     },
     {
-        value: ' Delhi',
+        value: 'Delhi',
         label: 'Delhi',
     },
     {
-        value: ' Lakshadweep',
+        value: 'Jammu and Kashmir',
+        label: 'Jammu and Kashmir',
+      },
+    {
+        value: 'Ladakh',
+        label: 'Ladakh',
+      },
+    {
+        value: 'Lakshadweep',
         label: 'Lakshadweep',
     },
     {
-        value: ' Puducherry',
+        value: 'Puducherry',
         label: 'Puducherry',
     },
 ];
@@ -2207,7 +2211,7 @@ class AddCustomer extends Component {
             })
             console.log("date format", moment(SelectedDate).format("DD MMM YYYY"))
         } else {
-            toast.error(" Entered age is below 18 years", {
+            toast.error("Entered Date of Birth below of 18 years", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -2930,7 +2934,7 @@ class AddCustomer extends Component {
                     draggable: true,
                 });
             } else {
-                toast.error("Something went wrong, Please try again later", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -3050,7 +3054,7 @@ class AddCustomer extends Component {
                     }
                 })
             } else {
-                toast.error("Something went wrong. Please try again later!", {
+                toast.error("Please fill all mandatory details marked *!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -3305,7 +3309,7 @@ class AddCustomer extends Component {
                                     <div style={{ display: 'flex' }}>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont">{t('AddCustomer.momname')}</h6>
-                                            <Input className="textBox" value={this.state.mothersname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ mothersname: event.target.value }) }} />
+                                            <Input className="textBox" placeholder="Full Name" value={this.state.mothersname || ''} style={{ height: '41px', border: this.state.mothername }} onClick={this.mothernameBox} onChange={(event) => { event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ mothersname: event.target.value }) }} />
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.dadname')}</h6>

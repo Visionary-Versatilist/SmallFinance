@@ -34,6 +34,10 @@ const axios = require('axios')
       value: 'Kannada',
       label: 'Kannada',
     },
+    {
+        value: 'Deutsch',
+        label: 'Deutsch',
+      },  
 ]
 
 class UpdateAdminProfile extends Component {

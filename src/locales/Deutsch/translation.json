@@ -1,0 +1,200 @@
+{
+	"AddCustomer": {
+		"Dob": "DoB",
+		"FCard": "Bankdaten",
+		"ThCard": "Sammlungsdetails",
+		"accnum": "Kontonummer",
+		"acctype": "Konto Typ",
+		"addar": "Aadhaar Kartennummer",
+		"address": "Heimatadresse",
+		"annincome": "Jährliches Einkommen",
+		"blank": "Leerer / abgebrochener Scheck (Bitte Datei hochladen Bild)",
+		"bname": "Bank Name",
+		"check": "Gleich wie Privatadresse",
+		"dadname": "Name des Vaters",
+		"depname": "Anzahl der Abhängigen",
+		"email": "E-Mail-ID",
+		"fCard": "Allgemeine Details",
+		"fifthCrad": "Referenzdetails",
+		"fname": "Vorname",
+		"gen": "Geschlecht",
+		"genF": "Weiblich",
+		"genM": "Männlich",
+		"genT": "Transgender",
+		"ifsc": "IFSC / SWIFT-Code",
+		"lname": "Nachname",
+		"majscr": "Haupteinnahmequelle",
+		"momname": "Name der Mutter",
+		"offaddrss": "Büro- / Handelsadresse",
+		"pan": "PAN-Kartennummer",
+		"personalinfo": "Persönliche Informationen",
+		"phone": "Handynummer",
+		"pic": "Foto",
+		"place": "Sammelplatz",
+		"reffname": "Referenz 2 - Name",
+		"reffphone": "Referenz 2 - Kontaktnummer",
+		"refname": "Referenz 1 - Name",
+		"refphone": "Referenz 1 - Kontaktnummer",
+		"sCard": "Adressen Details",
+		"sixCard": "Proof ID",
+		"stDiv": "Geschieden",
+		"stMr": "Verheiratet",
+		"stS": "Single",
+		"stWid": "Witwe",
+		"stWider": "Witwer",
+		"status": "Familienstand",
+		"subtitle": "Neuen Kunden hinzufügen",
+		"time": "Sammelzeit",
+		"title": "neue Kunden"
+	},
+	"AddLoan": {
+		"agents": "Dem Sammlungsagenten zuweisen",
+		"amount": "Darlehensbetrag",
+		"amtrange": "HINWEIS: Der Betragsbereich beträgt",
+		"buttn1": "Berechnung",
+		"buttn2": "Zurücksetzen",
+		"circle": "Gesamtmenge amt. bezahlt werden",
+		"customer": "Wählen Sie Kunde",
+		"date": "Anfangsdatum",
+		"emi": "Zinssatz",
+		"instal": "Rate",
+		"loandate": "Datum der Ausleihe",
+		"method": "Methode",
+		"monrange": "Monatliche Reichweite ist:",
+		"moratorm": "Moratorium",
+		"penality": "Strafe",
+		"subtitle": "Darlehen hinzufügen",
+		"tablename": "Tilgungsplan",
+		"tenure": "Leihfrist",
+		"title": "Darlehen",
+		"value": "Wert nach Moratorium"
+	},
+	"AddLoanType": {
+		"Type": "Darlehensart",
+		"amtrange": "Kreditbetragsbereich",
+		"edit": "Bearbeiten",
+		"intrstrange": "Zinssatzbereich",
+		"subtitle": "Darlehenstyp hinzufügen",
+		"tenuredayrange": "Laufzeitspanne",
+		"tenuremonrange": "Kreditlaufzeitspanne",
+		"tenureweekrange": "Loan Tenure Wochen reichen",
+		"title": "Darlehen"
+	},
+	"AddUser": {
+		"Button": "Benutzerseite hinzufügen",
+		"Cat": "KATEGORIE",
+		"subtitle": "Nutzer hinzufügen"
+	},
+	"CompanyProfile": {
+		"Address": "Adresse",
+		"cName": "Name der Firma",
+		"country": "Land",
+		"employees": "Anzahl der Angestellten",
+		"subtitle": "Bearbeiten",
+		"title": "Firmenprofil",
+		"website": "webseite"
+	},
+	"Dashboard": {
+		"Agent": "Sammelagenten",
+		"Daily": "Tägliche Abholung",
+		"Days": "Täglich",
+		"Graphname": "Sammlungen",
+		"Graphnames": "Status",
+		"Monthly": "Monatliche Abholung",
+		"Months": "Monatlich",
+		"Penality": "Strafsammlung",
+		"Weekly": "Wöchentliche Sammlung",
+		"collamt": "Gesammelter Betrag",
+		"dueamt": "Fälliger Betrag",
+		"overamt": "Überfälliger Betrag",
+		"secgraphtext": "Heute"
+	},
+	"DeleteUser": {
+		"content": "Bist du sicher, das du das löschen möchtest?"
+	},
+	"EditProfileDetails": {
+		"email": "E-Mail-ID",
+		"fname": "Vorname",
+		"lang": "Sprache",
+		"link": "Kennwort aktualisieren?",
+		"lname": "Nachname",
+		"phone": "Handynummer",
+		"title": "Profil bearbeiten"
+	},
+	"FAQ": {
+		"questions": {
+			"0": {
+				"ans": "Lendstack vergibt keine Kredite. Lendstack ist eine Plattform, auf der kleine und einzelne Kreditgeber ihren Kreditprozess verwalten.",
+				"que": "Gibt Lendstack Kredite aus?"
+			},
+			"1": {
+				"ans": "In einigen Fällen müssen wir bestimmte Informationen sammeln, überprüfen und pflegen, um potenziellen Betrug zu verhindern. Wir behandeln diese Informationen als äußerst sensibel und nehmen Datenschutz und Sicherheit ernst",
+				"que": "Warum muss Lendstack meine Daten überprüfen?"
+			},
+			"2": {
+				"ans": "Abgesehen von den Kontaktinformationen zum Erstellen eines Profils überlässt Lendstack Ihnen viel. Sie können jedoch auswählen, welche Details Sie von Ihrem Kunden anfordern möchten.",
+				"que": "Welche Details kann ich als Kreditgeber von meinen Kunden anfordern?"
+			},
+			"3": {
+				"ans": "Ja, ein Kreditnehmer kann ein Kreditgeber sein, solange Sie über das Kapital verfügen, das Sie ausleihen können.",
+				"que": "Kann ein Kreditnehmer ein Kreditgeber sein?"
+			},
+			"4": {
+				"ans": "Dies ist normalerweise darauf zurückzuführen, dass E-Mails als Junk oder Spam eingestuft werden. Überprüfen Sie Ihren Postfach-Junk- oder Spam-Ordner. Sie können sich auch an unseren Support wenden, um weitere Unterstützung zu erhalten",
+				"que": "Warum habe ich keine Bestätigungsmail erhalten?"
+			}
+		},
+		"title": "FAQs (häufig gestellte Fragen)"
+	},
+	"Loans": {
+		"Collseq": "Sammlung Seq.",
+		"Date": "Geburtstermin",
+		"all": "Alles",
+		"anytime": "Jederzeit",
+		"buttn": "Darlehen hinzufügen",
+		"cancel": "Abgebrochen",
+		"clear": "Datum löschen",
+		"close": "Geschlossen",
+		"custmDate": "Benutzerdefinierter Datumsbereich",
+		"due": "Fällig",
+		"filter": "Filter",
+		"open": "Öffnen",
+		"over": "Überfällig",
+		"weeks": "Wöchentlich"
+	},
+	"MessagingServices": {
+		"content": "Ihre Messaging-Plattform kommt bald ...",
+		"title": "Messaging-Dienste"
+	},
+	"NewCustomer": {
+		"Date": "Erstellungsdatum",
+		"addbutton": "Kunden hinzufügen",
+		"addloanbtn": "Darlehen hinzufügen",
+		"loans": "Anzahl der Kredite",
+		"notver": "Nicht verifiziert",
+		"verify": "Verifiziert",
+		"verifybtn": "Überprüfen"
+	},
+	"ProfileModal": {
+		"Company": "Firmenprofil",
+		"Management": "Benutzerverwaltung",
+		"signout": "Ausloggen"
+	},
+	"UpdateAdminPassword": {
+		"confirmPassword": "Passwort bestätigen",
+		"newPassword": "Neues Kennwort",
+		"oldPassword": "Altes Passwort",
+		"password": "Passwort",
+		"subtitle": "Passwort erneuern",
+		"title": "Profil bearbeiten"
+	},
+	"UserManagement": {
+		"Button": "Nutzer hinzufügen",
+		"Export": "Exportieren nach",
+		"member": "Mitglieder",
+		"title": "Benutzerverwaltung"
+	},
+	"sendMsg": {
+		"content": "Schreiben Sie ihre Nachricht hier"
+	}
+}

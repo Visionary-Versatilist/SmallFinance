@@ -7,6 +7,7 @@ import translationEN from "./locales/English/translation.json";
 import translationHin from "./locales/Hindi/translation.json";
 import translationKan from "./locales/Kannada/translation.json";
 import translationTam from "./locales/Tamil/translation.json";
+import translationDE from "./locales/Deutsch/translation.json";
 // not like to use this?
 // have a look at the Quick start guide 
 // for passing in lng and translations on init
@@ -22,9 +23,11 @@ const resources = {
   },
   Tamil: {
     translation: translationTam
+  },
+  Deutsch: {
+    translation: translationDE
   }
 };
-
 i18n
   // load translation using xhr -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
   // learn more: https://github.com/i18next/i18next-xhr-backend

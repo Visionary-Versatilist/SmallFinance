@@ -204,7 +204,7 @@ class AddUser extends Component {
                     });
                 this.props.history.push('/usermanagement')               
             }else{
-                toast.error("Please fill correct data!", {
+                toast.error("Please enter all mandatory details!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -216,7 +216,7 @@ class AddUser extends Component {
         }).catch(error => {
             console.log("agent catch")
             if (error.request.status === 401) {               
-                if (error.response.data.message === "user already exists with the above mail") {
+                if (error.response.data.message === "User already exists with the above EmailID") {
                     toast.error(error.response.data.message, {
                         position: "top-center",
                         autoClose: 4000,
@@ -353,7 +353,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel One Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                         <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
+                                        <Input className="textBox" placeholder="Given Name / Middle Name" required className="form-control" name="fname" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ fname: event.target.value })}} />
                                         {submitted && !fname &&
                                         <div className="help-block-user">First name is required</div>
                                         }
@@ -362,7 +362,7 @@ class AddUser extends Component {
                                     <div className="textFieldStyle">
                                         <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.lname')}</h6>
                                         <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                        <Input className="textBox" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
+                                        <Input className="textBox" placeholder="Surname / Family Name" required className="form-control" name="lname" style={{ height: '38px', border: this.state.changeColorname1 }} onClick={this.nameBox1} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Z a-z]/ig, ''); this.setState({ lname: event.target.value })}} />
                                         {submitted && !lname &&
                                         <div className="help-block-user">Last name is required</div>
                                         }
@@ -372,7 +372,7 @@ class AddUser extends Component {
                                         <h6 className="InputLabel Three Fonts fontSize" style={{ marginLeft: "30px" }}>{t('EditProfileDetails.phone')}</h6>
                                         <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                         <Input type="number"  placeholder="10-digit mobile number without prefixes" required className="form-control" name="mobilenum" className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
-                                        <span style={{ display: this.state.numError, paddingLeft:"25rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                                    
+                                        <span style={{ display: this.state.numError, paddingLeft:"35rem"}} className="help-block">10-digit mobile number without prefixes.</span>                                                                                    
                                         {submitted && !mobilenum &&
                                         <div className="help-block-user" style={{display:this.state.reqnum}}>Mobile Number is required</div>
                                         }
@@ -382,9 +382,9 @@ class AddUser extends Component {
                                         <h6 className="InputLabel Four Fonts fontSize" style={{ marginLeft: "9px" }}>{t('EditProfileDetails.email')}</h6>
                                         <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                         <Input className="textBox" placeholder="smith@example.com" required className="form-control" name="emailid" style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
-                                        <span style={{ display: this.state.emailError, paddingLeft:"25rem"}} className="help-block">Invalid Email id.</span>                                       
+                                        <span style={{ display: this.state.emailError, paddingLeft:"35rem"}} className="help-block">Invalid Email ID.</span>                                       
                                         {submitted && !emailid &&
-                                        <div className="help-block-user"  style={{display:this.state.reqemail}}>Email id is required</div>
+                                        <div className="help-block-user"  style={{display:this.state.reqemail}}>Email ID is required</div>
                                         }
                                         </div>
                                     </div>

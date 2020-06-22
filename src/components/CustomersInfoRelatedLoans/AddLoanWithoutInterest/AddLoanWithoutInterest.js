@@ -148,7 +148,7 @@ class AddLoanWithoutInterest extends Component {
 
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -159,7 +159,7 @@ class AddLoanWithoutInterest extends Component {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -192,7 +192,7 @@ class AddLoanWithoutInterest extends Component {
           allCustomer: resp.data,
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -203,7 +203,7 @@ class AddLoanWithoutInterest extends Component {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -479,7 +479,7 @@ const headers = {
           LaonType: resp.data,
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -490,7 +490,7 @@ const headers = {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -630,9 +630,9 @@ const headers = {
       }
     }).catch(err => {
       console.log("catch err==>", err)
-      toast.error(err.response.data.msg, {
+      toast.error("Choose Customer to assign loan", {
         position: "top-center",
-        autoClose: 2000,
+        autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
@@ -664,7 +664,7 @@ const headers = {
         // {this.state.choosecustomer}
         let custname = this.state.choosecustomer
         let laontype = this.state.laontype
-        toast.success(laontype + " " + "Added Successfully to" + " " + custname, {
+        toast.success(laontype + " " + "Assigned Successfully to" + " " + custname, {
           position: "top-center",
           autoClose: 3000,
           hideProgressBar: true,
@@ -957,7 +957,7 @@ const headers = {
                       {option.firstName} {option.lastName}
                     </MenuItem>
                   ))}
-                  }
+                  
         </TextField>
               </div>
             </div>

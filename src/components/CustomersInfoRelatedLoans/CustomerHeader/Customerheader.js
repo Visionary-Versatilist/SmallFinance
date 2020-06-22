@@ -1080,7 +1080,7 @@ class CustomerHeader extends Component {
                   <IconButton className='iconButton' aria-label="search">
                     <img src={searchicon} alt="searchicon" className="iconButton" />
                   </IconButton>
-                  <InputBase className='input' placeholder="Search by customer name" onChange={this.searchlist} />
+                  <InputBase className='input' placeholder="Search by Customer" onChange={this.searchlist} />
                 </div>
               </Toolbar>
             </AppBar>

@@ -114,7 +114,7 @@ let CustomerLoanInfo = (props) => {
           {!isInstallmentCalculator &&
             <div className="cardDetail">
               <h4 className="h4heading Fonts">{penalty}</h4>
-              <p className="pHeading Fonts">penalty</p>
+              <p className="pHeading Fonts">Penalty</p>
             </div>}
         </div>
       </div>

@@ -3065,7 +3065,7 @@ class AddCustomer extends Component {
             }
         }).catch(err => {
             // if(err.request.status!==200){
-            // toast.error("Something went wrong. Please try again later!", {
+            // toast.error("Please try again!", {
             //     position: "top-center",
             //     autoClose: 2000,
             //     hideProgressBar: true,

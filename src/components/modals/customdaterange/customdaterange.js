@@ -61,7 +61,7 @@ class Customdaterange extends Component {
               className="Fonts"
             >
               Custom Date Range
-             {!isDateValid && <div className='invalidDate' >Date should be past...</div>}
+             {!isDateValid && <div className='invalidDate' >Please select a date that is atleast 1 business day from now</div>}
             </div>
             <img src={crosscancel} alt="crosscancel" onClick={this.closeprofilemodal.bind(this)} style={{ marginLeft: "7rem", marginTop: "1rem" }} />
           </div>

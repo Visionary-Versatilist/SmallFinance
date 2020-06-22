@@ -89,7 +89,7 @@ class Usermanagement extends Component {
                 usercount:resp.data.TotalRecords
             })
         }else{
-            toast.error("Something went wrong. Please try again later!", {
+            toast.error("Please try again later!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -101,7 +101,7 @@ class Usermanagement extends Component {
     }).catch(err => {
         console.log("registeration error is:", err);
         if(err.request.status!==200){
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again later!", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: true,
@@ -135,7 +135,7 @@ class Usermanagement extends Component {
                 usercount:resp.data.TotalRecords
               })
           }else{
-              toast.error("Something went wrong. Please try again later!", {
+              toast.error("Please try again later!", {
                   position: "top-center",
                   autoClose: 2000,
                   hideProgressBar: true,
@@ -147,7 +147,7 @@ class Usermanagement extends Component {
       }).catch(err => {
           console.log("registeration error is:", err);
           if(err.request.status!==200){
-          toast.error("Something went wrong. Please try again later!", {
+          toast.error("Please try again later!", {
               position: "top-center",
               autoClose: 2000,
               hideProgressBar: true,

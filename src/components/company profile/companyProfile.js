@@ -580,7 +580,7 @@ const headers = {
                                       <div className={'form-group' + (submitted && !name ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                       <Input className="textBox" required className="form-control" name="name" style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) => this.setState({ name: event.target.value })} />
                                       {submitted && !name &&
-                                      <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
+                                      <div className="help-block" style={{marginRight:"12rem"}}>Company Name is required</div>
                                       }
                                   </div>
                                   </div>
@@ -589,7 +589,7 @@ const headers = {
                                       <div className={'form-group' + (submitted && !totalemployees ? ' has-error' : '')} style={{marginTop: '10px'}}>
                                       <Input className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border:"1px solid #00D95E" }} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
                                       {submitted && !totalemployees &&
-                                      <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
+                                      <div className="help-block" style={{marginRight:"12rem"}}>Number of Employees is required</div>
                                       }
                                   </div>
                                   </div>
@@ -599,7 +599,7 @@ const headers = {
                                       <Input type="number" className="textBox"  required className="form-control" name="mobilenum"  style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
                                       <span style={{ display: this.state.numError, paddingLeft:"25.2rem"}} className="help-block">Mobile number must be 10 digit.</span>                                        
                                       {submitted && !mobilenum &&
-                                       <div className="help-block" style={{marginRight:"12rem"}}>Mobile number is required</div>
+                                       <div className="help-block" style={{marginRight:"12rem"}}>Mobile Number is required</div>
                                       }
                                   </div>
                                   </div>
@@ -609,7 +609,7 @@ const headers = {
                                       <Input className="textBox"   required className="form-control" name="emailid" style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
                                       <span style={{ display: this.state.emailError, paddingLeft:"25.2rem"}} className="help-block">Invalid Email id.</span>
                                       {submitted && !emailid &&
-                                       <div className="help-block" style={{marginRight:"14rem"}}>Email id is required</div>
+                                       <div className="help-block" style={{marginRight:"14rem"}}>Email ID is required</div>
                                       }
                                   </div>
                                   </div>

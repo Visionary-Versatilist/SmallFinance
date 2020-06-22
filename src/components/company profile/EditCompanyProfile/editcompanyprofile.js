@@ -450,7 +450,7 @@ const headers = {
             }
         }).catch(err => {
             if(err.request.status!==200){
-            toast.error("something went wrong, please try again later!", {
+            toast.error("Please try again!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -515,7 +515,7 @@ const headers = {
             }
         }).catch(err => {
             if(err.request.status!==200){
-            toast.error("Something went wrong. Please try again later!!", {
+            toast.error("Please try again later!!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -629,7 +629,7 @@ const headers = {
           CountryData: resp.data,
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again later!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -640,7 +640,7 @@ const headers = {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again later!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -698,7 +698,7 @@ const headers = {
                                   <div className="textFieldStyle">
                                       <h6 className="InputLabel Two Fonts fontSize" style={{ marginLeft: "49px" }} >{t('CompanyProfile.employees')}</h6>
                                       {/* <div className={'form-group' + (submitted && !totalemployees ? ' has-error' : '')} style={{marginTop: '10px'}}> */}
-                                      <Input type="number" className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
+                                      <Input type="number" placeholder="Digits [0-9]" className="textBox" required className="form-control" name="totalemployees" style={{ height: '38px', border: this.state.changeColoremp }} value={this.state.totalemployees?this.state.totalemployees:""} onClick={this.employeesBox} onChange={(event) => this.setState({ totalemployees: event.target.value })} />
                                       {/* {submitted && !totalemployees &&
                                       <div className="help-block" style={{marginRight:"12rem"}}>company name is required</div>
                                       }
@@ -763,7 +763,7 @@ const headers = {
                                       <h6 className="InputLabel Fonts fontSize" ></h6>
                                       {/* <div className={'form-group' + (submitted && !homeAddressPincode ? ' has-error' : '')} style={{marginTop: '10px'}}>                                                                                                                                                                             */}
                                           <Input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode?this.state.homeAddressPincode:""} type="number" placeholder="6 Digits [0-9] pincode" className="number"  style={{ height: '41px', border: this.state.pin }} onClick={this.pinBox} onChange={this.validHomePin} />
-                                          <span style={{ display: this.state.homepinError, marginLeft:"36%"}} className="help-block">Invalid pincode.</span>                                                                                    
+                                          <span style={{ display: this.state.homepinError, marginLeft:"36%"}} className="help-block">Invalid Pincode.</span>                                                                                    
                                           {/* {submitted && !homeAddressPincode &&
                                        <div className="help-block" style={{marginRight:"14rem"}}>Address is required</div>
                                       }

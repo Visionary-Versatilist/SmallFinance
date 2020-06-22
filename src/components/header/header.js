@@ -92,12 +92,12 @@ class Header extends Component {
                         <div className='bttn'>
                         {/* <Link to="/signup" style={{ textDecoration: 'none', color: '#3E4664' }}> */}
                         <div>
-                            <Button className="Fonts" style={{textTransform:'capitalize',border: this.state.changeColorsignup, color:this.state.Textcolorsignup, backgroundColor:this.state.signupbackground,fontWeight: "600"}} onClick={this.signup.bind(this)}>Sign Up</Button>
+                            <Button className="Fonts" style={{textTransform:'capitalize',border: this.state.changeColorsignup, color:this.state.Textcolorsignup, backgroundColor:this.state.signupbackground,fontWeight: "600"}} onClick={this.signup.bind(this)}>SIGN UP</Button>
                             {/* </Link> */}
                             </div>
                         {/* <Link to="/" style={{ textDecoration: 'none', color: '#3E4664' }}> */}
                         <div>
-                            <Button className="Fonts" style={{textTransform:'capitalize',border: this.state.changeColorlogin, color:this.state.Textcolorlogin, backgroundColor:this.state.loginbackground,fontWeight: "600"}}  onClick={this.login.bind(this)}>Login</Button>
+                            <Button className="Fonts" style={{textTransform:'capitalize',border: this.state.changeColorlogin, color:this.state.Textcolorlogin, backgroundColor:this.state.loginbackground,fontWeight: "600"}}  onClick={this.login.bind(this)}>LOG IN</Button>
                             {/* </Link>   */}</div>
                         </div>
                     </Toolbar>

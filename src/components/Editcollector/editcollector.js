@@ -193,7 +193,7 @@ class EditCollectorProfile extends Component {
             }
         }).catch(error => {
             if (error.request.status === 401) {               
-                if (error.response.data.message === "user already exists with the above mail") {
+                if (error.response.data.message === "User already exists with the above Email ID") {
                     toast.error(error.response.data.message, {
                         position: "top-center",
                         autoClose: 4000,
@@ -352,38 +352,38 @@ class EditCollectorProfile extends Component {
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}>{t('EditProfileDetails.fname')}</h6>
                                     <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input className="textBox" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ fname: event.target.value })}} />
+                                    <Input className="textBox" placeholder="Given Name / Middle Name" value={this.state.fname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ fname: event.target.value })}} />
                                     {submitted && !fname &&
-                                        <div className="help-block-user">First name is required</div>
+                                        <div className="help-block-user">First Name is required</div>
                                         }
                                         </div>
                                 </div>
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "16px" }}> {t('EditProfileDetails.lname')}</h6>
                                     <div className={'form-group' + (submitted && !lname ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input className="textBox" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ lname: event.target.value })}} />
+                                    <Input className="textBox" placeholder="Surname / Family Name" value={this.state.lname} style={{ height: '38px', border: this.state.changeColorname }} onClick={this.nameBox} onChange={(event) =>{  event.target.value = event.target.value.replace(/[^A-Za-z]/ig, '');  this.setState({ lname: event.target.value })}} />
                                     {submitted && !lname &&
-                                        <div className="help-block-user">Name is required</div>
+                                        <div className="help-block-user"> Last Name is required</div>
                                         }
                                         </div>
                                 </div>
                                 <div className="numaricTextField">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "30px" }}> {t('EditProfileDetails.phone')}</h6>
                                     <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input type="number" value={this.state.mobilenum} className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
-                                    <span style={{ display: this.state.numError, paddingLeft:"25rem"}} className="help-block">Mobile number must be 10 digit.</span>                                                                                    
+                                    <Input type="number" placeholder="10-digit mobile number without prefixes" value={this.state.mobilenum} className="textBox" style={{ height: '38px', border: this.state.changeColornumber }} onClick={this.numberBox} onChange={this.validNum} />
+                                    <span style={{ display: this.state.numError, paddingLeft:"35rem"}} className="help-block">Mobile Number must be 10 digit.</span>                                                                                    
                                         {submitted && !mobilenum &&
-                                        <div className="help-block-user">Phone no. is required</div>
+                                        <div className="help-block-user">Mobile Number is required</div>
                                         }
                                         </div>
                                 </div>
                                 <div className="textFieldStyle">
                                     <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: "9px" }}>{t('EditProfileDetails.email')}</h6>
                                     <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{marginTop: '10px'}}>
-                                    <Input className="textBox" value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
-                                    <span style={{ display: this.state.emailError, paddingLeft:"25rem"}} className="help-block">Invalid Email id.</span>                                       
+                                    <Input className="textBox" placeholder="smith@example.com" value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
+                                    <span style={{ display: this.state.emailError, paddingLeft:"35rem"}} className="help-block">Invalid Email ID.</span>                                       
                                         {submitted && !emailid &&
-                                        <div className="help-block-user">Email id is required</div>
+                                        <div className="help-block-user">Email ID is required</div>
                                         }
                                         </div>
                                 </div>

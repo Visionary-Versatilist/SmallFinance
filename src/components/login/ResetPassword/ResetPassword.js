@@ -28,7 +28,7 @@ class ResetPassword extends Component {
         const { confirmpassword, password } = this.state;
         if(password !== confirmpassword){
             // alert("Passwords don't match");
-            toast.error("confirm password did not match with new password!!", {
+            toast.error("The New Password and Confrimation Password do not match. Please make sure your passwords match", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -100,7 +100,7 @@ class ResetPassword extends Component {
                                 <Card className="CardDiv3"> 
                                     <div className="CardDiv4">
                                         <div className="CardDiv5 HighlightTextColour">
-                                            <h3 className="Fonts">Welcome!</h3>
+                                            <h3 className="Fonts">Welcome! Please create your new password</h3>
                                         </div>
                                     <form name="form">
                                         <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{marginTop: '10px'}}>

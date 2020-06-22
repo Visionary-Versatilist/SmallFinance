@@ -117,7 +117,7 @@ class UpdatePassword extends Component {
                     });
                 this.props.history.push('/usermanagement')      
             }else{
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill correct information!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -135,7 +135,7 @@ class UpdatePassword extends Component {
         const { oldpassword,newpassword, confirmpassword} = this.state;
         if(newpassword !== confirmpassword){
             // alert("Passwords don't match");
-            toast.error("confirm password did not match with new password!!", {
+            toast.error("The New Password and Confirmation Password do not match. Please make sure your passwords match!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,

@@ -43,7 +43,7 @@ class Login extends Component {
                 localStorage.setItem('loggedinUserCompany', JSON.stringify(resp.data.companyId))
                 this.props.history.push('/dashboard')
             } else {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill correct information!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -64,7 +64,7 @@ class Login extends Component {
 
                 if (error.request.status === 401) {
                     // console.log("loginn 401 catch", error.request.status)
-                    toast.error("something went wrong", {
+                    toast.error("Please try again!", {
                         position: "top-center",
                         autoClose: 2000,
                         hideProgressBar: true,
@@ -127,7 +127,7 @@ class Login extends Component {
                             pauseOnHover: false,
                             draggable: true,
                         });
-                    } else if(error.response.data.message === "Your Account is not verify yet") {
+                    } else if(error.response.data.message === "Your Account is not verified yet") {
                         toast.error(error.response.data.message, {
                             position: "top-center",
                             autoClose: 2000,
@@ -162,7 +162,7 @@ class Login extends Component {
 
         }).then(resp => {
             if (resp.request.status === 200) {
-                toast.success("OTP has been sent to your Email id or Phone number!", {
+                toast.success("OTP has been sent to your Email ID or Mobile Number!", {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: true,
@@ -288,8 +288,8 @@ if (now.getMonth() === 12) {
                 <div style={{marginLeft: 'auto'}}>
                     <div className="firstDiv">
                         <div className="firstDivOne">
-                            <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
-                            <div className="firstH4 ">World’s Best in Class Small Finance Lending App</div>
+                            <div className="firstH3 TextColour">Lend like a PRO!</div>
+                            <div className="firstH4 TextColour">World’s Best in Class Small Finance Lending App</div>
                         </div>
                     </div>
                     <div className="secondDiv">
@@ -317,14 +317,14 @@ if (now.getMonth() === 12) {
                                 <Card className="CardDiv3">
                                     <div className="CardDiv4">
                                         <div className="CardDiv5 HighlightTextColour">
-                                            <h3 className="Fonts">Welcome! Please, log into your account</h3>
+                                            <h4 className="Fonts">Welcome back! Please, log into your Lendstack account</h4>
                                         </div>
                                         <form name="form">
                                             <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                <Input type="email" required placeholder="Enter your email or mobile number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
+                                                <Input type="email" required placeholder="Email Address or Mobile Number" className="form-control" name="email" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
                                                 {/* <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span> */}
                                                 {submitted && !emailid &&
-                                                    <div className="help-block" style={{ marginRight: "9rem" }}>Email id or Phone number is required</div>
+                                                    <div className="help-block" style={{ marginRight: "9rem" }}>Email ID or Mobile Number is required</div>
                                                 }
                                             </div>
 
@@ -337,7 +337,7 @@ if (now.getMonth() === 12) {
                                         </form>
                                         <div className="btnDiv">
                                             <Button variant="outlined" fullWidth className="Fonts btnSizeFont btn" onClick={this.handleSubmit}>
-                                                Login
+                                                LOG IN
                                             </Button>
                                         </div>
                                         <div className="linkDiv HighlightTextColour">

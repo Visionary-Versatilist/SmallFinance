@@ -21,7 +21,7 @@ const PaymentType = [
     },
     {
         value: 'Check',
-        label: 'Check',
+        label: 'Cheque',
     },
     {
         value: 'Others',

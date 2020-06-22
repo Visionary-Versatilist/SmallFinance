@@ -52,7 +52,7 @@ class Signup extends Component {
 
         }).then(resp => {
             if (resp.request.status === 200) {
-                // toast.success("Registered successfully !", {
+                // toast.success("Registered successfully!", {
                 //     position: "top-center",
                 //     autoClose: 2000,
                 //     hideProgressBar: true,
@@ -98,7 +98,7 @@ class Signup extends Component {
 
         }).then(resp => {
             if (resp.request.status === 200) {
-                toast.success("OTP has been sent to your Email id and Phone number!", {
+                toast.success("OTP has been sent to your Email ID and Mobile Number!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -110,7 +110,7 @@ class Signup extends Component {
                 localStorage.setItem("registeredPhone", this.state.mobilenum)
                 this.props.history.push('/verifynumber')
             } else {
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill correct information!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -148,7 +148,7 @@ class Signup extends Component {
         const { lname, fname, emailid, mobilenum, password, confirmpassword, checkedA } = this.state;
         if (password !== confirmpassword) {
             // alert("Passwords don't match");
-            toast.error("confirm password did not match with new password!!", {
+            toast.error("The New Password and Confirmation Password do not match. Please make sure your passwords match!", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -235,8 +235,8 @@ class Signup extends Component {
                         <div style={{marginLeft: 'auto'}}>
                         <div className="firstDiv">
                             <div className="firstDivOne">
-                                <div className="firstH3 TextColour">LEND LIKE A PRO!</div>
-                                <div className="firstH4 ">World’s Best in Class Small Finance Lending App</div>
+                                <div className="firstH3 TextColour">Lend like a PRO!</div>
+                                <div className="firstH4 TextColour">World’s Best in Class Small Finance Lending App</div>
                             </div>
                         </div>
                         <div className="secondDiv">
@@ -263,7 +263,7 @@ class Signup extends Component {
                                     <Card className="CardDiv3">
                                         <div className="CardDiv4">
                                             <div className="CardDiv5 HighlightTextColour">
-                                                <h3 className="Fonts">Let's set up your account</h3>
+                                                <h3 className="Fonts">Let's set up your Lendstack account</h3>
                                             </div>
                                             <form>
                                                 <div className={'form-group' + (submitted && !fname ? ' has-error' : '')} style={{ marginTop: '10px' }}>
@@ -279,17 +279,17 @@ class Signup extends Component {
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !emailid ? ' has-error' : '')} style={{ marginTop: '10px' }}>
-                                                    <Input type="email" placeholder="Email Address" required className="form-control" name="emailid" className="inputBoxContent Fonts SizeFont" fullWidth/*  onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
-                                                    <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
+                                                    <Input type="email" placeholder="Email" required className="form-control" name="emailid" className="inputBoxContent Fonts SizeFont" fullWidth/*  onChange={(event) => this.setState({ email: event.target.value })} */ onChange={this.validEmail} onKeyPress={this.handleKey} />
+                                                    <span style={{ display: this.state.emailError }} className="help-block">Invalid Email ID.</span>
                                                     {submitted && !emailid &&
-                                                        <div className="help-block" style={{ marginRight: "14rem" }}>Email id is required</div>
+                                                        <div className="help-block" style={{ marginRight: "14rem" }}>Email ID is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !mobilenum ? ' has-error' : '')} style={{ marginTop: '10px' }}>
                                                     <Input type="number" placeholder="10-digit Mobile Number without prefixes" required className="form-control" name="mobilenum" className="inputBoxContent Fonts SizeFont" fullWidth /* onChange={(event) => this.setState({ phone: event.target.value })} */ onChange={this.validNum} onKeyPress={this.handleKey} />
-                                                    <span style={{ display: this.state.numError, }} className="help-block">Mobile number must be 10 digit.</span>
+                                                    <span style={{ display: this.state.numError, }} className="help-block">Mobile Number must be 10 digit.</span>
                                                     {submitted && !mobilenum &&
-                                                        <div className="help-block" style={{ marginRight: "12rem" }}>Mobile number is required</div>
+                                                        <div className="help-block" style={{ marginRight: "12rem" }}>Mobile Number is required</div>
                                                     }
                                                 </div>
                                                 <div className={'form-group' + (submitted && !password ? ' has-error' : '')} style={{ marginTop: '10px' }}>
@@ -301,16 +301,16 @@ class Signup extends Component {
                                                 <div className={'form-group' + (submitted && !confirmpassword ? ' has-error' : '')} style={{ marginTop: '10px' }}>
                                                     <Input type="password" placeholder="Confirm Password" required className="form-control" name="confirmpassword" className="inputBoxContent Fonts SizeFont" fullWidth onChange={(event) => this.setState({ confirmpassword: event.target.value })} onKeyPress={this.handleKey} />
                                                     {submitted && !confirmpassword &&
-                                                        <div className="help-block">Confirm your password</div>
+                                                        <div className="help-block">Confirm your Password</div>
                                                     }
                                                 </div>
                                                 <FormGroup row>
                                                     <FormControlLabel
                                                         control={<Checkbox checked={this.state.checkedA} onChange={this.Termscheck} name="checkedA"  required className="form-control"/>}
-                                                        label={<div> I accept the <a target="_blank" href='https://lendstack.app/#/termsofservice'>Terms of Service</a> and <a target="_blank" href='https://lendstack.app/#/privacypolicy'>  Privacy Policy</a></div>}
+                                                        label={<div> I agree to the <a target="_blank" href='https://lendstack.app/#/termsofservice'>Terms of Service</a> and <a target="_blank" href='https://lendstack.app/#/privacypolicy'>Privacy Policy</a> of Lendstack</div>}
                                                     />
                                                     {submitted && !checkedA &&
-                                                        <div className="help-block">Accept terms of service and privacy policy</div>
+                                                        <div className="help-block">Please indicate that you agree to the "Terms of Service" and "Privacy Policy" of Lendstack</div>
                                                     }
                                                 </FormGroup>
                                             </form>

@@ -95,7 +95,7 @@ class NewCustomerCardView extends Component {
 
         let count = Object.keys(loan).length;
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -106,7 +106,7 @@ class NewCustomerCardView extends Component {
       }
     }).catch(err => {
       // if(err.request.status!==200){
-      // toast.error("Something went wrong. Please try again later!", {
+      // toast.error("Please try again!", {
       //     position: "top-center",
       //     autoClose: 2000,
       //     hideProgressBar: true,
@@ -145,7 +145,7 @@ class NewCustomerCardView extends Component {
         if (res.request.status === 200) {
           // {this.state.choosecustomer}
           let custname = customerId.firstName
-          toast.success(custname + " " + "verified Successfully", {
+          toast.success(custname + " " + "Verified Successfully", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: true,

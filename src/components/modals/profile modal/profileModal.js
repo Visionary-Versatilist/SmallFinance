@@ -83,7 +83,7 @@ class ProfileModal extends Component {
                         adminaccess: "none"
                     })
                 }            } else {
-                toast.error("Something went wrong. Please try again later!", {
+                toast.error("Please try again later!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,

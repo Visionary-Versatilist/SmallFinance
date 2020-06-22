@@ -52,8 +52,7 @@ class CancelLoan extends Component {
             <DialogTitle id="customized-dialog-title" className="TitleDiv">
               <div className="deleteconfirmation">
                 <div className="Fonts btnSizeFont confrmmessage">
-                  By cancelling the loan you can't proceed the further loan
-                  process for customer.
+                 By cancelling the loan, you cannot proceed the further loan process for this customer.
                 </div>
                 <div className="closeButtonDiv"><CloseIcon /* onClick={this.handleCloseModal.bind(this)} */ /></div>
                 <TextareaAutosize id="reason"
@@ -92,7 +91,7 @@ const ConfirmCancel = props => {
 
   return (
     <Dialog open={open} >
-      <DialogTitle>Are you sure</DialogTitle>
+      <DialogTitle>Are you sure?</DialogTitle>
 
       <DialogActions>
         <Button className='confirm' onClick={closeAction}>Yes</Button>

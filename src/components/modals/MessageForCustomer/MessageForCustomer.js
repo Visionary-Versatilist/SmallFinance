@@ -38,7 +38,7 @@ class MessageForCustomer extends Component {
         }).then(resp => {
             console.log("message", resp)
             if(resp.status==200) {
-                toast.success("Message Sent Successfully !", {
+                toast.success("Message Sent successfully!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -47,7 +47,7 @@ class MessageForCustomer extends Component {
                     draggable: true,
                 });            
             }else{
-                toast.error("Something went wrong!", {
+                toast.error("Please try again!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -58,7 +58,7 @@ class MessageForCustomer extends Component {
             }
         }).catch(err => {
             if(err.request.status!==200){
-            toast.error("Something went wrong!", {
+            toast.error("Please try again!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,

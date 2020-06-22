@@ -29,9 +29,9 @@ class DeleteLoan extends Component {
             headers: headers,
         }).then(resp => {
             if (resp.status === 200) {
-                toast.success("loan type deleted Successfully !", {
+                toast.success("Loan type deleted successfully !", {
                     position: "top-center",
-                    autoClose: 2000,
+                    autoClose: 3000,
                     hideProgressBar: true,
                     closeOnClick: true,
                     pauseOnHover: false,
@@ -40,7 +40,7 @@ class DeleteLoan extends Component {
 
                 this.props.allloan()
             } else {
-                toast.error("Something went wrong!", {
+                toast.error("Please try again!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -51,7 +51,7 @@ class DeleteLoan extends Component {
             }
         }).catch(err => {
             if (err.request.status !== 200) {
-                toast.error("Something went wrong!", {
+                toast.error("Please try again!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,

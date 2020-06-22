@@ -16,147 +16,151 @@ import { withNamespaces } from 'react-i18next';
 const axios = require('axios')
 const state = [
   {
-    value: ' Andhra Pradesh',
+    value: 'Andhra Pradesh',
     label: 'Andhra Pradesh',
   },
   {
-    value: ' Arunachal Pradesh',
+    value: 'Arunachal Pradesh',
     label: 'Arunachal Pradesh',
   },
   {
-    value: ' Assam',
+    value: 'Assam',
     label: 'Assam',
   },
   {
-    value: ' Bihar',
+    value: 'Bihar',
     label: 'Bihar',
   },
   {
-    value: ' Chhattisgarh',
+    value: 'Chhattisgarh',
     label: 'Chhattisgarh',
   },
   {
-    value: ' Goa',
+    value: 'Goa',
     label: 'Goa',
   },
   {
-    value: ' Gujarat',
+    value: 'Gujarat',
     label: 'Gujarat',
   },
   {
-    value: ' Haryana',
+    value: 'Haryana',
     label: 'Haryana',
   },
   {
-    value: ' Himachal Pradesh',
+    value: 'Himachal Pradesh',
     label: 'Himachal Pradesh',
   },
   {
-    value: ' Jammu and Kashmir',
-    label: 'Jammu and Kashmir',
-  },
-  {
-    value: ' Jharkhand',
+    value: 'Jharkhand',
     label: 'Jharkhand',
   },
   {
-    value: ' Karnataka',
+    value: 'Karnataka',
     label: 'Karnataka',
   },
   {
-    value: ' Kerala',
+    value: 'Kerala',
     label: 'Kerala',
   },
   {
-    value: ' Madhya Pradesh',
+    value: 'Madhya Pradesh',
     label: 'Madhya Pradesh',
   },
   {
-    value: ' Maharashtra',
+    value: 'Maharashtra',
     label: 'Maharashtra',
   },
   {
-    value: ' Manipur',
+    value: 'Manipur',
     label: 'Manipur',
   },
   {
-    value: ' Meghalaya',
+    value: 'Meghalaya',
     label: 'Meghalaya',
   },
   {
-    value: ' Mizoram',
+    value: 'Mizoram',
     label: 'Mizoram',
   },
   {
-    value: ' Nagaland',
+    value: 'Nagaland',
     label: 'Nagaland',
   },
   {
-    value: ' Odisha',
+    value: 'Odisha',
     label: 'Odisha',
   },
   {
-    value: ' Punjab',
+    value: 'Punjab',
     label: 'Punjab',
   },
   {
-    value: ' Rajasthan',
+    value: 'Rajasthan',
     label: 'Rajasthan',
   },
   {
-    value: ' Sikkim',
+    value: 'Sikkim',
     label: 'Sikkim',
   },
   {
-    value: ' Tamil Nadu',
+    value: 'Tamil Nadu',
     label: 'Tamil Nadu',
   },
   {
-    value: ' Telangana',
+    value: 'Telangana',
     label: 'Telangana',
   },
   {
-    value: ' Tripura',
+    value: 'Tripura',
     label: 'Tripura',
   },
   {
-    value: ' Uttarakhand',
+    value: 'Uttarakhand',
     label: 'Uttarakhand',
   },
   {
-    value: ' Uttar Pradesh',
+    value: 'Uttar Pradesh',
     label: 'Uttar Pradesh',
   },
   {
-    value: ' West Bengal',
+    value: 'West Bengal',
     label: 'West Bengal',
   },
   {
-    value: ' Andaman and Nicobar Islands',
+    value: 'Andaman and Nicobar Islands',
     label: 'Andaman and Nicobar Islands',
   },
   {
-    value: ' Chandigarh',
+    value: 'Chandigarh',
     label: 'Chandigarh',
   },
   {
-    value: ' Dadra and Nagar Haveli',
+    value: 'Dadra and Nagar Haveli',
     label: 'Dadra and Nagar Haveli',
   },
   {
-    value: ' Daman and Diu',
+    value: 'Daman and Diu',
     label: 'Daman and Diu',
   },
   {
-    value: ' Delhi',
+    value: 'Delhi',
     label: 'Delhi',
+  },
+  {
+    value: 'Jammu and Kashmir',
+    label: 'Jammu and Kashmir',
   },
   {
     value: ' Lakshadweep',
     label: 'Lakshadweep',
   },
   {
-    value: ' Puducherry',
+    value: 'Ladakh',
+    label: 'Ladakh',
+  },
+  {
+    value: 'Puducherry',
     label: 'Puducherry',
   },
 ];
@@ -230,7 +234,7 @@ class CompanyProfileDetails extends Component {
           countrySymbol:resp.data.country?resp.data.country.symbol: ""
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -241,7 +245,7 @@ class CompanyProfileDetails extends Component {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -268,7 +272,7 @@ const headers = {
           CountryData: resp.data,
         })
       } else {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -279,7 +283,7 @@ const headers = {
       }
     }).catch(err => {
       if (err.request.status !== 200) {
-        toast.error("Something went wrong. Please try again later!", {
+        toast.error("Please try again!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -362,7 +366,7 @@ const headers = {
 
                       <div className="textFieldStyle" style={{ width: '100%' }}>
                         <h6 className="InputLabel Fonts SizeFont" ></h6>
-                        <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Street / Locality" value={this.state.CompanyProfile.AddressStreet?this.state.CompanyProfile.AddressStreet:""} style={{ height: '41px', border: this.state.street }}  onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} disabled />
+                        <Input className="textBox" required className="form-control" name="homeAddressStreet" placeholder="Colony / Street / Locality" value={this.state.CompanyProfile.AddressStreet?this.state.CompanyProfile.AddressStreet:""} style={{ height: '41px', border: this.state.street }}  onChange={(event) => this.setState({ homeAddressStreet: event.target.value })} disabled />
 
                       </div>
                       {/* <div style={{ display: 'flex' }}> */}

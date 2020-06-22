@@ -72,7 +72,7 @@ class PaymentDetails extends Component {
     //   { label: 'Collection Amount', value: 1 },
     //   { label: 'Closing Balance', value: 1 },
     //   { label: 'Due Date', value: 1 },
-    //   { label: 'penalty', value: 1 },
+    //   { label: 'Penalty', value: 1 },
     // ]
 
     return (
@@ -97,7 +97,7 @@ class PaymentDetails extends Component {
                   <Workbook.Column label="Collected Amount" value="collectedAmount" />
                   <Workbook.Column label="Due Date" value="dueDate" />
                   <Workbook.Column label="Collected Sequence" value="collectionSeq" />
-                  <Workbook.Column label="penalty" value="penalty" />
+                  <Workbook.Column label="Penalty" value="Penalty" />
                 </Workbook.Sheet>
               </Workbook>
             </div>
@@ -121,7 +121,7 @@ class PaymentDetails extends Component {
                       <TableCell className="tablHeadCellPayment">Interest</TableCell>}
                     <TableCell className="tablHeadCellPayment">Collection Amt</TableCell>
                     <TableCell className="tablHeadCellPayment">Closing Balance</TableCell>
-                    {!isInstallmentCalculator && <TableCell className="tablHeadCellPayment">penalty</TableCell>}
+                    {!isInstallmentCalculator && <TableCell className="tablHeadCellPayment">Penalty</TableCell>}
                   </TableRow>
                 </TableHead>
 

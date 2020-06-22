@@ -3,7 +3,7 @@
     "activeStatusCards": [],
     "collectionAgents": [{
         "id": 1,
-        "name": "Test1"
+        "name": "Lendstack"
     }],
 
     "statusCardList": [{
@@ -92,12 +92,12 @@
         },
         {
             "value": "pastmonth",
-            "label": "Past month",
+            "label": "Past Month",
             "isActive": false
         },
         {
             "value": "pastyear",
-            "label": "Past year",
+            "label": "Past Year",
             "isActive": false
         }
     ],

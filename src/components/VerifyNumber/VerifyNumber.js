@@ -42,7 +42,7 @@ class VerifyNumber extends Component {
     })
       .then(resp => {
         if (resp.status === 200) {
-          toast.success("Registered successfully !", {
+          toast.success("Registered successfully!", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: true,
@@ -96,7 +96,7 @@ class VerifyNumber extends Component {
     })
       .then(resp => {
         if (resp.status === 200) {
-          toast.success("Registered successfully !", {
+          toast.success("Registered successfully!", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: true,
@@ -164,7 +164,7 @@ class VerifyNumber extends Component {
 
   }).then(resp => {
       if (resp.request.status === 200) {
-          toast.success("OTP has been sent to your Email id and Phone number!", {
+          toast.success("OTP has been sent to your Email ID and Mobile Number!", {
               position: "top-center",
               autoClose: 2000,
               hideProgressBar: true,
@@ -208,7 +208,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
 
 }).then(resp => {
     if (resp.request.status === 200) {
-        toast.success("OTP has been sent to your Email id and Phone number!", {
+        toast.success("OTP has been sent to your Email ID and Mobile Number!", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: true,
@@ -253,9 +253,9 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
           <div className="firstDiv">
             <div className="firstDivOne">
               <div className="firstH3 TextColour">
-                LEND LIKE A PRO!
+              Lend like a PRO!
               </div>
-              <div className="firstH4 ">
+              <div className="firstH4 TextColour">
                 World’s Best in Class Small Finance Lending App
               </div>
             </div>
@@ -269,7 +269,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                 <Card className="CardDiv3">
                   <div className="CardDiv4">
                     <div className="CardDiv5 HighlightTextColour">
-                      <h3 className="Fonts">Welcome!</h3>
+                      <h3 className="Fonts">Welcome! Please verify your Lendstack account</h3>
                     </div>
                     <form name="form">
                       <div
@@ -282,7 +282,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                         <Input
                           type="number"
                           required
-                          placeholder="Enter Otp"
+                          placeholder="Enter OTP"
                           className="form-control"
                           name="otp"
                           className="inputBoxContent Fonts SizeFont"
@@ -291,7 +291,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                           onKeyPress={this.handleKey}
                         />
                         {submitted && !otp &&
-                          <div className="help-block" style={{ marginRight: "9rem" }}>Enter your otp</div>
+                          <div className="help-block" style={{ marginRight: "9rem" }}>Enter your OTP</div>
                         }
                       </div>
                     </form>
@@ -303,7 +303,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                           cursor: "pointer"
                         }}
                       >
-                        Resend Otp
+                        Resend OTP
                       </a>
                     </div>
                     <div className="btnDiv">
@@ -313,7 +313,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                         className="Fonts btnSizeFont btn"
                         onClick={this.handleSubmit}
                       >
-                        Submit
+                        SUBMIT
                       </Button>
                     </div>
                     <div className="linkDiv HighlightTextColour">
@@ -325,7 +325,7 @@ axios.post(BaseUrl + '/user/sendOtp', userdetails, {
                         }}
                         onClick={this.loginPage.bind(this)}
                       >
-                        Go back to SignUp Page
+                        Go back to Sign Up Page
                       </a>
                     </div>
                   </div>

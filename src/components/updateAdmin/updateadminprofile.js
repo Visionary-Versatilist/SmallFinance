@@ -83,7 +83,7 @@ class UpdateAdminProfile extends Component {
     _handleImageChange(e) {
         e.preventDefault();
         if(e.target.files[0].size > 1000000){
-            toast.error("Image Size Should be less than 1 Mb", {
+            toast.error("Image Size should be less than 1 MB!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -223,7 +223,7 @@ class UpdateAdminProfile extends Component {
                     });
                 this.props.history.push('/usermanagement')      
             }else{
-                toast.error("Please fill correct data!", {
+                toast.error("Please fill correct information!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -234,7 +234,7 @@ class UpdateAdminProfile extends Component {
             }
         }).catch(err => {
             if(err.request.status === 413){
-                toast.error("Profile Image should be less than 1 mb!!", {
+                toast.error("Profile Image should be less than 1 MB!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -243,7 +243,7 @@ class UpdateAdminProfile extends Component {
                     draggable: true,
                     });
             } else {
-            toast.error("Something went wrong. Please try again later!!", {
+            toast.error("Please try again later!!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -284,7 +284,7 @@ class UpdateAdminProfile extends Component {
                   })
                   i18n.changeLanguage(resp.data.language)
                 } else {
-                  toast.error("Something went wrong. Please try again later!", {
+                  toast.error("Please try again later!", {
                       position: "top-center",
                       autoClose: 2000,
                       hideProgressBar: true,
@@ -439,7 +439,7 @@ class UpdateAdminProfile extends Component {
                                         <Input className="textBox"  value={this.state.emailid} style={{ height: '38px', border: this.state.changeColoremail }} onClick={this.emailBox} onChange={this.validEmail} />
                                         <span style={{ display: this.state.emailError,marginLeft:"28rem" }} className="help-block">Invalid Email id.</span>
                                         {submitted && !emailid &&
-                                         <div className="help-block" style={{marginRight:"14rem"}}>Email id is required</div>
+                                         <div className="help-block" style={{marginRight:"14rem"}}>Email ID is required</div>
                                         }
                                     </div>
                                     <div className="textFieldStyle categorytextFieldStyle" style={{ width: '100%', height:"34px" }}>

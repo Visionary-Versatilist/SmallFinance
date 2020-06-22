@@ -51,7 +51,7 @@ class NotPaid extends Component {
                                         rowsMax={4}
                                         style={{ height: '60px' }}
                                         aria-label="maximum height"
-                                        placeholder="Type the status here for not paid status"
+                                        placeholder="Type the reason here for not paid status"
                                         className="numarictextBox"
 
                                     />

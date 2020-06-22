@@ -59,7 +59,7 @@ class CollectionReportHeader extends Component {
           { value: "last week", label: "Past Week", isActive: false },
           { value: "last month", label: "Past Month", isActive: false },
           { value: "last year", label: "Past Year", isActive: false },
-          { value: "customDate", label: "Custom date Range", isActive: false }
+          { value: "customDate", label: "Custom Date Range", isActive: false }
         ],
         filter2: [
           { value: "1", label: "Loan Type", isActive: false, subList: [] },
@@ -216,8 +216,8 @@ class CollectionReportHeader extends Component {
 
       isCustomDatePkrOpen = false
       this.props.condition.filter("dateFilter", dateRange)
-      durationName = `${moment(dateRange[0]).format('DD MMM YYYY HH:mm:mm')} 
-        - ${moment(dateRange[1]).format('DD MMM YYYY HH:mm:mm')}`
+      durationName = `${moment(dateRange[0]).format('DD MMM YYYY HH:mm:ss')} 
+        - ${moment(dateRange[1]).format('DD MMM YYYY HH:mm:ss')}`
       this.setState({ isCustomDatePkrOpen, durationName });
 
 

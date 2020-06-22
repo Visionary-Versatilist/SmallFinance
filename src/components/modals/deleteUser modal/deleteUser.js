@@ -32,7 +32,7 @@ class DeleteUser extends Component {
             headers: headers,
         }).then(resp => {
             if(resp.status===200) {
-                toast.success("User deleted Successfully !", {
+                toast.success("User deleted successfully!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -43,7 +43,7 @@ class DeleteUser extends Component {
 
                     this.props.allUser()
             }else{
-                toast.error("Something went wrong!", {
+                toast.error("Please try again!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -54,7 +54,7 @@ class DeleteUser extends Component {
             }
         }).catch(err => {
             if(err.request.status!==200){
-            toast.error("Something went wrong!", {
+            toast.error("Please try again!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,

@@ -229,6 +229,7 @@ class CompanyProfileDetails extends Component {
           countryArea:resp.data.country?resp.data.country.area: "",
           countrySymbol:resp.data.country?resp.data.country.symbol: ""
         })
+        localStorage.setItem('companyCountry', JSON.stringify(resp.data.country))
       } else {
         toast.error("Something went wrong. Please try again later!", {
           position: "top-center",

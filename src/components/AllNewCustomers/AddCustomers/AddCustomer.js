@@ -24,29 +24,7 @@ import {KeyboardDatePicker,MuiPickersUtilsProvider} from '@material-ui/pickers';
 import ImageModal from '../../modals/ImageModal/ImageModal';
 import { withNamespaces } from 'react-i18next';
 const axios = require('axios')
-const annualincome = [
-    {
-        value: ' 0.00 -  250,000',
-        label: '₹ 0.00 - ₹ 250,000',
-    },
-    {
-        value: ' 250,001 -  500,000',
-        label: '₹ 250,001 - ₹ 500,000',
-    },
-    {
-        value: ' 500,001 -  1,000,000',
-        label: '₹ 500,001 - ₹ 1,000,000',
-    },
-    {
-        value: ' 1,000,000 -  50,000,000',
-        label: '₹ 1,000,000 - ₹ 50,000,000',
-    },
-    {
-        value: '50,000,000',
-        label: 'Above ₹ 50,000,000',
-    },
 
-];
 const preferredtime = [
 
     {
@@ -3127,6 +3105,37 @@ class AddCustomer extends Component {
     }
 
     render() {
+        let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+        let countryCurrencySymbol = countryCurrency.symbol;
+        console.log("currency symbol",countryCurrencySymbol )
+
+        const annualincome = [
+            {
+                value: ' 0.00 -  250,000',
+                label: countryCurrencySymbol +' 0.00  - ' +countryCurrencySymbol +' 250,000',
+            },
+            {
+                value: ' 250,001 -  500,000',
+                label: countryCurrencySymbol+' 250,001  - ' +countryCurrencySymbol +' 500,000',
+                // label: '₹ 250,001 - ₹ 500,000',
+            },
+            {
+                value: ' 500,001 -  1,000,000',
+                label: countryCurrencySymbol+' 500,001  - ' +countryCurrencySymbol +' 1,000,000',
+                // label: '₹ 500,001 - ₹ 1,000,000',
+            },
+            {
+                value: ' 1,000,000 -  50,000,000',
+                label: countryCurrencySymbol+' 1,000,000  - ' +countryCurrencySymbol +' 50,000,000',
+                // label: '₹ 1,000,000 - ₹ 50,000,000',
+            },
+            {
+                value: '50,000,000',
+                label: 'Above ' + countryCurrencySymbol+' 50,000,000',
+                // label: 'Above ₹ 50,000,000',
+            },
+        
+        ];
         let UserId = localStorage.getItem("userid")
         const { t } = this.props;
 

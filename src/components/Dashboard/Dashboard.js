@@ -357,7 +357,9 @@ const StatusCard = (props) => {
     const { bcColor, header, amount, totalAmount, hasFunctionality, value } = card
     const percent = Math.round(amount * 100 / (totalAmount === 0 ? 1 : totalAmount))
     const isInActive = activeStatusCards.length === 0 ? false : activeStatusCards.indexOf(value) === -1
-
+    let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+    let countryCurrencySymbol = countryCurrency.symbol;
+    console.log("currency symbol",countryCurrencySymbol )
     return (
         <div onClick={() => { hasFunctionality && changeActiveStatusCard(value) }}
             className={`statusCard ${bcColor} ${hasFunctionality ? '' : 'defaultCursor'} 
@@ -379,8 +381,8 @@ const StatusCard = (props) => {
                         />
                     </div>
                     <div className="scValues">
-                        <span className='mainAmountVal' >₹ {amount.toLocaleString(currencyFormat, { minimumFractionDigits: 0 })}</span> <br />
-                        Out of ₹{totalAmount.toLocaleString(currencyFormat, { minimumFractionDigits: 0 })}
+                        <span className='mainAmountVal' >{countryCurrencySymbol} {amount.toLocaleString(currencyFormat, { minimumFractionDigits: 0 })}</span> <br />
+                        Out of {countryCurrencySymbol} {totalAmount.toLocaleString(currencyFormat, { minimumFractionDigits: 0 })}
                     </div>
                 </div>
             </div>

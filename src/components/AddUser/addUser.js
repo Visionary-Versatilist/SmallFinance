@@ -66,7 +66,7 @@ class AddUser extends Component {
     _handleImageChange(e) {
         e.preventDefault();
         if(e.target.files[0].size > 1000000){
-            toast.error("File size should be less than 1 Mb", {
+            toast.error("File size should be less than 1 MB", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
@@ -216,7 +216,7 @@ class AddUser extends Component {
         }).catch(error => {
             console.log("agent catch")
             if (error.request.status === 401) {               
-                if (error.response.data.message === "User already exists with the above EmailID") {
+                if (error.response.data.message === "User already exists with the above Email ID") {
                     toast.error(error.response.data.message, {
                         position: "top-center",
                         autoClose: 4000,

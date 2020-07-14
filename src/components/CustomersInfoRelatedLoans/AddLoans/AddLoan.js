@@ -627,6 +627,9 @@ const headers = {
 
   render() {
     console.log("this.state.maxValue", this.state.maxValue)
+    let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+    let countryCurrencySymbol = countryCurrency.symbol;
+    console.log("currency symbol",countryCurrencySymbol )
     const { t } = this.props;
 
     const { brands ,tenure} = this.state;
@@ -696,14 +699,14 @@ const headers = {
                   <div style={{ width: "50%", margin: '3rem', textAlign: "left" }}>
                     <div style={{ display: "flex" }}>
                       <h6 className="InputLabel Fonts SizeFont" style={{ marginBottom: "1px" }}> {t('AddLoan.amount')}</h6>
-                      <div className="outputDivLoan">
-                        &#x20b9; <Input className="output" value={this.state.amountvalues} margin="dense" onChange={this.handleInputChange} onBlur={this.handleBlur} inputProps={{ type: 'number', 'aria-labelledby': 'input-slider', }} />
+                      <div className="outputDivLoan"  style={{display:'flex'}}>
+                      <div style={{paddingTop: '7px'}}>{countryCurrencySymbol}</div>  <Input className="output" value={this.state.amountvalues} margin="dense" onChange={this.handleInputChange} onBlur={this.handleBlur} inputProps={{ type: 'number', 'aria-labelledby': 'input-slider', }} />
                       </div>
                     </div>
                     <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", }}>
                       <Slider value={typeof this.state.amountvalues === 'number' ? this.state.amountvalues : null}  min={this.state.minValue} step={this.state.step} max={this.state.maxValue} onChange={this.handleSliderChange} aria-labelledby="input-slider" />
-                      <span className="MoneyDisplay Money Fonts">&#x20b9;{this.state.minValue}</span>
-                      <span className="Fonts Money">&#x20b9;{this.state.maxValue}</span>
+                      <span className="MoneyDisplay Money Fonts">{this.state.minValue} {countryCurrencySymbol}</span>
+                      <span className="Fonts Money">{this.state.maxValue} {countryCurrencySymbol}</span>
                     </div><br></br>
                     <div style={{ display: "flex" }}>
                       <h6 className="InputLabel Fonts SizeFont" style={{ marginBottom: "1px" }}> {t('AddLoan.tenure')}</h6>
@@ -756,7 +759,7 @@ const headers = {
                     </div>
                     <br></br>
                     <div className="TotalMoneyDisplay">
-                      <input placeholder="&#x20b9;" value={this.state.collectionAmount || ""} className="displaytotalmoney" disabled style={{ backgroundColor: "transparent" }} />
+                      <input placeholder={countryCurrencySymbol} value={this.state.collectionAmount || ""} className="displaytotalmoney" disabled style={{ backgroundColor: "transparent" }} />
                     </div>
                     <span className="Fonts instalment">{t('AddLoan.instal')}</span>
                   </div>

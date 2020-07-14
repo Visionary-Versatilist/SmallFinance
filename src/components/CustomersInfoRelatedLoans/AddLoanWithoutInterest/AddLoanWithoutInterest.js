@@ -750,6 +750,9 @@ const headers = {
     this.child.postLoan() 
   }
   render() {
+    let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+    let countryCurrencySymbol = countryCurrency.symbol;
+    console.log("currency symbol",countryCurrencySymbol )
     const { t } = this.props;
 
     toast.configure({});
@@ -816,7 +819,7 @@ const headers = {
 
                         <div className="textFieldStyle">
                           <h6 className="InputLabel Fonts SizeFont">{t('AddLoan.penality')}</h6>
-                          <div className="textBox" style={{ height: '35px', border: this.state.changeColoremail1, display: "flex" }}><span className="aboutfield">&#x20b9;</span>
+                          <div className="textBox" style={{ height: '35px', border: this.state.changeColoremail1, display: "flex" }}><span className="aboutfield">{countryCurrencySymbol}</span>
                             <Input type="number" value={this.state.penalty || ""} onClick={this.emailBox1} onChange={(event) => this.setState({ penalty: event.target.value })} />
                           </div>
                         </div>
@@ -859,14 +862,14 @@ const headers = {
                         </div>
                         <div className="textFieldStyle">
                           <h6 className="InputLabel Fonts SizeFont">{t('AddLoan.amount')}</h6>
-                          <div style={{ height: '35px', border: this.state.changeColoremail3, display: "flex" }} className="textBox"><span className="aboutfield">&#x20b9;</span>
+                          <div style={{ height: '35px', border: this.state.changeColoremail3, display: "flex" }} className="textBox"><span className="aboutfield">{countryCurrencySymbol}</span>
                             <Input type="number" onClick={this.emailBox3} value={this.state.distamount || ""} onChange={(event) => this.setState({ distamount: event.target.value })} />
                           </div>
                           <span className="InputLabel Fonts linkFontSize" style={{ paddingLeft: "10px" }}> NOTE: {" " + "Amount Range is:" + " " + this.state.amountfrom + "-" + this.state.amountto}</span>
                         </div>
                         <div className="textFieldStyle">
                           <h6 className="InputLabel Fonts SizeFont">{t('AddLoan.instal')}</h6>
-                          <div style={{ height: '35px', border: this.state.changeColoremail4, display: "flex" }} className="textBox"><span className="aboutfield">&#x20b9;</span>
+                          <div style={{ height: '35px', border: this.state.changeColoremail4, display: "flex" }} className="textBox"><span className="aboutfield">{countryCurrencySymbol}</span>
                             <Input type="number" onClick={this.emailBox4} value={this.state.installment || ""} onChange={(event) => this.setState({ installment: event.target.value })} />
                           </div>
                         </div>
@@ -884,7 +887,7 @@ const headers = {
                           ) : null}
                         </div>
                         <div className="TotalMoney">
-                          <input placeholder="&#x20b9;" value={this.state.totalAmount || ""} className="displaytotalmoney" disabled style={{ backgroundColor: "transparent" }} />
+                          <input placeholder={countryCurrencySymbol} value={this.state.totalAmount || ""} className="displaytotalmoney" disabled style={{ backgroundColor: "transparent" }} />
                         </div>
                         <span className="Fonts instalment">{t('AddLoan.circle')}</span>
                       </div>

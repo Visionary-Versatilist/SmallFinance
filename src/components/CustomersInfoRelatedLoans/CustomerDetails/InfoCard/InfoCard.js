@@ -127,14 +127,15 @@ let CustomerInfoHeader = (props) => {
 
   const { loanType, totalLoanAmount, location, time, moratoriumPeriods, rateOfInterest } = props.headerData
   const { cancelClickEvent, isLoanActive, isInstallmentCalculator } = props
-
+  let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+  let countryCurrencySymbol = countryCurrency.symbol;
 
   return (
     <div className="headerPart">
       <div className="headerLeft">
         <div className="headerPartOne">
           <div className="headerPartOneOne Fonts">
-            &#8377; {totalLoanAmount}
+            {countryCurrencySymbol} {totalLoanAmount}
             {isInstallmentCalculator && <span> at {rateOfInterest} %</span>}
           </div>
           <div className="headerPartOneTwo Fonts"> {loanType}</div>
@@ -181,6 +182,9 @@ let CustomerInfoHeader = (props) => {
 
 let LoanProgress = (props) => {
   const { totalAmountPaid, balanceData, percentage, paidPenalty } = props.amountOverView
+  let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+    let countryCurrencySymbol = countryCurrency.symbol;
+    console.log("currency symbol",countryCurrencySymbol )
   return (
     <div className="loanProgress">
 
@@ -205,17 +209,17 @@ let LoanProgress = (props) => {
         <div className="MainAmountDisplay">
           <div className="amountDisplay Fonts">
 
-            ₹&nbsp;&nbsp;{totalAmountPaid}
+            {countryCurrencySymbol}&nbsp;&nbsp;{totalAmountPaid}
 
             <div className="type Fonts">Total Amount Paid</div>
           </div>
 
           <div className="amountDisplay Fonts">
-            ₹&nbsp;&nbsp;{balanceData}
+            {countryCurrencySymbol}&nbsp;&nbsp;{balanceData}
             <div className="type Fonts">Balance Amount</div>
           </div>
           <div className="amountDisplay Fonts">
-            ₹&nbsp;&nbsp;{paidPenalty}
+            {countryCurrencySymbol}&nbsp;&nbsp;{paidPenalty}
             <div className="type Fonts">Penalty Applied</div>
           </div>
         </div>

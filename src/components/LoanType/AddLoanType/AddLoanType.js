@@ -295,7 +295,7 @@ class AddLoanType extends Component {
             headers: headers,
         }).then(resp => {
             if(resp.status===200) {
-                toast.success("Loan AddedSuccessfully !", {
+                toast.success("Loan Added Successfully!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -306,7 +306,7 @@ class AddLoanType extends Component {
         this.props.history.push('/loantype')      
 
             }else{
-                toast.error("Something went wrong!", {
+                toast.error("Please try again later!", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,
@@ -317,7 +317,7 @@ class AddLoanType extends Component {
             }
         }).catch(err => {
             if(err.request.status!==200){
-            toast.error("Something went wrong!", {
+            toast.error("Please try again later!", {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,

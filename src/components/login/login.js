@@ -41,6 +41,7 @@ class Login extends Component {
                 localStorage.setItem('userid', resp.data.userId)
                 localStorage.setItem('loggedinUser', JSON.stringify(resp.data))
                 localStorage.setItem('loggedinUserCompany', JSON.stringify(resp.data.companyId))
+                this.companyData()
                 this.props.history.push('/dashboard')
             } else {
                 toast.error("Please fill correct information!", {
@@ -196,6 +197,46 @@ class Login extends Component {
             }
         }) 
     }
+
+
+    companyData=()=>{
+
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+ JSON.parse(localStorage.getItem('token'))
+          }
+          let loggedinUser = JSON.parse(localStorage.getItem("loggedinUser"))
+          axios.get(BaseUrl + '/company/getCompanyProfile?companyId=' + loggedinUser.companyId, {
+            headers: headers,
+          }).then(resp => {
+            
+            if (resp.status === 200 || resp.status===304) {
+                localStorage.setItem('companyCountry', JSON.stringify(resp.data.country))
+            } else {
+              toast.error("Something went wrong. Please try again later!", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+              });
+            }
+          }).catch(err => {
+            if (err.request.status !== 200) {
+              toast.error("Something went wrong. Please try again later!", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+              });
+            }
+          })
+
+    }
+
     handleSubmit(e) {
         e.preventDefault();
 

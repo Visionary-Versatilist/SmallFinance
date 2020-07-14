@@ -29,7 +29,8 @@ class PaymentProcess extends Component {
             isPayModeInvalid: false,
             isPayTypeOther: false,
             otherMode: '',
-            isPayTypeCheque: false
+            isPayTypeCheque: false,
+            countryCurrency: {}
         };
     }
 
@@ -122,6 +123,13 @@ class PaymentProcess extends Component {
 
         }
 
+    }
+    componentDidMount=()=>{
+        let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
+        console.log("country currency", countryCurrency)
+        this.setState({
+            countryCurrency:countryCurrency
+        })
     }
 
     componentWillReceiveProps(props) {
@@ -342,8 +350,8 @@ class PaymentProcess extends Component {
                             }
 
                             <div className={isReceive ? 'totalAmountLayout' : ''}>
-                                <div className='totalAmount Fonts' >₹ {parseInt(totalAmount)}</div>
-                                <span className="totalAmountText"> {isReceive ? 'Total' : `₹ ${totalAmount - penalty} Principal | ${penalty} Penalty`}</span>
+                                <div className='totalAmount Fonts' >{this.state.countryCurrency.symbol} {parseInt(totalAmount)}</div>
+                                <span className="totalAmountText"> {isReceive ? 'Total' : `${this.state.countryCurrency.symbol} ${totalAmount - penalty} Principal | ${penalty} Penalty`}</span>
                             </div>
 
                             {!isReceive &&

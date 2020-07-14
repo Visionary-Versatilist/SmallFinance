@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './CollectionCardView.scss';
+import { withNamespaces } from 'react-i18next';
 
 
 
@@ -13,6 +14,7 @@ class CollectionCardView extends Component {
 
 
   render() {
+    const { t } = this.props;
 
     const { loanCollectionAmount, totalLoanCollectionAmount, overDueAmount, totalOverDueAmount, totalCustomer, paidCustomer, penalty, totalpenalty } = this.props.data
 
@@ -24,7 +26,7 @@ class CollectionCardView extends Component {
     return (
 
       <div className="Allcardviewpage">
-        <StatusCard percent={loanCollectionPercent} amount={loanCollectionAmount} totalAmount={totalLoanCollectionAmount} header={"Loan Collection Amount"} />
+        <StatusCard percent={loanCollectionPercent} amount={loanCollectionAmount} totalAmount={totalLoanCollectionAmount} header={t("CollectionReport.CardTitleOne")} />
         <StatusCard percent={overDuePercent} amount={overDueAmount} totalAmount={totalOverDueAmount} header={"Overdue Amount"} />
         <StatusCard percent={paidCustomerPercent} amount={paidCustomer} totalAmount={totalCustomer} header={"Paid Customers"} />
         <StatusCard percent={penaltyPercent} amount={penalty} totalAmount={totalpenalty} header={"Penalty"} />
@@ -34,7 +36,7 @@ class CollectionCardView extends Component {
   }
 }
 
-export default CollectionCardView;
+export default withNamespaces()(CollectionCardView);
 
 
 

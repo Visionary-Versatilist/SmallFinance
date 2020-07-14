@@ -8,6 +8,7 @@ import translationHin from "./locales/Hindi/translation.json";
 import translationKan from "./locales/Kannada/translation.json";
 import translationTam from "./locales/Tamil/translation.json";
 import translationDE from "./locales/Deutsch/translation.json";
+import translationTL from "./locales/Telugu/translation.json"
 // not like to use this?
 // have a look at the Quick start guide 
 // for passing in lng and translations on init
@@ -26,6 +27,9 @@ const resources = {
   },
   Deutsch: {
     translation: translationDE
+  },
+  Telugu: {
+    translation: translationTL
   }
 };
 i18n

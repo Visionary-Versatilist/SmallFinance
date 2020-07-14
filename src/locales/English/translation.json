@@ -256,5 +256,8 @@
     "emi":"Rate of Interest",
     "value":"Value after moratorium",
     "circle":"Total amt. to be paid"
+  },
+  "CollectionReport": {
+    "CardTitleOne": "Loan Collection Amount"
   }
 }

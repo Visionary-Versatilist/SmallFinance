@@ -122,28 +122,28 @@
 		"title": "Profil bearbeiten"
 	},
 	"FAQ": {
-		"questions": {
-			"0": {
+		"questions": [
+			{
 				"ans": "Lendstack vergibt keine Kredite. Lendstack ist eine Plattform, auf der kleine und einzelne Kreditgeber ihren Kreditprozess verwalten.",
 				"que": "Gibt Lendstack Kredite aus?"
 			},
-			"1": {
+			{
 				"ans": "In einigen Fällen müssen wir bestimmte Informationen sammeln, überprüfen und pflegen, um potenziellen Betrug zu verhindern. Wir behandeln diese Informationen als äußerst sensibel und nehmen Datenschutz und Sicherheit ernst",
 				"que": "Warum muss Lendstack meine Daten überprüfen?"
 			},
-			"2": {
+			{
 				"ans": "Abgesehen von den Kontaktinformationen zum Erstellen eines Profils überlässt Lendstack Ihnen viel. Sie können jedoch auswählen, welche Details Sie von Ihrem Kunden anfordern möchten.",
 				"que": "Welche Details kann ich als Kreditgeber von meinen Kunden anfordern?"
 			},
-			"3": {
+			{
 				"ans": "Ja, ein Kreditnehmer kann ein Kreditgeber sein, solange Sie über das Kapital verfügen, das Sie ausleihen können.",
 				"que": "Kann ein Kreditnehmer ein Kreditgeber sein?"
 			},
-			"4": {
+			{
 				"ans": "Dies ist normalerweise darauf zurückzuführen, dass E-Mails als Junk oder Spam eingestuft werden. Überprüfen Sie Ihren Postfach-Junk- oder Spam-Ordner. Sie können sich auch an unseren Support wenden, um weitere Unterstützung zu erhalten",
 				"que": "Warum habe ich keine Bestätigungsmail erhalten?"
 			}
-		},
+		],
 		"title": "FAQs (häufig gestellte Fragen)"
 	},
 	"Loans": {

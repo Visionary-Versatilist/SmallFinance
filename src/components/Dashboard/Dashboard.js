@@ -10,7 +10,7 @@ import { companylogo, downarrow as greenArrow, user_solid } from "../../assets/i
 import moment from "moment";
 import { currencyFormat } from '../../Environment'
 import LoadingPage from '../modals/LoadingPage/LoadingPage'
-
+import { withNamespaces } from 'react-i18next';
 import {pieDayFilter, amountDetailIndex, activeStatusCards, isLoading,collectionAgents, statusCardList, pieChartList, dashDayFilter, lineChartList} from './Dashboard.json'
 
 
@@ -215,6 +215,7 @@ class Dashboard extends Component {
     }
 
     render() {
+        const { t } = this.props;
         const { amountDetailIndex, activeStatusCards, collectionAgents, isLoading,
             statusCardList, pieChartList, lineChartList, pieDayFilter, dashDayFilter } = this.state
 
@@ -262,7 +263,7 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default  withNamespaces()(Dashboard);
 
 
 

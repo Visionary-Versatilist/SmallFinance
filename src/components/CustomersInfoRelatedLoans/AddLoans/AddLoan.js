@@ -628,7 +628,7 @@ const headers = {
   render() {
     console.log("this.state.maxValue", this.state.maxValue)
     let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
-    let countryCurrencySymbol = countryCurrency.symbol;
+    let countryCurrencySymbol = countryCurrency?countryCurrency.symbol:"INR";
     console.log("currency symbol",countryCurrencySymbol )
     const { t } = this.props;
 

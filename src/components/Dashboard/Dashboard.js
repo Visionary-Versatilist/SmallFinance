@@ -51,7 +51,8 @@ class Dashboard extends Component {
 
         //get collection agent by api call and assign in state
         const collectionAgentsRes = await fetchAPIData("collectionAgent", {})
-        this.setState({ collectionAgents: collectionAgentsRes.collectionAgents });
+        const collectionAgentsResSec = collectionAgentsRes.collectionAgents
+        this.setState({ collectionAgents: collectionAgentsResSec });
 
 
         //make dashboard and piechart call
@@ -359,7 +360,7 @@ const StatusCard = (props) => {
     const percent = Math.round(amount * 100 / (totalAmount === 0 ? 1 : totalAmount))
     const isInActive = activeStatusCards.length === 0 ? false : activeStatusCards.indexOf(value) === -1
     let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
-    let countryCurrencySymbol = countryCurrency.symbol;
+    let countryCurrencySymbol = countryCurrency?countryCurrency.symbol:"INR";
     console.log("currency symbol",countryCurrencySymbol )
     return (
         <div onClick={() => { hasFunctionality && changeActiveStatusCard(value) }}

@@ -128,7 +128,7 @@ let CustomerInfoHeader = (props) => {
   const { loanType, totalLoanAmount, location, time, moratoriumPeriods, rateOfInterest } = props.headerData
   const { cancelClickEvent, isLoanActive, isInstallmentCalculator } = props
   let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
-  let countryCurrencySymbol = countryCurrency.symbol;
+  let countryCurrencySymbol = countryCurrency?countryCurrency.symbol:"INR";
 
   return (
     <div className="headerPart">
@@ -183,7 +183,7 @@ let CustomerInfoHeader = (props) => {
 let LoanProgress = (props) => {
   const { totalAmountPaid, balanceData, percentage, paidPenalty } = props.amountOverView
   let countryCurrency = JSON.parse(localStorage.getItem("companyCountry"))
-    let countryCurrencySymbol = countryCurrency.symbol;
+    let countryCurrencySymbol = countryCurrency?countryCurrency.symbol:"INR";
     console.log("currency symbol",countryCurrencySymbol )
   return (
     <div className="loanProgress">

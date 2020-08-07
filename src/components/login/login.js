@@ -128,7 +128,7 @@ class Login extends Component {
                             pauseOnHover: false,
                             draggable: true,
                         });
-                    } else if(error.response.data.message === "Your Account is not verified yet") {
+                    } else if(error.response.data.message === "Your Account is not verified yet" || error.response.data.message === "Please verify your account") {
                         toast.error(error.response.data.message, {
                             position: "top-center",
                             autoClose: 2000,
@@ -139,7 +139,7 @@ class Login extends Component {
                         });
                         this.sentOtp()
                     } else {
-                        toast.error(error.response.data.msg, {
+                        toast.error(error.response.data.msg || error.response.data.message, {
                             position: "top-center",
                             autoClose: 2000,
                             hideProgressBar: true,
@@ -148,6 +148,15 @@ class Login extends Component {
                             draggable: true,
                         });
                     }
+                } else {
+                    toast.error("something went wrong, try again", {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                    });
                 }
             })
     }
@@ -187,6 +196,15 @@ class Login extends Component {
         }).catch(err => {
             if (err.request.status === 401) {
                 toast.error(err.response.data.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                });
+            } else {
+                toast.error("something went wrong", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: true,

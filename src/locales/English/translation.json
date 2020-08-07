@@ -258,6 +258,9 @@
     "circle":"Total amt. to be paid"
   },
   "CollectionReport": {
-    "CardTitleOne": "Loan Collection Amount"
+    "CardTitleOne": "Loan Collection Amount",
+    "CardTitleTwo": "Overdue Amount",
+    "CardTitleThree": "Paid Customers Amount",
+    "CardTitleFour": "Penalty"
   }
 }

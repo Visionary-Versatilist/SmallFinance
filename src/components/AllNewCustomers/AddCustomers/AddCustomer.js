@@ -3355,7 +3355,7 @@ class AddCustomer extends Component {
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" >{t('AddCustomer.email')}</h6>
                                             <Input className="textBox" placeholder="smith@example.com" value={this.state.email || ''} style={{ height: '41px', border: this.state.emaill }} onClick={this.emailBox} onChange={this.validEmail} />
-                                            <span style={{ display: this.state.emailError }} className="help-block">Invalid Email id.</span>
+                                            <span style={{ display: this.state.emailError }} className="help-block">Invalid Email ID.</span>
                                         </div>
                                         <div className="textFieldStyle" style={{ width: '50%' }}>
                                             <h6 className="InputLabel Fonts SizeFont" style={{ marginLeft: '70px' }} >{t('AddCustomer.depname')}</h6>
@@ -3490,7 +3490,7 @@ class AddCustomer extends Component {
                                             <h6 className="InputLabel Fonts SizeFont"></h6>
                                             <div className={'form-group' + (submitted && !homeAddressPincode ? ' has-error' : '')} style={{ marginTop: '10px' }}>
                                                 <input required className="form-control" name="homeAddressPincode" value={this.state.homeAddressPincode} type="text" maxlength="6" placeholder="6 Digits [0-9] pincode" className="number" style={{ height: '41px', border: this.state.pin, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinBox} onChange={this.validHomePin} />
-                                                <span style={{ display: this.state.homepinError }} className="help-block">Invalid pincode.</span>
+                                                <span style={{ display: this.state.homepinError }} className="help-block">Invalid Pincode.</span>
                                                 {submitted && !homeAddressPincode &&
                                                     <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                 }
@@ -3589,7 +3589,7 @@ class AddCustomer extends Component {
                                                 <h6 className="InputLabel Fonts SizeFont" ></h6>
                                                 <div className={'form-group' + (submitted && !OfficeAddressPincode ? ' has-error' : '')} style={{ marginTop: '10px' }}>
                                                     <input required type="text" maxlength="6" className="form-control" name="OfficeAddressPincode" value={this.state.OfficeAddressPincode} placeholder="6 Digits [0-9] pincode" className="number" style={{ height: '41px', border: this.state.pinoffice, width: "82%", borderRadius: "5px", paddingLeft: "10px" }} onClick={this.pinofficeBox} onChange={this.validOfficePin} />
-                                                    <span style={{ display: this.state.officepinError }} className="help-block">Invalid pincode.</span>
+                                                    <span style={{ display: this.state.officepinError }} className="help-block">Invalid Pincode.</span>
                                                     {submitted && !OfficeAddressPincode &&
                                                         <div className="help-block" style={{ marginRight: "14rem" }}>Address is required</div>
                                                     }

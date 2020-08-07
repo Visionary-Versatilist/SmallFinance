@@ -27,9 +27,9 @@ class CollectionCardView extends Component {
 
       <div className="Allcardviewpage">
         <StatusCard percent={loanCollectionPercent} amount={loanCollectionAmount} totalAmount={totalLoanCollectionAmount} header={t("CollectionReport.CardTitleOne")} />
-        <StatusCard percent={overDuePercent} amount={overDueAmount} totalAmount={totalOverDueAmount} header={"Overdue Amount"} />
-        <StatusCard percent={paidCustomerPercent} amount={paidCustomer} totalAmount={totalCustomer} header={"Paid Customers"} />
-        <StatusCard percent={penaltyPercent} amount={penalty} totalAmount={totalpenalty} header={"Penalty"} />
+        <StatusCard percent={overDuePercent} amount={overDueAmount} totalAmount={totalOverDueAmount} header={t("CollectionReport.CardTitleTwo")} />
+        <StatusCard percent={paidCustomerPercent} amount={paidCustomer} totalAmount={totalCustomer} header={t("CollectionReport.CardTitleThree")} />
+        <StatusCard percent={penaltyPercent} amount={penalty} totalAmount={totalpenalty} header={t("CollectionReport.CardTitleFour")} />
 
       </div>
     )

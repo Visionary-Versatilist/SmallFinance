@@ -24,7 +24,7 @@
     "i18next-browser-languagedetector": "^4.0.1",
     "i18next-xhr-backend": "^3.2.2",
     "jquery": "^3.4.1",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "local-storage": "^2.0.0",
     "material-ui-flat-pagination": "^4.0.0",
     "moment": "^2.24.0",
